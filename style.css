@@ -23,14 +23,14 @@ html {
     --h4-size: 1.5em;
     --p-size: 1.375em;
 
-    --body-height: 2835px;
     --header-height: 16.75em;
-    --footer-height: 8.875em;
+    --footer-height: calc(8.875em + var(--header-height));
 }
 
 p, h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
+    color: var(--black-color);
 }
 
 p, h2, h3, h4, h5, h6 {
@@ -68,7 +68,6 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    height: calc(var(--body-height) + var(--footer-height));
     margin: 0;
     background-color: var(--light-primary-color);
 }
@@ -79,34 +78,49 @@ header {
     align-items: center;
     justify-content: center;
     width: 100%;
-    color: var(--primary-color);
     position: fixed;
+    text-align: center;
 }
 
 header h1 {
     margin-top: var(--unrelated-space);
     font-weight: 700;
+    color: var(--primary-color);
 }
 
-header p {
+header h3 {
     margin-top: var(--related-space);
+    margin-bottom: var(--unrelated-space);
+    color: var(--primary-color);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
     margin-bottom: var(--unrelated-space);
 }
 
-footer {
-    display: flex;
-    position: fixed;
+.footer-space {
+    position: relative;
     bottom: 0px;
+    height: var(--footer-height);
 }
 
 .main-card {
     position: relative;
     z-index: 2;
-    width: 100%;
+    max-width: 800px;
+    width: 95%;
+    margin: 0 auto;
     top: var(--header-height);
-    padding: 1em 1em 4em 1em;
-    border-top-left-radius: 35px;
-    border-top-right-radius: 35px;
+    padding: 1em 1em 6em 1em;
+    border-radius: 35px;
     background-color: var(--white-color);
     box-shadow: var(--shadow-button)
 }
@@ -140,6 +154,7 @@ footer {
     height: 200px;
     border-radius: 200px;
     background-color: var(--primary-color);
+    box-shadow: var(--shadow-button)
 }
 
 .card-bio .bio-info .profile-name {
@@ -156,7 +171,8 @@ footer {
 .skills-info,
 .projects-info,
 .ref-info,
-.contact-info {
+.contact-info,
+footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -169,7 +185,21 @@ footer {
 .contact-info .contact-title {
     flex: 1 1 100%;
     margin-top: var(--unrelated-space);
+    margin-bottom: var(--related-space);
     text-align: center;
+}
+
+.card-title {
+    margin-top: var(--related-space);
+}
+
+.card-title a {
+    color: var(--black-color);
+    text-decoration: none;
+}
+
+.card-title a:active, .card-title a:hover {
+    text-decoration: underline;
 }
 
 .ref-info .ref-note {
@@ -179,7 +209,8 @@ footer {
 
 .skills-info .skill-card,
 .projects-info .project-card,
-.ref-info .ref-card {
+.ref-info .ref-card,
+footer .footer-card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -191,11 +222,13 @@ footer {
 
 .skills-info .card-pic,
 .projects-info .card-pic,
-.ref-info .card-pic {
+.ref-info .card-pic,
+footer .card-pic {
     width: 100px;
     height: 100px;
     border-radius: 200px;
     background-color: var(--primary-color);
+    box-shadow: var(--shadow-button)
 }
 
 .contact-info form {
@@ -212,9 +245,15 @@ footer {
     border: 1px solid var(--black-color);
     border-radius: 5px;
     padding: 1em;
+    box-shadow: var(--shadow-button)
 }
 
-@media only screen and (max-width: 800px) {
+footer .card-pic {
+    width: 60px;
+    height: 60px;
+}
+
+@media only screen and (max-width: 840px) {
     
     html {
         --related-space: 0.375em;
@@ -226,7 +265,67 @@ footer {
         --h4-size: 1.5em;
         --p-size: 1.25em;
 
-        --body-height: 3120px;
         --header-height: 8.5em;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    html {
+        --footer-height: 24em;
+    }
+
+    .skills-info .skill-card,
+    .projects-info .project-card,
+    .ref-info .ref-card,
+    footer .footer-card {
+        flex: 0 1 38%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    html {
+        --related-space: 0.25em;
+        --unrelated-space: 1em;
+
+        --h1-size: 1.75em;
+        --h2-size: 1.75em;
+        --h3-size: 1.375em;
+        --h4-size: 1.375em;
+        --p-size: 1.25em;
+
+        --header-height: 7em;
+        --footer-height: 22em;
+    }
+
+    .card-bio .bio-pic {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skills-info .skill-card,
+    .projects-info .project-card,
+    .ref-info .ref-card,
+    footer .footer-card {
+        margin: 0.5em 0;
+    }
+
+    .skills-info .card-pic,
+    .projects-info .card-pic,
+    .ref-info .card-pic,
+    footer .card-pic {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media only screen and (max-width: 342px) {
+    html {
+        --h1-size: 1.5em;
+        --h2-size: 1.5em;
+        --h3-size: 1.25em;
+        --h4-size: 1.25em;
+        --p-size: 1.125em;
+
+        --header-height: 6.5em;
     }
 }
