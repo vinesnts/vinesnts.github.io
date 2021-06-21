@@ -168,6 +168,11 @@ header h3 {
     margin-bottom: var(--unrelated-space);
 }
 
+.card-bio .bio-info .profile-text {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 .skills-info,
 .projects-info,
 .ref-info,
