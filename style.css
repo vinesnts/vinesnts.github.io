@@ -4,15 +4,18 @@
 
 html {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    --primary-color: #462B81;
+    font-weight: 500;
+    --primary-color: #3A069E;
     --light-primary-color: #D1C2F2;
     --white-color: #fff;
     --light-color: #e4e4e4;
     --black-color: #333;
-    --dark-shadow-color: rgba(0,0,0,0.2);
+    --dark-shadow-color: rgba(0,0,0,0.1);
 
-    --shadow-button: 2px 2px 10px var(--dark-shadow-color);
+    --shadow-button: 4px 4px 20px var(--dark-shadow-color),
+                    -4px -4px 20px var(--dark-shadow-color),
+                    4px 4px 20px rgba(255,255,255,0.2),
+                    -4px -4px 20px rgba(255,255,255,0.2);
 
     --related-space: 0.375em;
     --unrelated-space: 1.25em;
@@ -23,7 +26,7 @@ html {
     --h4-size: 1.5em;
     --p-size: 1.375em;
 
-    --header-height: 16.75em;
+    --header-height: 12.75em;
     --footer-height: calc(8.875em + var(--header-height));
 }
 
@@ -34,11 +37,11 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 p, h3, h4, h5, h6 {
-    font-weight: 400;
+    font-weight: 500;
 }
 
 h1, h2 {
-    font-size: 500;
+    font-size: 600;
     font-size: var(--h1-size);
 }
 
@@ -69,7 +72,17 @@ body {
     flex-direction: column;
     position: relative;
     margin: 0;
-    background-color: var(--light-primary-color);
+    /* background-color: var(--light-primary-color); */
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 60vh;
+    border-bottom-left-radius: 64px;
+    border-bottom-right-radius: 64px;
+    background-color: var(--primary-color);
 }
 
 header {
@@ -85,13 +98,13 @@ header {
 header h1 {
     /* margin-top: var(--unrelated-space); */
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--white-color);
 }
 
 header h3 {
     margin-top: var(--related-space);
-    margin-bottom: var(--unrelated-space);
-    color: var(--primary-color);
+    margin-bottom: var(--related-space);
+    color: var(--white-color);
 }
 
 .footer {
@@ -115,19 +128,29 @@ header h3 {
 .main-card {
     position: relative;
     z-index: 2;
-    max-width: 800px;
-    width: 95%;
-    margin: 0 auto;
+    /* max-width: 800px; */
+    width: 100%;
+    /* margin: 0 auto; */
     top: var(--header-height);
     padding: 1em 1em 6em 1em;
-    border-radius: 35px;
+    /* border-radius: 35px; */
+    /* background-color: var(--white-color); */
+    /* box-shadow: var(--shadow-button) */
+}
+
+.card {
+    max-width: 800px;
+    width: 95%;
+    margin: 4em auto;
+    padding: 1em 1em 6em 1em;
+    border-radius: 64px;
     background-color: var(--white-color);
     box-shadow: var(--shadow-button)
 }
 
 .main-card .content {
-    max-width: 600px;
-    margin: 0 auto;
+    /* max-width: 600px; */
+    /* margin: 0 auto; */
 }
 
 .main-card .card-dash {
@@ -153,7 +176,8 @@ header h3 {
     width: 200px;
     height: 200px;
     border-radius: 200px;
-    background-color: var(--primary-color);
+    background: var(--primary-color) url('/profile-pic.jpg') no-repeat 50% 20%;
+    background-size: 115%;
     box-shadow: var(--shadow-button)
 }
 
@@ -165,12 +189,14 @@ header h3 {
 .card-bio .bio-info .profile-job {
     text-align: center;
     margin-top: var(--related-space);
-    margin-bottom: var(--unrelated-space);
+    margin-bottom: var(--related-space);
 }
 
 .card-bio .bio-info .profile-text {
-    text-align: justify;
+    margin-top: var(--related-space);
+    text-align: center;
     text-justify: inter-word;
+    line-height: var(--p-size);
 }
 
 .skills-info,
@@ -189,7 +215,7 @@ footer {
 .ref-info .ref-title,
 .contact-info .contact-title {
     flex: 1 1 100%;
-    margin-top: var(--unrelated-space);
+    /* margin-top: var(--unrelated-space); */
     margin-bottom: var(--related-space);
     text-align: center;
 }
@@ -250,7 +276,6 @@ footer .card-pic {
     border: 1px solid var(--black-color);
     border-radius: 5px;
     padding: 1em;
-    box-shadow: var(--shadow-button)
 }
 
 footer .card-pic {
