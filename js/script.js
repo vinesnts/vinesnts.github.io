@@ -2,7 +2,6 @@ const scrollOffset = 5;
 const scrollElementTrigger = document.querySelector("*[data-animate='trigger-fade-out']");
 const scrollElement = document.querySelector("*[data-animate='fade-out']");
 
-const scrollOffsetFadeIn = 70;
 const scrollElementFadeInTrigger = document.querySelector("*[data-animate='trigger-fade-in']");
 const scrollElementFadeIn = document.querySelector("*[data-animate='fade-in']");
 
@@ -43,5 +42,5 @@ const handleScrollAnimation = (scrollElementTrigger, scrollElement, scrollOffset
 
 window.addEventListener('scroll', () => {
     handleScrollAnimation(scrollElementTrigger, scrollElement, scrollOffset);
-    handleScrollAnimation(scrollElementFadeInTrigger, scrollElementFadeIn, scrollOffsetFadeIn, false);
+    handleScrollAnimation(scrollElementFadeInTrigger, scrollElementFadeIn, scrollOffset, false);
 })
