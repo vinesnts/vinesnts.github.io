@@ -1,0 +1,75 @@
+svg {
+    --svg-black-color: #333333;
+    --svg-light-color: #fff;
+    --svg-dark-color: #CDE300;
+    position: relative;
+    fill-opacity: 0;
+    font-size: 5.5rem;
+    font-weight: 800;
+}
+
+svg #id {
+    transform: translateX(-50%);
+}
+
+svg #V {
+    fill: var(--svg-light-color);
+    fill-opacity: 1;
+    transform: translateX(31%) translateY(12.5%) rotate(0deg) scale(80);
+}
+
+svg #A {
+    position: absolute;
+    fill: var(--svg-dark-color);
+    fill-opacity: 0.9;
+    transform: translateX(31%) translateY(12.5%) rotate(0deg) scale(80);
+}
+
+svg #bar1,
+svg #bar2 {
+    position: absolute;
+    fill-opacity: 0;
+    transform: translateX(32%) translateY(12.5%) scale(80);
+}
+
+svg #bar2 {
+    fill: var(--svg-dark-color);
+}
+
+svg #bar1 {
+    fill: var(--svg-light-color);
+}
+
+svg #name {
+    font-size: 0.375rem;
+    opacity: 0;
+    transform: translateX(29%) translateY(0%);
+}
+
+svg #V,
+svg #A {
+    transition: all 1s ease;
+}
+
+svg #bar1,
+svg #bar2 {
+    transition: all 1s ease-in;
+}
+
+svg:hover #V {
+    transform: translateX(42%) translateY(95%) rotate(-90deg) scale(80);
+}
+
+svg:hover #A {
+    transform: translateX(18%) translateY(95%) rotate(-90deg) scale(80);
+}
+
+svg:hover #bar1 {
+    fill-opacity: 1;
+    transform: translateX(31%) translateY(14.5%) scale(80);
+}
+
+svg:hover #bar2 {
+    fill-opacity: 0.9;
+    transform: translateX(29%) translateY(12.5%) scale(80);
+}

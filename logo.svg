@@ -1,8 +1,0 @@
-<svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
-    <g id="initial">
-        <text id="V" style="white-space: pre" font-family="Montserrat" letter-spacing="0em"><tspan x="2" y="72">V</tspan></text>
-        <text id="A" style="white-space: pre" font-family="Montserrat" letter-spacing="0em"><tspan x="2" y="62">V</tspan></text>
-        <text id="bar" style="white-space: pre" font-family="Montserrat" letter-spacing="0em"><tspan x="6" y="83">/</tspan></text>
-        <!-- <text id="name" xml:space="preserve" style="white-space: pre" font-family="Montserrat" letter-spacing="0em"><tspan x="0" y="61">Vínícius Almeida Dev</tspan></text> -->
-    </g>
-</svg>
