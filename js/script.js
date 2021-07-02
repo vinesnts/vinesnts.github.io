@@ -9,8 +9,6 @@ const scrollElementFadeIn = document.querySelector("*[data-animate='fade-in']");
 const elementInView = (el, offset = 0) => {
     const elementTop = el.getBoundingClientRect().top;
     const clientHeight = window.innerHeight || document.documentElement.clientHeight;
-    console.log(clientHeight - offset)
-    console.log((clientHeight * offset) / 100);
     return (
         elementTop <= 
             ((clientHeight * offset) / 100)
