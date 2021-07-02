@@ -8,11 +8,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="logo.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/logo.css">
+    <link href="node_modules/aos/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header data-animate="fade-out">
         <div class="header-pic">
             <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
                 <g id="initial">
@@ -23,12 +24,15 @@
                 </g>
             </svg>
         </div>
-        <h3>&ltALMEIDA.DEV /&gt</h3>
-        <h1>Precisando de um site?</h1>
+        <!-- <h3>losango.dev</h3> -->
+        <!-- <h1 style="margin-top: var(--related-space);">Precisando de um site?</h1> -->
     </header>
     <div class="main-card">
         <div class="content">
-            <div class="card card-bio">
+            <div class="card card-bio"
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom"
+                data-animate="trigger-fade-out">
                 <div class="card-dash">
                     <span></span>
                 </div>
@@ -45,13 +49,15 @@
                     </p>
                 </div>
             </div>
-            <div class="card skills-info">
+            <div class="card skills-info"
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom">
                 <div class="card-dash">
                     <span></span>
                 </div>
                 <h2 class="skills-title">Skills</h2>
                 <div class="skill-card">
-                    <div class="card-pic"></div>
+                    <div class="card-pic frontend"></div>
                     <h4 class="card-title">Front-end</h4>
                     <ul>
                         <li>HTML/CSS</li>
@@ -62,7 +68,7 @@
                     </ul>
                 </div>
                 <div class="skill-card">
-                    <div class="card-pic"></div>
+                    <div class="card-pic backend"></div>
                     <h4 class="card-title">Back-end</h4>
                     <ul>
                         <li>Django / Python</li>
@@ -74,7 +80,7 @@
                     </ul>
                 </div>
                 <div class="skill-card">
-                    <div class="card-pic"></div>
+                    <div class="card-pic design"></div>
                     <h4 class="card-title">Design</h4>
                     <ul>
                         <li>Figma</li>
@@ -82,52 +88,65 @@
                     </ul>
                 </div>
             </div>
-            <div class="card projects-info">
+            <div class="card projects-info"
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom">
                 <div class="card-dash">
                     <span></span>
                 </div>
                 <h2 class="projects-title">Projetos</h2>
                 <div class="project-card">
-                    <div class="card-pic"></div>
+                    <div class="card-pic casaong"></div>
                     <h4 class="card-title">
-                        <a href="#">
-                            Casaong.org
+                        <a href="https://casaong.org" target="blank">
+                            CASA ONG
                         </a>
                     </h4>
                 </div>
                 <div class="project-card">
-                    <div class="card-pic"></div>
+                    <div class="card-pic lapa"></div>
                     <h4 class="card-title">
-                        <a href="#">
+                        <a href="http://sistemas.ufape.edu.br/lapa/" target="blank">
                             LAPA UFAPE
                         </a>
                     </h4>
                 </div>
                 <div class="project-card">
-                    <div class="card-pic"></div>
+                    <div class="card-pic gestor"></div>
                     <h4 class="card-title">
-                        <a href="#">
-                            DaRoca
+                        <a href="https://www.showtecnologia.com/" target="blank">
+                            Gestor
                         </a>
                     </h4>
                 </div>
                 <div class="project-card">
-                    <div class="card-pic"></div>
+                    <div class="card-pic daroca"></div>
                     <h4 class="card-title">
-                        <a href="#">
-                            Horar.io
+                        <a href="https://www.instagram.com/daroca.amesa/" target="blank">
+                            DaRoça
+                        </a>
+                    </h4>
+                </div>
+                <div class="project-card">
+                    <div class="card-pic meupregao"></div>
+                    <h4 class="card-title">
+                        <a href="https://www.meupregao.com/" target="blank">
+                            meupregão
                         </a>
                     </h4>
                 </div>
             </div>
-            <div class="card ref-info">
+            <div class="card ref-info"
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom"
+                data-animate="trigger-fade-in">
                 <div class="card-dash">
                     <span></span>
                 </div>
                 <h2 class="ref-title">Referenciais</h2>
                 <p class="ref-note">Onde eu trabalhei</p>
                 <div class="ref-card">
-                    <div class="card-pic"></div>
+                    <div class="card-pic tecnosolve"></div>
                     <h4 class="card-title">
                         <a href="#">
                             Tecnosolve
@@ -135,15 +154,15 @@
                     </h4>
                 </div>
                 <div class="ref-card">
-                    <div class="card-pic"></div>
+                    <div class="card-pic showtecnologia"></div>
                     <h4 class="card-title">
-                        <a href="#">
+                        <a href="https://www.showtecnologia.com/" target="blank">
                             Show Tecnologia
                         </a>
                     </h4>
                 </div>
                 <div class="ref-card">
-                    <div class="card-pic"></div>
+                    <div class="card-pic casaong"></div>
                     <h4 class="card-title">
                         <a href="#">
                             CASA ONG
@@ -151,7 +170,7 @@
                     </h4>
                 </div>
                 <div class="ref-card">
-                    <div class="card-pic"></div>
+                    <div class="card-pic ufape"></div>
                     <h4 class="card-title">
                         <a href="#">
                             UFAPE
@@ -159,7 +178,7 @@
                     </h4>
                 </div>
                 <div class="ref-card">
-                    <div class="card-pic"></div>
+                    <div class="card-pic alive"></div>
                     <h4 class="card-title">
                         <a href="#">
                             Alive SI
@@ -167,7 +186,7 @@
                     </h4>
                 </div>
             </div>
-            <div class="card contact-info">
+            <!-- <div class="card contact-info">
                 <div class="card-dash">
                     <span></span>
                 </div>
@@ -186,16 +205,16 @@
                         <textarea type="text" rows="8" class="form-control"></textarea>
                     </div>
                 </form>
-            </div>
+            </div> -->
         </div>
     </div>
     <div class="footer-space">
         <!-- Element to reserve footer space -->
     </div>
-    <footer>
+    <footer data-animate="fade-in">
         <div class="footer">
             <div class="footer-card">
-                <div class="card-pic"></div>
+                <div class="card-pic email"></div>
                 <div class="card-title">
                     <a href="#">
                         vinicius@almeida.dev
@@ -203,7 +222,7 @@
                 </div>
             </div>
             <div class="footer-card">
-                <div class="card-pic"></div>
+                <div class="card-pic phone"></div>
                 <div class="card-title">
                     <a href="#">
                         + 55 81 981645401
@@ -211,7 +230,7 @@
                 </div>
             </div>
             <div class="footer-card">
-                <div class="card-pic"></div>
+                <div class="card-pic linkedin"></div>
                 <div class="card-title">
                     <a href="#">
                         LinkedIn
@@ -219,6 +238,11 @@
                 </div>
             </div>
         </div>
+        <script src="node_modules/aos/dist/aos.js"></script>
+        <script src="js/script.js"></script>
+        <script>
+            AOS.init();
+        </script>
     </footer>
 </body>
 </html>

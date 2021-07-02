@@ -26,8 +26,8 @@ html {
     --h4-size: 1.5em;
     --p-size: 1.375em;
 
-    --header-height: 12.75em;
-    --footer-height: calc(8.875em + var(--header-height));
+    --header-height: 6em;
+    --footer-height: calc(var(--header-height));
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -141,16 +141,11 @@ header h3 {
 .card {
     max-width: 800px;
     width: 95%;
-    margin: 4em auto;
+    margin: 0 auto 4em auto;
     padding: 1em 1em 6em 1em;
     border-radius: 64px;
     background-color: var(--white-color);
     box-shadow: var(--shadow-button)
-}
-
-.main-card .content {
-    /* max-width: 600px; */
-    /* margin: 0 auto; */
 }
 
 .main-card .card-dash {
@@ -176,7 +171,7 @@ header h3 {
     width: 200px;
     height: 200px;
     border-radius: 200px;
-    background: var(--primary-color) url('/profile-pic.jpg') no-repeat 50% 20%;
+    background: var(--primary-color) url('../assets/profile-pic.jpg') no-repeat 50% 20%;
     background-size: 115%;
     box-shadow: var(--shadow-button)
 }
@@ -215,7 +210,6 @@ footer {
 .ref-info .ref-title,
 .contact-info .contact-title {
     flex: 1 1 100%;
-    /* margin-top: var(--unrelated-space); */
     margin-bottom: var(--related-space);
     text-align: center;
 }
@@ -258,8 +252,91 @@ footer .card-pic {
     width: 100px;
     height: 100px;
     border-radius: 200px;
-    background-color: var(--primary-color);
+    background: var(--primary-color) no-repeat 50% 50%;
+    background-size: 60%;
     box-shadow: var(--shadow-button)
+}
+
+.card-pic.frontend {
+    background-image: url('../assets/icon/frontend-simple-icon.png');
+    background-size: 70%;
+}
+
+.card-pic.backend {
+    background-image: url('../assets/icon/backend-simple-icon.png');
+}
+
+.card-pic.design {
+    background-image: url('../assets/icon/design-simple-icon.png');
+}
+
+.card-pic.email {
+    background-image: url('../assets/icon/email-icon.png');
+}
+
+.card-pic.phone {
+    background-image: url('../assets/icon/phone-icon.png');
+    background-size: 50%;
+}
+
+.card-pic.linkedin {
+    background-image: url('../assets/logo/linkedin-icon.png');
+    background-size: 50%;
+}
+
+.card-pic.casaong {
+    background-color: #BEF0B8;
+    background-image: url('../assets/logo/casaong-icon.png');
+    background-size: 80%;
+}
+
+.card-pic.lapa {
+    background-color: #FFF;
+    background-image: url('../assets/logo/lapa-icon.png');
+    background-size: 55%;
+}
+
+.card-pic.daroca {
+    background-color: #DCFFEE;
+    background-image: url('../assets/logo/daroca-icon.png');
+    background-size: 70%;
+}
+
+.card-pic.tecnosolve {
+    background-color: rgb(0,39,96);
+    background-image: url('../assets/logo/tecnosolve.webp');
+    background-position: center;
+    background-size: 125%;
+}
+
+.card-pic.showtecnologia {
+    background-color: #FFFFFF;
+    background-image: url('../assets/logo/showtecnologia.png');
+    background-size: 110%;
+}
+
+.card-pic.gestor {
+    background-color: #08469a;
+    background-image: url('../assets/logo/gestor-showtecnologia.png');
+    background-size: 95%;
+}
+
+.card-pic.ufape {
+    background-color: #1B2D4F;
+    background-image: url('../assets/logo/ufape.png');
+    background-size: 50%;
+}
+
+.card-pic.alive {
+    background-color: #FFFFFF;
+    background-image: url('../assets/logo/alive.png');
+    background-size: 100%;
+}
+
+.card-pic.meupregao {
+    background-color: #FFFFFF;
+    background-image: url('../assets/logo/meupregao-logo.png');
+    background-size: 50%;
 }
 
 .contact-info form {
@@ -294,14 +371,16 @@ footer .card-pic {
         --h3-size: 1.5em;
         --h4-size: 1.5em;
         --p-size: 1.25em;
+    }
 
-        --header-height: 12.5em;
+    .card {
+        margin: 0 auto 3em auto;
     }
 }
 
 @media only screen and (max-width: 600px) {
     html {
-        --footer-height: 28em;
+        --footer-height: 22em;
     }
 
     .skills-info .skill-card,
@@ -323,8 +402,8 @@ footer .card-pic {
         --h4-size: 1.375em;
         --p-size: 1.25em;
 
-        --header-height: 11.5em;
-        --footer-height: 26em;
+        --header-height: 8.5em;
+        --footer-height: 18em;
     }
 
     .card-bio .bio-pic {
@@ -356,4 +435,22 @@ footer .card-pic {
         --h4-size: 1.25em;
         --p-size: 1.125em;
     }
+}
+
+*[data-animate="fade-out"] {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+*[data-animate="fade-out"].scrolled {
+    opacity: 0;
+}
+
+*[data-animate="fade-in"] {
+    opacity: 0;
+    transition: opacity 300ms;
+}
+
+*[data-animate="fade-in"].scrolled {
+    opacity: 1;
 }
