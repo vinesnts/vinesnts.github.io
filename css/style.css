@@ -117,6 +117,7 @@ header h3 {
     max-width: 800px;
     margin: 0 auto;
     margin-bottom: var(--unrelated-space);
+    z-index: 2;
 }
 
 .footer-space {
