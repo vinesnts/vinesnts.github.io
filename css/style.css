@@ -449,9 +449,11 @@ footer .card-pic {
 
 *[data-animate="fade-in"] {
     opacity: 0;
+    z-index: 0;
     transition: opacity 300ms;
 }
 
 *[data-animate="fade-in"].scrolled {
     opacity: 1;
+    z-index: 3;
 }
