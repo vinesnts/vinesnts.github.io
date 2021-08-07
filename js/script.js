@@ -1,14 +1,36 @@
-const scrollOffset = 5;
+const scrollOffset = 10;
 const scrollElementTrigger = document.querySelector("*[data-animate='trigger-fade-out']");
 const scrollElement = document.querySelector("*[data-animate='fade-out']");
 
-const scrollOffsetFadeIn = 25;
+const scrollOffsetFadeIn = 35;
 const scrollElementFadeInTrigger = document.querySelector("*[data-animate='trigger-fade-in']");
 const scrollElementFadeIn = document.querySelector("*[data-animate='fade-in']");
 
-const elementInView = (el, offset = 0) => {
+const scrollOffsetAnimate = 10;
+const scrollElementAnimateTrigger = document.querySelector("#navbar");
+const scrollElementAnimate = scrollElementAnimateTrigger;
+
+const scrollOffsetBio = 50;
+const highlightBio = document.querySelector("a[href='#bio']");
+const highlightBioTrigger = document.querySelector("#bio");
+
+const scrollOffsetSkill = 10;
+const highlightSkill = document.querySelector("a[href='#skills']");
+const highlightSkillTrigger = document.querySelector("#skills");
+
+const scrollOffsetProjects = 10;
+const highlightProjects = document.querySelector("a[href='#projects']");
+const highlightProjectsTrigger = document.querySelector("#projects");
+
+const scrollOffsetRef = 10;
+const highlightRef = document.querySelector("a[href='#ref']");
+const highlightRefTrigger = document.querySelector("#ref");
+
+const elementInView = (el, offset = 0, t = false) => {
     const elementTop = el.getBoundingClientRect().top;
     const clientHeight = window.innerHeight || document.documentElement.clientHeight;
+    
+    if (t) console.log((elementTop <= ((clientHeight * offset) / 100)));
     return (
         elementTop <= 
             ((clientHeight * offset) / 100)
@@ -23,7 +45,7 @@ const hideScrollElement = (scrollElement) => {
     scrollElement.classList.remove('scrolled');
 }
 
-const handleScrollAnimation = (scrollElementTrigger, scrollElement, scrollOffset, fadeOut = true) => {
+const handleScrollFade = (scrollElementTrigger, scrollElement, scrollOffset, fadeOut = true) => {
     if (fadeOut) {
         if (elementInView(scrollElementTrigger, scrollOffset)) {
             displayScrollElement(scrollElement);
@@ -39,7 +61,32 @@ const handleScrollAnimation = (scrollElementTrigger, scrollElement, scrollOffset
     }
 }
 
+const handleScrollColorNavbar = (scrollElementTrigger, scrollElement, scrollOffset) => {
+    if (elementInView(scrollElementTrigger, scrollOffset)) {
+        scrollElement.classList = "navbar darken";
+    } else {
+        scrollElement.classList = "navbar";
+    }
+}
+
+const handleScrollHighlight = (scrollElementTrigger, scrollElement, scrollOffset, t = true) => {
+    if (elementInView(scrollElementTrigger, scrollOffset, t)) {
+        highlightBio.classList = "";
+        highlightSkill.classList = "";
+        highlightProjects.classList = "";
+        highlightRef.classList = "";
+        scrollElement.classList = "active";
+    } else {
+        scrollElement.classList = "";
+    }
+}
+
 window.addEventListener('scroll', () => {
-    handleScrollAnimation(scrollElementTrigger, scrollElement, scrollOffset);
-    handleScrollAnimation(scrollElementFadeInTrigger, scrollElementFadeIn, scrollOffsetFadeIn, false);
+    handleScrollFade(scrollElementTrigger, scrollElement, scrollOffset);
+    handleScrollFade(scrollElementFadeInTrigger, scrollElementFadeIn, scrollOffsetFadeIn, false);
+    handleScrollColorNavbar(scrollElementAnimateTrigger, scrollElementAnimate, scrollOffsetAnimate);
+    handleScrollHighlight(highlightBioTrigger, highlightBio, scrollOffsetBio);
+    handleScrollHighlight(highlightSkillTrigger, highlightSkill, scrollOffsetSkill);
+    handleScrollHighlight(highlightProjectsTrigger, highlightProjects, scrollOffsetProjects);
+    handleScrollHighlight(highlightRefTrigger, highlightRef, scrollOffsetRef);
 })

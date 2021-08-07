@@ -1,0 +1,448 @@
+footer .footer, .main-container__card.skills, .main-container__card.projects, .main-container__card.ref, .main-container__card.contact {
+  display: flex;
+  flex-direction: row;
+}
+
+footer .footer__card {
+  display: flex;
+  flex-direction: column;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 0;
+}
+body::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 60vh;
+  border-bottom-left-radius: 64px;
+  border-bottom-right-radius: 64px;
+  background-color: #3A069E;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+h2, h1 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 1.375em;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.anchor {
+  display: block;
+  position: relative;
+  visibility: hidden;
+  top: -6em;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 1em;
+  position: fixed;
+}
+header .header__content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  max-width: 832px;
+  padding: 0 1em;
+  width: 100%;
+}
+header .header__content__title * {
+  vertical-align: middle;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 0.375em;
+  margin-bottom: 0.375em;
+  color: #fff;
+}
+
+.main-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 832px;
+  margin: 0 auto;
+  top: 6em;
+  padding: 1em 1em 6em 1em;
+}
+.main-container .navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 4;
+}
+.main-container .navbar ul {
+  display: flex;
+  max-width: 800px;
+  padding: 1em;
+  margin: 0 auto 1em auto;
+}
+.main-container .navbar a {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  color: #fff;
+  text-decoration: none;
+}
+.main-container .navbar a.active {
+  background-color: #fff;
+  color: #333;
+  border-radius: 12px;
+}
+.main-container .navbar.darken {
+  background-color: #3A069E;
+}
+.main-container__card {
+  margin: 0 1em 4em 1em;
+  padding: 1em 1em 6em 1em;
+  border-radius: 36px;
+  background-color: #fff;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1), -4px -4px 20px rgba(0, 0, 0, 0.1), 4px 4px 20px rgba(255, 255, 255, 0.2), -4px -4px 20px rgba(255, 255, 255, 0.2);
+}
+.main-container__card.bio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-container__card.skills, .main-container__card.projects, .main-container__card.ref, .main-container__card.contact {
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.main-container__card .bio__pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+  background: #3A069E url("../../assets/profile-pic-vector.png") no-repeat 50% 20%;
+  background-size: 115%;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1), -4px -4px 20px rgba(0, 0, 0, 0.1), 4px 4px 20px rgba(255, 255, 255, 0.2), -4px -4px 20px rgba(255, 255, 255, 0.2);
+}
+.main-container__card .bio__info__profile-name {
+  text-align: center;
+  margin-top: 0.375em;
+}
+.main-container__card .bio__info__profile-text {
+  margin-top: 0.375em;
+  text-align: center;
+  text-justify: inter-word;
+  line-height: 1.375em;
+}
+.main-container__card .bio__info__profile-job {
+  text-align: center;
+  margin-top: 0.375em;
+  margin-bottom: 0.375em;
+}
+.main-container__card .skills__title,
+.main-container__card .projects__title,
+.main-container__card .ref__title,
+.main-container__card .contact__title {
+  flex: 1 1 100%;
+  margin-bottom: 0.375em;
+  text-align: center;
+}
+.main-container__card .skills__note,
+.main-container__card .projects__note,
+.main-container__card .ref__note,
+.main-container__card .contact__note {
+  flex: 1 1 100%;
+  text-align: center;
+}
+.main-container__card .skills__card,
+.main-container__card .projects__card,
+.main-container__card .ref__card,
+.main-container__card .contact__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 1 25%;
+  margin: 0 1em;
+  margin-top: 1.25em;
+  text-align: center;
+}
+.main-container__card .skills__card__title,
+.main-container__card .projects__card__title,
+.main-container__card .ref__card__title,
+.main-container__card .contact__card__title {
+  margin-top: 0.375em;
+}
+.main-container__card .skills__card__title a,
+.main-container__card .projects__card__title a,
+.main-container__card .ref__card__title a,
+.main-container__card .contact__card__title a {
+  color: #333;
+  text-decoration: none;
+}
+.main-container__card .skills__card__title a:active, .main-container__card .skills__card__title a:hover,
+.main-container__card .projects__card__title a:active,
+.main-container__card .projects__card__title a:hover,
+.main-container__card .ref__card__title a:active,
+.main-container__card .ref__card__title a:hover,
+.main-container__card .contact__card__title a:active,
+.main-container__card .contact__card__title a:hover {
+  text-decoration: underline;
+}
+.main-container__card .skills__card__pic,
+.main-container__card .projects__card__pic,
+.main-container__card .ref__card__pic,
+.main-container__card .contact__card__pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 200px;
+  background: #3A069E no-repeat 50% 50%;
+  background-size: 60%;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1), -4px -4px 20px rgba(0, 0, 0, 0.1), 4px 4px 20px rgba(255, 255, 255, 0.2), -4px -4px 20px rgba(255, 255, 255, 0.2);
+}
+.main-container__card .skills__card__pic.frontend,
+.main-container__card .projects__card__pic.frontend,
+.main-container__card .ref__card__pic.frontend,
+.main-container__card .contact__card__pic.frontend {
+  background-image: url("../../assets/icon/frontend-simple-icon.png");
+  background-size: 70%;
+}
+.main-container__card .skills__card__pic.backend,
+.main-container__card .projects__card__pic.backend,
+.main-container__card .ref__card__pic.backend,
+.main-container__card .contact__card__pic.backend {
+  background-image: url("../../assets/icon/backend-simple-icon.png");
+}
+.main-container__card .skills__card__pic.design,
+.main-container__card .projects__card__pic.design,
+.main-container__card .ref__card__pic.design,
+.main-container__card .contact__card__pic.design {
+  background-image: url("../../assets/icon/design-simple-icon.png");
+}
+.main-container__card .skills__card__pic.email,
+.main-container__card .projects__card__pic.email,
+.main-container__card .ref__card__pic.email,
+.main-container__card .contact__card__pic.email {
+  background-image: url("../../assets/icon/email-icon.png");
+}
+.main-container__card .skills__card__pic.phone,
+.main-container__card .projects__card__pic.phone,
+.main-container__card .ref__card__pic.phone,
+.main-container__card .contact__card__pic.phone {
+  background-image: url("../../assets/icon/phone-icon.png");
+  background-size: 50%;
+}
+.main-container__card .skills__card__pic.linkedin,
+.main-container__card .projects__card__pic.linkedin,
+.main-container__card .ref__card__pic.linkedin,
+.main-container__card .contact__card__pic.linkedin {
+  background-image: url("../../assets/logo/linkedin-icon.png");
+  background-size: 50%;
+}
+.main-container__card .skills__card__pic.casaong,
+.main-container__card .projects__card__pic.casaong,
+.main-container__card .ref__card__pic.casaong,
+.main-container__card .contact__card__pic.casaong {
+  background-color: #BEF0B8;
+  background-image: url("../../assets/logo/casaong-icon.png");
+  background-size: 80%;
+}
+.main-container__card .skills__card__pic.lapa,
+.main-container__card .projects__card__pic.lapa,
+.main-container__card .ref__card__pic.lapa,
+.main-container__card .contact__card__pic.lapa {
+  background-color: #FFF;
+  background-image: url("../../assets/logo/lapa-icon.png");
+  background-size: 55%;
+}
+.main-container__card .skills__card__pic.daroca,
+.main-container__card .projects__card__pic.daroca,
+.main-container__card .ref__card__pic.daroca,
+.main-container__card .contact__card__pic.daroca {
+  background-color: #DCFFEE;
+  background-image: url("../../assets/logo/daroca-icon.png");
+  background-size: 70%;
+}
+.main-container__card .skills__card__pic.tecnosolve,
+.main-container__card .projects__card__pic.tecnosolve,
+.main-container__card .ref__card__pic.tecnosolve,
+.main-container__card .contact__card__pic.tecnosolve {
+  background-color: #002760;
+  background-image: url("../../assets/logo/tecnosolve.webp");
+  background-position: center;
+  background-size: 125%;
+}
+.main-container__card .skills__card__pic.showtecnologia,
+.main-container__card .projects__card__pic.showtecnologia,
+.main-container__card .ref__card__pic.showtecnologia,
+.main-container__card .contact__card__pic.showtecnologia {
+  background-color: #FFFFFF;
+  background-image: url("../../assets/logo/showtecnologia.png");
+  background-size: 110%;
+}
+.main-container__card .skills__card__pic.gestor,
+.main-container__card .projects__card__pic.gestor,
+.main-container__card .ref__card__pic.gestor,
+.main-container__card .contact__card__pic.gestor {
+  background-color: #08469a;
+  background-image: url("../../assets/logo/gestor-showtecnologia.png");
+  background-size: 95%;
+}
+.main-container__card .skills__card__pic.ufape,
+.main-container__card .projects__card__pic.ufape,
+.main-container__card .ref__card__pic.ufape,
+.main-container__card .contact__card__pic.ufape {
+  background-color: #1B2D4F;
+  background-image: url("../../assets/logo/ufape.png");
+  background-size: 50%;
+}
+.main-container__card .skills__card__pic.alive,
+.main-container__card .projects__card__pic.alive,
+.main-container__card .ref__card__pic.alive,
+.main-container__card .contact__card__pic.alive {
+  background-color: #FFFFFF;
+  background-image: url("../../assets/logo/alive.png");
+  background-size: 100%;
+}
+.main-container__card .skills__card__pic.meupregao,
+.main-container__card .projects__card__pic.meupregao,
+.main-container__card .ref__card__pic.meupregao,
+.main-container__card .contact__card__pic.meupregao {
+  background-color: #FFFFFF;
+  background-image: url("../../assets/logo/meupregao-logo.png");
+  background-size: 50%;
+}
+
+form {
+  width: 100%;
+}
+form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.25em;
+}
+form .form-group__form-control {
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 1em;
+}
+
+*[data-animate=fade-out] {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+*[data-animate=fade-out].scrolled {
+  opacity: 0;
+}
+
+*[data-animate=fade-in] {
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 300ms;
+}
+
+*[data-animate=fade-in].scrolled {
+  opacity: 1;
+  /* z-index: 3; */
+}
+
+footer .footer, .main-container__card.skills, .main-container__card.projects, .main-container__card.ref, .main-container__card.contact {
+  display: flex;
+  flex-direction: row;
+}
+
+footer .footer__card {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+footer .footer {
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 1.25em;
+}
+footer .footer__card {
+  align-items: center;
+  flex: 0 1 25%;
+  margin: 0 1em;
+  margin-top: 1.25em;
+  text-align: center;
+}
+footer .footer__card__pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 200px;
+  background: #3A069E no-repeat 50% 50%;
+  background-size: 60%;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1), -4px -4px 20px rgba(0, 0, 0, 0.1), 4px 4px 20px rgba(255, 255, 255, 0.2), -4px -4px 20px rgba(255, 255, 255, 0.2);
+}
+footer .footer__card__pic.email {
+  background-image: url("../../assets/icon/email-icon.png");
+}
+footer .footer__card__pic.phone {
+  background-image: url("../../assets/icon/phone-icon.png");
+}
+footer .footer__card__pic.linkedin {
+  background-image: url("../../assets/logo/linkedin-icon.png");
+}
+
+.footer-space {
+  position: relative;
+  bottom: 0px;
+  height: 6em;
+}
+
+/*# sourceMappingURL=style.css.map */

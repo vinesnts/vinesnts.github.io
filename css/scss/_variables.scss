@@ -1,0 +1,59 @@
+$primary-color: #3A069E;
+$light-primary-color: #D1C2F2;
+$white-color: #fff;
+$light-color: #e4e4e4;
+$black-color: #333;
+$dark-shadow-color: rgba(0,0,0,0.1);
+
+$shadow-button: 4px 4px 20px $dark-shadow-color,
+                -4px -4px 20px $dark-shadow-color,
+                4px 4px 20px rgba(255,255,255,0.2),
+                -4px -4px 20px rgba(255,255,255,0.2);
+
+$base-width: 832px;
+$related-space: 0.375em;
+$unrelated-space: 1.25em;
+
+$font-stack: 'Montserrat', sans-serif;
+$h1-size: 4em;
+$h2-size: 3em;
+$h3-size: 2em;
+$h4-size: 1.5em;
+$p-size: 1.375em;
+
+$header-height: 6em;
+$footer-height: $header-height;
+
+$border-radius-sm: 12px;
+$border-radius-md: 24px;
+$border-radius-lg: 36px;
+$border-radius-xl: 48px;
+
+$asset-pic-profile: url('../../assets/profile-pic-vector.png');
+
+$asset-icon-frontend: url('../../assets/icon/frontend-simple-icon.png');
+$asset-icon-backend: url('../../assets/icon/backend-simple-icon.png');
+$asset-icon-design: url('../../assets/icon/design-simple-icon.png');
+$asset-icon-email: url('../../assets/icon/email-icon.png');
+$asset-icon-phone: url('../../assets/icon/phone-icon.png');
+
+$asset-logo-linkedin: url('../../assets/logo/linkedin-icon.png');
+$asset-logo-casaong: url('../../assets/logo/casaong-icon.png');
+$asset-logo-lapa: url('../../assets/logo/lapa-icon.png');
+$asset-logo-daroca: url('../../assets/logo/daroca-icon.png');
+$asset-logo-tecnosolve: url('../../assets/logo/tecnosolve.webp');
+$asset-logo-showtecnologia: url('../../assets/logo/showtecnologia.png');
+$asset-logo-gestor: url('../../assets/logo/gestor-showtecnologia.png');
+$asset-logo-ufape: url('../../assets/logo/ufape.png');
+$asset-logo-alive: url('../../assets/logo/alive.png');
+$asset-logo-meupregao: url('../../assets/logo/meupregao-logo.png');
+
+%d-flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+%d-flex-column {
+    display: flex;
+    flex-direction: column;
+}

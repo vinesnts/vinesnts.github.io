@@ -1,0 +1,54 @@
+@import './variables';
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    .footer {
+        @extend %d-flex-row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        margin-bottom: $unrelated-space;
+    
+        &__card {
+            @extend %d-flex-column;
+            align-items: center;
+            flex: 0 1 25%;
+            margin: 0 1em;
+            margin-top: $unrelated-space;
+            text-align: center;
+            
+            &__pic {
+                width: 60px;
+                height: 60px;
+                border-radius: 200px;
+                background: $primary-color no-repeat 50% 50%;
+                background-size: 60%;
+                box-shadow: $shadow-button;
+        
+                &.email {
+                    background-image: $asset-icon-email;
+                }
+        
+                &.phone {
+                    background-image: $asset-icon-phone;
+                }
+        
+                &.linkedin {
+                    background-image: $asset-logo-linkedin;
+                }
+            }
+        }
+    
+    }
+}
+
+.footer-space {
+    position: relative;
+    bottom: 0px;
+    height: $footer-height;
+}

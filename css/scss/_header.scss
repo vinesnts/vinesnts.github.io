@@ -1,0 +1,30 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 1em;
+    position: fixed;
+
+    .header {
+        &__content {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            max-width: $base-width;
+            padding: 0 1em;
+            width: 100%;
+    
+            &__title * {
+                vertical-align: middle;
+                font-weight: 700;
+                color: $white-color;
+                margin-top: $related-space;
+                margin-bottom: $related-space;
+                color: $white-color;
+            }
+        }
+    }
+
+
+}

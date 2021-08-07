@@ -3,6 +3,7 @@
 }
 
 html {
+    scroll-behavior: smooth;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     --primary-color: #3A069E;
@@ -28,6 +29,11 @@ html {
 
     --header-height: 6em;
     --footer-height: calc(var(--header-height));
+
+    --border-radius-sm: 12px;
+    --border-radius-md: 24px;
+    --border-radius-lg: 36px;
+    --border-radius-xl: 48px;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -41,7 +47,7 @@ p, h3, h4, h5, h6 {
 }
 
 h1, h2 {
-    font-size: 600;
+    font-weight: 600;
     font-size: var(--h1-size);
 }
 
@@ -72,7 +78,6 @@ body {
     flex-direction: column;
     position: relative;
     margin: 0;
-    /* background-color: var(--light-primary-color); */
 }
 
 body::before {
@@ -87,16 +92,23 @@ body::before {
 
 header {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
     position: fixed;
-    text-align: center;
 }
 
-header h1 {
-    /* margin-top: var(--unrelated-space); */
+.header__content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    width: 100%;
+}
+
+.header__content__title * {
+    vertical-align: middle;
+    line-height: 2em;
     font-weight: 700;
     color: var(--white-color);
 }
@@ -107,35 +119,56 @@ header h3 {
     color: var(--white-color);
 }
 
-.footer {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    position: fixed;
-    bottom: 0px;
+.navbar {
+    position: sticky;
+    top: 0;
     width: 100%;
-    max-width: 800px;
     margin: 0 auto;
-    margin-bottom: var(--unrelated-space);
+    z-index: 4;
 }
 
-.footer-space {
-    position: relative;
-    bottom: 0px;
-    height: var(--footer-height);
+.navbar ul {
+    display: flex;
+    max-width: 800px;
+    padding: 1.5em 0;
+    margin: 0 auto 1em auto;
 }
+
+.navbar a {
+    padding: 1em;
+    margin: 0.125em;
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.navbar a.active {
+    background-color: var(--white-color);
+    color: var(--black-color);
+    border-radius: var(--border-radius-sm);
+}
+
+.navbar.navbar-darken {
+    background-color: var(--primary-color);
+}
+
+.anchor {
+    display: block;
+    position: relative;
+    visibility: hidden;
+    top: -6em;
+}
+
+
+
+
 
 .main-card {
     position: relative;
     z-index: 2;
-    /* max-width: 800px; */
     width: 100%;
-    /* margin: 0 auto; */
+    padding-top: 0;
     top: var(--header-height);
     padding: 1em 1em 6em 1em;
-    /* border-radius: 35px; */
-    /* background-color: var(--white-color); */
-    /* box-shadow: var(--shadow-button) */
 }
 
 .card {
@@ -143,7 +176,7 @@ header h3 {
     width: 95%;
     margin: 0 auto 4em auto;
     padding: 1em 1em 6em 1em;
-    border-radius: 64px;
+    border-radius: var(--border-radius-lg);
     background-color: var(--white-color);
     box-shadow: var(--shadow-button)
 }
@@ -171,7 +204,7 @@ header h3 {
     width: 200px;
     height: 200px;
     border-radius: 200px;
-    background: var(--primary-color) url('../assets/profile-pic.jpg') no-repeat 50% 20%;
+    background: var(--primary-color) url('../assets/profile-pic-vector.png') no-repeat 50% 20%;
     background-size: 115%;
     box-shadow: var(--shadow-button)
 }
@@ -373,6 +406,20 @@ footer .card-pic {
         --p-size: 1.25em;
     }
 
+    header h1, header h2 {
+        line-height: 4em;
+    }
+
+    .header__content {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    .navbar {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
     .card {
         margin: 0 auto 3em auto;
     }
@@ -381,6 +428,15 @@ footer .card-pic {
 @media only screen and (max-width: 600px) {
     html {
         --footer-height: 22em;
+    }
+
+    .header__content h1,
+    .header__content h2 {
+        font-size: 1.5em;
+    }
+
+    #logo-animation {
+        transform: scale(.70);
     }
 
     .skills-info .skill-card,
@@ -454,5 +510,5 @@ footer .card-pic {
 
 *[data-animate="fade-in"].scrolled {
     opacity: 1;
-    z-index: 3;
+    /* z-index: 3; */
 }
