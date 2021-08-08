@@ -11,7 +11,7 @@ header {
             position: relative;
             display: flex;
             justify-content: space-between;
-            max-width: $base-width;
+            max-width: var(--base-width);
             padding: 0 1em;
             width: 100%;
     
@@ -19,8 +19,8 @@ header {
                 vertical-align: middle;
                 font-weight: 700;
                 color: $white-color;
-                margin-top: $related-space;
-                margin-bottom: $related-space;
+                margin-top: var(--related-space);
+                margin-bottom: var(--related-space);
                 color: $white-color;
             }
         }

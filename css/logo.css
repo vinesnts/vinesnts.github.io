@@ -1,5 +1,7 @@
 .svg {
-    width: 120px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
 }
 
 svg {
@@ -13,7 +15,7 @@ svg {
 }
 
 svg g {
-    transform: translateX(-30px);;
+    transform: translateX(-25px);;
 }
 
 svg #V {
@@ -79,3 +81,9 @@ svg #bar1 {
     fill-opacity: 1;
     transform: translateX(30%) translateY(14.5%) scale(80);
 } */
+
+@media only screen and (max-width: 375px) {
+    svg {
+        transform: scale(.70);
+    }
+}

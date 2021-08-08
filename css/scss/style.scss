@@ -6,9 +6,9 @@
     position: relative;
     z-index: 2;
     width: 100%;
-    max-width: $base-width;
+    max-width: var(--base-width);
     margin: 0 auto;
-    top: $header-height;
+    top: var(--header-height);
     padding: 1em 1em 6em 1em;
 
     .navbar {
@@ -78,20 +78,20 @@
             &__info {
                 &__profile-name {
                     text-align: center;
-                    margin-top: $related-space;
+                    margin-top: var(--related-space);
                 }
     
                 &__profile-text {
-                    margin-top: $related-space;
+                    margin-top: var(--related-space);
                     text-align: center;
                     text-justify: inter-word;
-                    line-height: $p-size;
+                    line-height: var(--p-size);
                 }
 
                 &__profile-job {
                     text-align: center;
-                    margin-top: $related-space;
-                    margin-bottom: $related-space;
+                    margin-top: var(--related-space);
+                    margin-bottom: var(--related-space);
                 }
             }
 
@@ -103,7 +103,7 @@
         .contact {
             &__title {
                 flex: 1 1 100%;
-                margin-bottom: $related-space;
+                margin-bottom: var(--related-space);
                 text-align: center;
             }
 
@@ -118,11 +118,11 @@
                 align-items: center;
                 flex: 0 1 25%;
                 margin: 0 1em;
-                margin-top: $unrelated-space;
+                margin-top: var(--unrelated-space);
                 text-align: center;
 
                 &__title {
-                    margin-top: $related-space;
+                    margin-top: var(--related-space);
 
                     a {
                         color: $black-color;
@@ -238,7 +238,7 @@ form {
     .form-group {
         display: flex;
         flex-direction: column;
-        margin-top: $unrelated-space;
+        margin-top: var(--unrelated-space);
 
         &__form-control {
             border: 1px solid $black-color;
