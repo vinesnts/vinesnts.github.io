@@ -1,8 +1,8 @@
-const scrollOffset = 10;
+const scrollOffset = (screen.width > 413 ? 11 : 20);
 const scrollElementTrigger = document.querySelector("*[data-animate='trigger-fade-out']");
 const scrollElement = document.querySelector("*[data-animate='fade-out']");
 
-const scrollOffsetFadeIn = 35;
+const scrollOffsetFadeIn = 45;
 const scrollElementFadeInTrigger = document.querySelector("*[data-animate='trigger-fade-in']");
 const scrollElementFadeIn = document.querySelector("*[data-animate='fade-in']");
 
@@ -22,7 +22,7 @@ const scrollOffsetProjects = 10;
 const highlightProjects = document.querySelector("a[href='#projects']");
 const highlightProjectsTrigger = document.querySelector("#projects");
 
-const scrollOffsetRef = 10;
+const scrollOffsetRef = 30;
 const highlightRef = document.querySelector("a[href='#ref']");
 const highlightRefTrigger = document.querySelector("#ref");
 

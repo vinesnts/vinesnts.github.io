@@ -1,0 +1,27 @@
+@media only screen and (max-width: 768px) {
+    :root {
+
+        --base-padding: 0.5em;
+        --bottom-padding: 1.5em;
+        --card-padding: 2em;
+
+        --header-height: 10em;
+        --footer-height: 20em;
+    }
+
+    header {
+        margin: 0;
+        .header {
+            &__content {
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+        }
+    }
+
+    .main-container {
+        &__card {
+            border-radius: $border-radius-md;
+        }
+    }
+}

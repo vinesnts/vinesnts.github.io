@@ -17,10 +17,15 @@ footer .footer__card {
 :root {
   scroll-behavior: smooth;
   --base-width: 832px;
+  --base-padding: 1em;
+  --bottom-padding: 2.5em;
+  --card-padding: 3em;
+  --bottom-space: 1em;
+  --between-space-y: 1em;
   --related-space: 0.375em;
   --unrelated-space: 1.25em;
-  --header-height: 6em;
-  --footer-height: var(--header-height);
+  --header-height: 7em;
+  --footer-height: calc(var(--header-height) + 4em);
   --h1-size: 4em;
   --h2-size: 3em;
   --h3-size: 2em;
@@ -91,7 +96,10 @@ ul {
   display: block;
   position: relative;
   visibility: hidden;
-  top: -6em;
+  top: -10em;
+}
+.anchor#projects {
+  top: -10em;
 }
 
 header {
@@ -126,20 +134,23 @@ header .header__content__title * {
   max-width: var(--base-width);
   margin: 0 auto;
   top: var(--header-height);
-  padding: 1em 1em 6em 1em;
+  padding: 0 var(--base-padding);
+  padding-bottom: var(--bottom-padding);
 }
 .main-container .navbar {
   position: sticky;
   top: 0;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto var(--bottom-space) auto;
   z-index: 4;
+  overflow-y: auto;
 }
 .main-container .navbar ul {
+  background-color: #3A069E;
   display: flex;
   max-width: 800px;
-  padding: 1em;
-  margin: 0 auto 1em auto;
+  padding: var(--base-padding);
+  margin: 0 auto;
 }
 .main-container .navbar a {
   display: inline-block;
@@ -156,8 +167,10 @@ header .header__content__title * {
   background-color: #3A069E;
 }
 .main-container__card {
-  margin: 0 1em 4em 1em;
-  padding: 1em 1em 6em 1em;
+  margin: var(--base-padding);
+  margin-top: 0;
+  margin-bottom: var(--bottom-padding);
+  padding: var(--card-padding);
   border-radius: 36px;
   background-color: #fff;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1), -4px -4px 20px rgba(0, 0, 0, 0.1), 4px 4px 20px rgba(255, 255, 255, 0.2), -4px -4px 20px rgba(255, 255, 255, 0.2);
@@ -185,7 +198,7 @@ header .header__content__title * {
 }
 .main-container__card .bio__info__profile-text {
   margin-top: var(--related-space);
-  text-align: center;
+  text-align: justify;
   text-justify: inter-word;
   line-height: var(--p-size);
 }
@@ -218,7 +231,7 @@ header .header__content__title * {
   align-items: center;
   flex: 0 1 25%;
   margin: 0 1em;
-  margin-top: var(--unrelated-space);
+  margin-top: var(--between-space-y);
   text-align: center;
 }
 .main-container__card .skills__card__title,
@@ -448,6 +461,16 @@ footer .footer__card__pic.phone {
 footer .footer__card__pic.linkedin {
   background-image: url("../../assets/logo/linkedin-icon.png");
 }
+footer .footer__card__title {
+  padding: var(--related-space);
+}
+footer .footer__card__title a {
+  color: #333;
+  text-decoration: none;
+}
+footer .footer__card__title a:hover {
+  text-decoration: underline;
+}
 
 .footer-space {
   position: relative;
@@ -465,33 +488,22 @@ footer .footer__card__pic.linkedin {
     --h4-size: 1.5em;
     --p-size: 1.25em;
   }
-}
-@media only screen and (max-width: 600px) {
-  :root {
-    --footer-height: 22em;
+
+  .main-container__card {
+    border-radius: 36px;
+  }
+  .main-container__card .bio__pic {
+    width: 125px;
+    height: 125px;
   }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 768px) {
   :root {
-    --h1-size: 1.75em;
-    --h2-size: 1.75em;
-    --h3-size: 1.375em;
-    --h4-size: 1.375em;
-    --p-size: 1.25em;
-    --header-height: 8.5em;
-    --footer-height: 18em;
-    --base-width: 832px;
-    --related-space: 0.25em;
-    --unrelated-space: 1em;
-  }
-}
-@media only screen and (max-width: 375px) {
-  :root {
-    --h1-size: 1.75em;
-    --h2-size: var(--h1-size);
-    --h3-size: 1em;
-    --h4-size: 1em;
-    --p-size: 1.125em;
+    --base-padding: 0.5em;
+    --bottom-padding: 1.5em;
+    --card-padding: 2em;
+    --header-height: 10em;
+    --footer-height: 20em;
   }
 
   header {
@@ -500,6 +512,99 @@ footer .footer__card__pic.linkedin {
   header .header__content {
     flex-direction: column-reverse;
     align-items: center;
+  }
+
+  .main-container__card {
+    border-radius: 24px;
+  }
+}
+@media only screen and (max-width: 413px) {
+  :root {
+    --base-padding: 0.5em;
+    --h1-size: 1.75em;
+    --h2-size: 1.75em;
+    --h3-size: 1.375em;
+    --h4-size: 1.375em;
+    --p-size: 1.25em;
+    --header-height: 8.5em;
+    --footer-height: 15em;
+    --base-width: 832px;
+    --related-space: 0.25em;
+    --unrelated-space: 1em;
+  }
+
+  .main-container {
+    padding: var(--base-padding);
+    padding-bottom: var(--bottom-padding);
+  }
+  .main-container .navbar {
+    margin: var(--bottom-space) auto;
+  }
+  .main-container__card.skills, .main-container__card.projects, .main-container__card.ref {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main-container__card .skills__title,
+.main-container__card .projects__title,
+.main-container__card .ref__title {
+    width: 100%;
+  }
+  .main-container__card .skills__note,
+.main-container__card .projects__note,
+.main-container__card .ref__note {
+    width: 100%;
+  }
+  .main-container__card .skills__card,
+.main-container__card .projects__card,
+.main-container__card .ref__card {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .main-container__card .skills__card__pic,
+.main-container__card .projects__card__pic,
+.main-container__card .ref__card__pic {
+    width: 30px;
+    height: 30px;
+  }
+  .main-container__card .skills__card__title,
+.main-container__card .projects__card__title,
+.main-container__card .ref__card__title {
+    margin: 0;
+    margin-left: 1em;
+  }
+  .main-container__card .skills__card ul,
+.main-container__card .projects__card ul,
+.main-container__card .ref__card ul {
+    flex: 1 1 100%;
+    margin-left: 3.5em;
+    text-align: left;
+  }
+
+  footer .footer {
+    flex-direction: column;
+  }
+  footer .footer__card {
+    flex-direction: row;
+  }
+  footer .footer__card__pic {
+    width: 30px;
+    height: 30px;
+  }
+  footer .footer__card__title {
+    margin-left: 1em;
+  }
+}
+@media only screen and (max-width: 375px) {
+  :root {
+    --base-padding: 0.5em;
+    --bottom-padding: 1.5em;
+    --card-padding: 1.5em;
+    --h1-size: 1.75em;
+    --h2-size: var(--h1-size);
+    --h3-size: 1em;
+    --h4-size: 1em;
+    --p-size: 1.125em;
   }
 }
 

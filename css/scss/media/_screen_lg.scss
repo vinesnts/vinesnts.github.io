@@ -10,4 +10,17 @@
         --h4-size: 1.5em;
         --p-size: 1.25em;
     }
+
+    .main-container {
+        &__card {
+            border-radius: $border-radius-lg;
+
+            .bio {
+                &__pic {
+                    width: 125px;
+                    height: 125px;
+                }
+            }
+        }
+    }
 }

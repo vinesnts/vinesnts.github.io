@@ -42,6 +42,18 @@ footer {
                     background-image: $asset-logo-linkedin;
                 }
             }
+
+            &__title {
+                padding: var(--related-space);
+                a {
+                    color: $black-color;
+                    text-decoration: none;
+                }
+
+                a:hover {
+                    text-decoration: underline;
+                }
+            }
         }
     
     }

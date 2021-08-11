@@ -1,22 +1,14 @@
 @media only screen and (max-width: 375px) {
 
     :root {
+        --base-padding: 0.5em;
+        --bottom-padding: 1.5em;
+        --card-padding: 1.5em;
+
         --h1-size: 1.75em;
         --h2-size: var(--h1-size);
         --h3-size: 1em;
         --h4-size: 1em;
         --p-size: 1.125em;
     }
-
-    header {
-        margin: 0;
-        .header {
-            &__content {
-                flex-direction: column-reverse;
-                align-items: center;
-            }
-        }
-    }
-
-    
 }

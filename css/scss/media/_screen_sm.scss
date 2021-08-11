@@ -1,0 +1,87 @@
+@media only screen and (max-width: 413px) {
+    :root {
+        --base-padding: 0.5em;
+
+        --h1-size: 1.75em;
+        --h2-size: 1.75em;
+        --h3-size: 1.375em;
+        --h4-size: 1.375em;
+        --p-size: 1.25em;
+
+        --header-height: 8.5em;
+        --footer-height: 15em;
+
+        --base-width: 832px;
+        --related-space: 0.25em;
+        --unrelated-space: 1em;
+    }
+
+    .main-container {
+        padding: var(--base-padding);
+        padding-bottom: var(--bottom-padding);
+
+        .navbar {
+            margin: var(--bottom-space) auto;
+        }
+
+        &__card {
+            &.skills,
+            &.projects,
+            &.ref {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .skills,
+            .projects,
+            .ref {
+                &__title {
+                    width: 100%;
+                }
+                &__note {
+                    width: 100%;
+                }
+                &__card {
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    width: 100%;
+
+                    &__pic {
+                        width: 30px;
+                        height: 30px;
+                    }
+
+                    &__title {
+                        margin: 0;
+                        margin-left: 1em;
+                    }
+
+
+                    ul {
+                        flex: 1 1 100%;
+                        margin-left: 3.5em;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        .footer {
+            flex-direction: column;
+
+            &__card {
+                flex-direction: row;
+                &__pic {
+                    width: 30px;
+                    height: 30px;
+                }
+
+                &__title {
+                    margin-left: 1em;
+                }
+            }
+        }
+    }
+}

@@ -9,20 +9,23 @@
     max-width: var(--base-width);
     margin: 0 auto;
     top: var(--header-height);
-    padding: 1em 1em 6em 1em;
+    padding: 0 var(--base-padding);
+    padding-bottom: var(--bottom-padding);
 
     .navbar {
         position: sticky;
         top: 0;
         width: 100%;
-        margin: 0 auto;
+        margin: 0 auto var(--bottom-space) auto;
         z-index: 4;
-    
+        overflow-y: auto;
+        
         ul {
+            background-color: $primary-color;
             display: flex;
             max-width: 800px;
-            padding: 1em;
-            margin: 0 auto 1em auto;
+            padding: var(--base-padding);
+            margin: 0 auto;
         }
     
         a {
@@ -44,8 +47,10 @@
     }
 
     &__card {
-        margin: 0 1em 4em 1em;
-        padding: 1em 1em 6em 1em;
+        margin: var(--base-padding);
+        margin-top: 0;
+        margin-bottom: var(--bottom-padding);
+        padding: var(--card-padding);
         border-radius: $border-radius-lg;
         background-color: $white-color;
         box-shadow: $shadow-button;
@@ -83,7 +88,7 @@
     
                 &__profile-text {
                     margin-top: var(--related-space);
-                    text-align: center;
+                    text-align: justify;
                     text-justify: inter-word;
                     line-height: var(--p-size);
                 }
@@ -118,7 +123,7 @@
                 align-items: center;
                 flex: 0 1 25%;
                 margin: 0 1em;
-                margin-top: var(--unrelated-space);
+                margin-top: var(--between-space-y);
                 text-align: center;
 
                 &__title {
@@ -270,7 +275,7 @@ form {
 }
 
 @import './footer';
-@import './media/screen_lt_840';
-@import './media/screen_lt_600';
-@import './media/screen_lt_400';
-@import './media/screen_lt_342';
+@import './media/screen_lg';
+@import './media/screen_md';
+@import './media/screen_sm';
+@import './media/screen_xs';
