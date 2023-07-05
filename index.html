@@ -14,7 +14,7 @@
     <link rel="icon" type="image/png" href="assets/favicon.png"/>
 </head>
 <body>
-    <header data-animate="fade-out">
+    <!-- <header data-animate="fade-out">
         <div class="header__content">
             <div class="header__content__title">
                 <h2>Vinícius Almeida</h2>
@@ -31,12 +31,17 @@
                 </svg>
             </div>
         </div>
-    </header>
+    </header> -->
     <div class="main-container">
         <nav class="navbar" id="navbar" data-animate="trigger-fade-out">
             <ul>
                 <li>
                     <a href="#bio" class="active">
+                        Início
+                    </a>
+                </li>
+                <li>
+                    <a href="#intro" class="active">
                         Bio
                     </a>
                 </li>
@@ -45,11 +50,11 @@
                         Skills
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="#projects">
                         Projetos
                     </a>
-                </li>
+                </li> -->
                 <li>
                     <a href="#ref">
                         Referenciais
@@ -67,14 +72,42 @@
                 </div>
                 <div class="bio__info">
                     <h2 class="bio__info__profile-name">
-                        Bio
+                        Vinícius Almeida
                     </h2>
                     <!-- <p class="profile-job">Desenvolvedor Full-Stack</p> -->
                     <p class="bio__info__profile-text">
-                        Desenvolvedor full-stack e viciado em programar,
-                        sou estudante de Ciência da Computação e entusiasta
-                        de design UI/UX, além disso, sou apaixonado por
-                        tecnologia e astronomia.
+                        Desenvolvedor
+                        <!-- <br><br>
+                        No <strong>Front-end</strong> trabalho com as principais tecnologias básicas como HTML, CSS e Javascript,
+                        além do framework Angular e bibliotecas como Bootstrap e jQuery.
+                        <br><br>
+                        No <strong>Back-end</strong>, tenho experiência com Python, nos frameworks Django e Falcon, 
+                        além de Java Spring Boot e PHP com Laravel e CodeIgniter.
+                        <br><br>
+                        Como <strong>Full-Stack</strong>, adquiri experiência em gerenciamento de projetos em servidores,
+                        usando tecnologias como Apache, httpd, cron e comandos Linux. Além disso, também projeto bancos de dados
+                        nos mais conhecidos SGBDs, como Postgres e MySQL. -->
+                    </p>
+                </div>
+            </div>
+            <div class="main-container__card intro"
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom">
+                <a class="anchor" id="intro"></a>
+                <div class="intro__content">
+                    <h2 class="intro__content__title">
+                        Bio
+                    </h2>
+                    <p class="intro__content__text">
+                        No <strong>Front-end</strong> trabalho com as principais tecnologias básicas como HTML, CSS e Javascript,
+                        além do framework Angular e bibliotecas como Bootstrap e jQuery.
+                        <br><br>
+                        No <strong>Back-end</strong>, tenho experiência com Python, nos frameworks Django e Falcon, 
+                        além de Java Spring Boot e PHP com Laravel e CodeIgniter.
+                        <br><br>
+                        Como <strong>Full-Stack</strong>, adquiri experiência em gerenciamento de projetos em servidores,
+                        usando tecnologias como Apache, httpd, cron e comandos Linux. Além disso, também projeto bancos de dados
+                        nos mais conhecidos SGBDs, como Postgres e MySQL.
                     </p>
                 </div>
             </div>
@@ -86,36 +119,50 @@
                 <div class="skills__card">
                     <div class="skills__card__pic frontend"></div>
                     <h4 class="skills__card__title">Front-end</h4>
-                    <ul>
-                        <li>HTML/CSS</li>
-                        <li>JavaScript</li>
-                        <li>TypeScript</li>
-                        <li>Angular</li>
-                        <li>jQuery</li>
+                    <ul class="skills__card__description">
+                        <li class="tag red">Angular</li>
+                        <li class="tag blue">TypeScript</li>
+                        <li class="tag yellow">JavaScript</li>
+                        <li class="tag orange">HTML</li>
+                        <li class="tag blue">CSS</li>
+                        <li class="tag blue">jQuery</li>
+                        <li class="tag purple">Bootstrap</li>
                     </ul>
                 </div>
                 <div class="skills__card">
                     <div class="skills__card__pic backend"></div>
                     <h4 class="skills__card__title">Back-end</h4>
-                    <ul>
-                        <li>Django / Python</li>
-                        <li>Falcon / Python</li>
-                        <li>Laravel / PHP</li>
-                        <li>MySQL</li>
-                        <li>postgres</li>
-                        <li>SQL Server</li>
+                    <ul class="skills__card__description">
+                        <li class="tag yellow">Python</li>
+                        <li class="tag green">Django</li>
+                        <li class="tag yellow">Falcon</li>
+                        <li class="tag blue">PHP</li>
+                        <li class="tag red">Laravel</li>
+                        <li class="tag orange">CodeIgniter</li>
+                        <li class="tag blue">Java</li>
+                        <li class="tag green">Spring Boot</li>
+                        <li class="tag blue">postgres</li>
+                        <li class="tag orange">MySQL</li>
                     </ul>
                 </div>
                 <div class="skills__card">
-                    <div class="skills__card__pic design"></div>
-                    <h4 class="skills__card__title">Design</h4>
-                    <ul>
-                        <li>Figma</li>
-                        <li>Inkscape</li>
+                    <div class="skills__card__pic other">
+                        <span>...</span>
+                    </div>
+                    <h4 class="skills__card__title">Outros</h4>
+                    <ul class="skills__card__description">
+                        <li class="tag yellow">Linux</li>
+                        <li class="tag">cron</li>
+                        <li class="tag blue">httpd</li>
+                        <li class="tag orange">Apache</li>
+                        <li class="tag purple">Figma</li>
+                        <li class="tag green">Inkscape</li>
+                        <li class="tag red">Shell Script</li>
                     </ul>
                 </div>
+                </div>
             </div>
-            <div class="main-container__card projects"
+            <!-- <div class="main-container__card projects"
                 data-aos="fade-up"
                 data-aos-anchor-placement="top-bottom">
                 <a class="anchor" id="projects"></a>
@@ -160,7 +207,7 @@
                         </a>
                     </h4>
                 </div>
-            </div>
+            </div> -->
             <div class="main-container__card ref"
                 data-aos="fade-up"
                 data-aos-anchor-placement="top-bottom"
@@ -174,22 +221,9 @@
                             Tecnosolve
                         </a>
                     </h4>
-                </div>
-                <div class="ref__card">
-                    <div class="ref__card__pic showtecnologia"></div>
-                    <h4 class="ref__card__title">
-                        <a href="https://www.showtecnologia.com/" target="blank">
-                            Show Tecnologia
-                        </a>
-                    </h4>
-                </div>
-                <div class="ref__card">
-                    <div class="ref__card__pic casaong"></div>
-                    <h4 class="ref__card__title">
-                        <a href="https://casaong.org" target="blank">
-                            CASA ONG
-                        </a>
-                    </h4>
+                    <p class="ref__card__description">
+                        Desenvolvimento e manutenção de sistemas e APIs usando tecnologias como: Python (Falcon e Django), Angular, Java Spring Boot, PostgreSQL e GIT.
+                    </p>
                 </div>
                 <div class="ref__card">
                     <div class="ref__card__pic ufape"></div>
@@ -198,6 +232,31 @@
                             UFAPE
                         </a>
                     </h4>
+                    <p class="ref__card__description">
+                        Graduação em Ciência da Computação. Desenvolvimento de Pesquisa e Extensão.
+                    </p>
+                </div>
+                <div class="ref__card">
+                    <div class="ref__card__pic showtecnologia"></div>
+                    <h4 class="ref__card__title">
+                        <a href="https://www.showtecnologia.com/" target="blank">
+                            Show Tecnologia
+                        </a>
+                    </h4>
+                    <p class="ref__card__description">
+                        Desenvolvimento e manutenção de sistemas e APIs em PHP CodeIgniter, NodeJS, HTML/CSS e MySQL.
+                    </p>
+                </div>
+                <div class="ref__card">
+                    <div class="ref__card__pic casaong"></div>
+                    <h4 class="ref__card__title">
+                        <a href="https://casaong.org" target="blank">
+                            CASA ONG
+                        </a>
+                    </h4>
+                    <p class="ref__card__description">
+                        Desenvolvimento e gerenciamento do site da ONG Centro de Apoio Social e Ambiental.
+                    </p>
                 </div>
                 <div class="ref__card">
                     <div class="ref__card__pic alive"></div>
@@ -206,6 +265,9 @@
                             Alive SI
                         </a>
                     </h4>
+                    <p class="ref__card__description">
+                        Desenvolvimento do frontend da plataforma MeuPregão usando tecnologias como HTML, CSS, JS e Bootstrap, além de consumo de APIs por meio de ajax.
+                    </p>
                 </div>
             </div>
             <!-- <div class="card contact-info">
@@ -254,8 +316,8 @@
             <div class="footer__card">
                 <div class="footer__card__pic linkedin"></div>
                 <div class="footer__card__title">
-                    <a href="https://www.linkedin.com/in/vinesnts/">
-                        LinkedIn
+                    <a href="https://www.linkedin.com/in/viniciusalmeidadev/">
+                        @viniciusalmeidadev
                     </a>
                 </div>
             </div>

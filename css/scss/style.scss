@@ -65,7 +65,7 @@
         &.projects,
         &.ref,
         &.contact {
-            @extend %d-flex-row;
+            @extend %d-flex-column;
             justify-content: space-around;
             flex-wrap: wrap;
         }
@@ -88,7 +88,7 @@
     
                 &__profile-text {
                     margin-top: var(--related-space);
-                    text-align: justify;
+                    text-align: center;
                     text-justify: inter-word;
                     line-height: var(--p-size);
                 }
@@ -97,6 +97,23 @@
                     text-align: center;
                     margin-top: var(--related-space);
                     margin-bottom: var(--related-space);
+                }
+            }
+
+        }
+
+        .intro {
+
+            &__content {
+                &__title {
+                    text-align: center;
+                }
+    
+                &__text {
+                    margin-top: var(--related-space);
+                    text-align: justify;
+                    text-justify: inter-word;
+                    line-height: var(--p-size);
                 }
             }
 
@@ -119,7 +136,8 @@
 
             &__card {
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
+                flex-wrap: wrap;
                 align-items: center;
                 flex: 0 1 25%;
                 margin: 0 1em;
@@ -127,7 +145,7 @@
                 text-align: center;
 
                 &__title {
-                    margin-top: var(--related-space);
+                    // margin-top: var(--related-space);
 
                     a {
                         color: $black-color;
@@ -141,12 +159,20 @@
                 }
     
                 &__pic {
-                    width: 100px;
-                    height: 100px;
+                    width: 50px;
+                    height: 50px;
                     border-radius: 200px;
                     background: $primary-color no-repeat 50% 50%;
                     background-size: 60%;
                     box-shadow: $shadow-button;
+                    margin-right: var(--unrelated-space);
+                    border: 1px solid $primary-color;
+
+                    span {
+                        color: $white-color;
+                        font-size: 3em;
+                        line-height: 24px;
+                    }
     
                     &.frontend {
                         background-image: $asset-icon-frontend;
@@ -231,9 +257,63 @@
                     }
                 }
 
+                &__description {
+                    margin-top: var(--related-space);
+                    font-size: 1em;
+                    text-align: left;
+                    flex: 1 1 100%;
+                }
+
+                &__description:has(.tag) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: .5em;
+                }
+                
+                ~ .ref,
+                ~ .skills {
+                    &__card {
+                        padding-top: var(--unrelated-space);
+                        border-top: 1px solid $dark-shadow-color;
+                    }
+                }
+                
+
             }
 
         }
+    }
+}
+
+.tag {
+    border-radius: 5px;
+    background-color: $primary-color;
+    color: $white-color;
+    padding: .25em;
+
+    &.yellow {
+        color: $black-color;
+        background-color: #FFCA28;
+    }
+
+    &.red {
+        background-color: #E53935;
+    }
+
+    &.blue {
+        background-color: #0288D1;
+    }
+
+    &.orange {
+        background-color: #FF7043;
+    }
+
+    &.green {
+        background-color: #4CAF50;
+    }
+
+    &.purple {
+        background-color: #8210F5;
     }
 }
 

@@ -1,23 +1,29 @@
-$primary-color: #3A069E;
+$primary-color: #222;
 $light-primary-color: #D1C2F2;
 $white-color: #fff;
 $light-color: #e4e4e4;
 $black-color: #333;
 $dark-shadow-color: rgba(0,0,0,0.1);
 
-$shadow-button: 4px 4px 20px $dark-shadow-color,
-                -4px -4px 20px $dark-shadow-color,
-                4px 4px 20px rgba(255,255,255,0.2),
-                -4px -4px 20px rgba(255,255,255,0.2);
+// $shadow-button: 4px 4px 10px $dark-shadow-color,
+//                 -4px -4px 10px $dark-shadow-color,
+//                 4px 4px 10px rgba(255,255,255,0.2),
+//                 -4px -4px 10px rgba(255,255,255,0.2);
+
+$shadow-button: none;
 
 $font-stack: 'Montserrat', sans-serif;
 
-$border-radius-sm: 12px;
-$border-radius-md: 24px;
-$border-radius-lg: 36px;
-$border-radius-xl: 48px;
+// $border-radius-sm: 12px;
+$border-radius-sm: 0px;
+// $border-radius-md: 24px;
+$border-radius-md: 0px;
+// $border-radius-lg: 36px;
+$border-radius-lg: 0px;
+// $border-radius-xl: 48px;
+$border-radius-xl: 0px;
 
-$asset-pic-profile: url('../../assets/profile-pic-vector.png');
+$asset-pic-profile: url('../../assets/profile-pic.png');
 
 $asset-icon-frontend: url('../../assets/icon/frontend-simple-icon.png');
 $asset-icon-backend: url('../../assets/icon/backend-simple-icon.png');

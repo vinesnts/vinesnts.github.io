@@ -10,19 +10,23 @@ const scrollOffsetAnimate = 10;
 const scrollElementAnimateTrigger = document.querySelector("#navbar");
 const scrollElementAnimate = scrollElementAnimateTrigger;
 
-const scrollOffsetBio = 50;
+const scrollOffsetBio = 10;
 const highlightBio = document.querySelector("a[href='#bio']");
 const highlightBioTrigger = document.querySelector("#bio");
 
-const scrollOffsetSkill = 10;
+const scrollOffsetIntro = 0;
+const highlightIntro = document.querySelector("a[href='#intro']");
+const highlightIntroTrigger = document.querySelector("#intro");
+
+const scrollOffsetSkill = 0;
 const highlightSkill = document.querySelector("a[href='#skills']");
 const highlightSkillTrigger = document.querySelector("#skills");
 
-const scrollOffsetProjects = 10;
-const highlightProjects = document.querySelector("a[href='#projects']");
-const highlightProjectsTrigger = document.querySelector("#projects");
+// const scrollOffsetProjects = 10;
+// const highlightProjects = document.querySelector("a[href='#projects']");
+// const highlightProjectsTrigger = document.querySelector("#projects");
 
-const scrollOffsetRef = 30;
+const scrollOffsetRef = 0;
 const highlightRef = document.querySelector("a[href='#ref']");
 const highlightRefTrigger = document.querySelector("#ref");
 
@@ -30,7 +34,7 @@ const elementInView = (el, offset = 0, t = false) => {
     const elementTop = el.getBoundingClientRect().top;
     const clientHeight = window.innerHeight || document.documentElement.clientHeight;
     
-    if (t) console.log((elementTop <= ((clientHeight * offset) / 100)));
+    // if (t) console.log((elementTop <= ((clientHeight * offset) / 100)));
     return (
         elementTop <= 
             ((clientHeight * offset) / 100)
@@ -38,7 +42,7 @@ const elementInView = (el, offset = 0, t = false) => {
 };
 
 const displayScrollElement = (scrollElement) => {
-    scrollElement.classList.add('scrolled');
+    scrollElement?.classList.add('scrolled');
 }
 
 const hideScrollElement = (scrollElement) => {
@@ -73,7 +77,8 @@ const handleScrollHighlight = (scrollElementTrigger, scrollElement, scrollOffset
     if (elementInView(scrollElementTrigger, scrollOffset, t)) {
         highlightBio.classList = "";
         highlightSkill.classList = "";
-        highlightProjects.classList = "";
+        // highlightProjects.classList = "";
+        highlightIntro.classList = "";
         highlightRef.classList = "";
         scrollElement.classList = "active";
     } else {
@@ -87,6 +92,7 @@ window.addEventListener('scroll', () => {
     handleScrollColorNavbar(scrollElementAnimateTrigger, scrollElementAnimate, scrollOffsetAnimate);
     handleScrollHighlight(highlightBioTrigger, highlightBio, scrollOffsetBio);
     handleScrollHighlight(highlightSkillTrigger, highlightSkill, scrollOffsetSkill);
-    handleScrollHighlight(highlightProjectsTrigger, highlightProjects, scrollOffsetProjects);
+    handleScrollHighlight(highlightIntroTrigger, highlightIntro, scrollOffsetIntro);
+    // handleScrollHighlight(highlightProjectsTrigger, highlightProjects, scrollOffsetProjects);
     handleScrollHighlight(highlightRefTrigger, highlightRef, scrollOffsetRef);
 })

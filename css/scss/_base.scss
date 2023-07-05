@@ -6,6 +6,7 @@
 
 :root {
     scroll-behavior: smooth;
+    scroll-padding-top: 48px;
 
     --base-width: 832px;
 
@@ -18,7 +19,7 @@
     --related-space: 0.375em;
     --unrelated-space: 1.25em;
 
-    --header-height: 7em;
+    --header-height: 0em;
     --footer-height: calc(var(--header-height) + 4em);
 
     --h1-size: 4em;
@@ -40,9 +41,9 @@ body {
         content: '';
         position: fixed;
         width: 100%;
-        height: 60vh;
-        border-bottom-left-radius: 64px;
-        border-bottom-right-radius: 64px;
+        height: 100vh;
+        // border-bottom-left-radius: 64px;
+        // border-bottom-right-radius: 64px;
         background-color: $primary-color;
     }
 }
