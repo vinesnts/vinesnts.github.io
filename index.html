@@ -25,91 +25,62 @@
     </script>
 </head>
 <body>
-    <!-- <header data-animate="fade-out">
-        <div class="header__content">
-            <div class="header__content__title">
-                <h2>Vinícius Almeida</h2>
-            </div>
-            <label for="logo-checkbox" id="logo-checkbox-label"></label>
-            <input type="checkbox" id="logo-checkbox" checked="true">
-            <div class="svg">
-                <svg width="80" height="100" xmlns="http://www.w3.org/2000/svg">
-                    <g id="initial">
-                        <path id="V" d="M0.33 0.5L0.5 0.75L0.66 0.5H1L0.66 1H0.33L0 0.5H0.33Z" />
-                        <path id="A" d="M0.33 0.0012207H0.66L1 0.5H0.66L0.5 0.25L0.33 0.5H0L0.33 0.0012207Z" />
-                        <path id="bar1" d="M0.75 0H0.5L0.25 1H0.5L0.75 0Z" />
-                    </g>
-                </svg>
-            </div>
-        </div>
-    </header> -->
     <div class="main-container">
         <nav class="navbar" id="navbar" data-animate="trigger-fade-out">
             <ul>
                 <li>
-                    <a href="#bio" class="active">
+                    <a href="#intro" class="active" onclick="scrollToElement(event, 'intro')">
                         Início
                     </a>
                 </li>
                 <li>
-                    <a href="#intro" class="active">
+                    <a href="#bio" onclick="scrollToElement(event, 'bio')">
                         Bio
                     </a>
                 </li>
                 <li>
-                    <a href="#skills">
+                    <a href="#skills" onclick="scrollToElement(event, 'skills')">
                         Skills
                     </a>
                 </li>
-                <!-- <li>
-                    <a href="#projects">
-                        Projetos
-                    </a>
-                </li> -->
                 <li>
-                    <a href="#ref">
+                    <a href="#ref" onclick="scrollToElement(event, 'ref')">
                         Referenciais
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact" onclick="scrollBottom(event)">
+                        Contato
                     </a>
                 </li>
             </ul>
         </nav>
         <div class="content">
-            <div class="main-container__card bio"
-                data-aos="fade-up"
-                data-aos-anchor-placement="top-bottom">
-                <a class="anchor" id="bio"></a>
-                <div class="bio__pic">
-                    <!-- Self picture here -->
-                </div>
-                <div class="bio__info">
-                    <h2 class="bio__info__profile-name">
-                        Vinícius Almeida
-                    </h2>
-                    <!-- <p class="profile-job">Desenvolvedor Full-Stack</p> -->
-                    <p class="bio__info__profile-text">
-                        Desenvolvedor
-                        <!-- <br><br>
-                        No <strong>Front-end</strong> trabalho com as principais tecnologias básicas como HTML, CSS e Javascript,
-                        além do framework Angular e bibliotecas como Bootstrap e jQuery.
-                        <br><br>
-                        No <strong>Back-end</strong>, tenho experiência com Python, nos frameworks Django e Falcon, 
-                        além de Java Spring Boot e PHP com Laravel e CodeIgniter.
-                        <br><br>
-                        Como <strong>Full-Stack</strong>, adquiri experiência em gerenciamento de projetos em servidores,
-                        usando tecnologias como Apache, httpd, cron e comandos Linux. Além disso, também projeto bancos de dados
-                        nos mais conhecidos SGBDs, como Postgres e MySQL. -->
-                    </p>
-                </div>
-            </div>
             <div class="main-container__card intro"
                 data-aos="fade-up"
                 data-aos-anchor-placement="top-bottom">
                 <a class="anchor" id="intro"></a>
-                <div class="intro__content">
-                    <h2 class="intro__content__title">
+                <div class="intro__pic">
+                    <!-- Self picture here -->
+                </div>
+                <div class="intro__info">
+                    <h2 class="intro__info__profile-name">
+                        Vinícius Almeida
+                    </h2>
+                    <p class="intro__info__profile-text">
+                        Desenvolvedor
+                    </p>
+                </div>
+            </div>
+            <div class="main-container__card bio"
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom">
+                <a class="anchor" id="bio"></a>
+                <div class="bio__content">
+                    <h2 class="bio__content__title">
                         Bio
                     </h2>
-                    <p class="intro__content__text">
+                    <p class="bio__content__text">
                         No <strong>Front-end</strong> trabalho com as principais tecnologias básicas como HTML, CSS e Javascript,
                         além do framework Angular e bibliotecas como Bootstrap e jQuery.
                         <br><br>
@@ -173,52 +144,6 @@
                 </div>
                 </div>
             </div>
-            <!-- <div class="main-container__card projects"
-                data-aos="fade-up"
-                data-aos-anchor-placement="top-bottom">
-                <a class="anchor" id="projects"></a>
-                <h2 class="projects__title">Projetos</h2>
-                <div class="projects__card">
-                    <div class="projects__card__pic casaong"></div>
-                    <h4 class="projects__card__title">
-                        <a href="https://casaong.org" target="blank">
-                            CASA ONG
-                        </a>
-                    </h4>
-                </div>
-                <div class="projects__card">
-                    <div class="projects__card__pic lapa"></div>
-                    <h4 class="projects__card__title">
-                        <a href="http://sistemas.ufape.edu.br/lapa/" target="blank">
-                            LAPA UFAPE
-                        </a>
-                    </h4>
-                </div>
-                <div class="projects__card">
-                    <div class="projects__card__pic gestor"></div>
-                    <h4 class="projects__card__title">
-                        <a href="https://www.showtecnologia.com/" target="blank">
-                            Gestor
-                        </a>
-                    </h4>
-                </div>
-                <div class="projects__card">
-                    <div class="projects__card__pic daroca"></div>
-                    <h4 class="projects__card__title">
-                        <a href="https://www.instagram.com/daroca.amesa/" target="blank">
-                            DaRoça
-                        </a>
-                    </h4>
-                </div>
-                <div class="projects__card">
-                    <div class="projects__card__pic meupregao"></div>
-                    <h4 class="projects__card__title">
-                        <a href="https://www.meupregao.com/" target="blank">
-                            meupregão
-                        </a>
-                    </h4>
-                </div>
-            </div> -->
             <div class="main-container__card ref"
                 data-aos="fade-up"
                 data-aos-anchor-placement="top-bottom"
@@ -281,26 +206,6 @@
                     </p>
                 </div>
             </div>
-            <!-- <div class="card contact-info">
-                <div class="card-dash">
-                    <span></span>
-                </div>
-                <h2 class="contact-title">Contato</h2>
-                <form action="#" method="POST">
-                    <div class="form-group">
-                        <label for="name">Nome</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Mensagem</label>
-                        <textarea type="text" rows="8" class="form-control"></textarea>
-                    </div>
-                </form>
-            </div> -->
         </div>
     </div>
     <div class="footer-space">
@@ -328,11 +233,12 @@
                 <div class="footer__card__pic linkedin"></div>
                 <div class="footer__card__title">
                     <a href="https://www.linkedin.com/in/viniciusalmeidadev/">
-                        @viniciusalmeidadev
+                        in/viniciusalmeidadev
                     </a>
                 </div>
             </div>
         </div>
+        <a class="anchor" id="contact"></a>
         <script src="node_modules/aos/dist/aos.js"></script>
         <script src="js/script.js"></script>
         <script>

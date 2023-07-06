@@ -16,7 +16,7 @@ footer .footer__card, .main-container__card.skills, .main-container__card.projec
 
 :root {
   scroll-behavior: smooth;
-  scroll-padding-top: 48px;
+  scroll-padding-top: 10em;
   --base-width: 832px;
   --base-padding: 1em;
   --bottom-padding: 2.5em;
@@ -95,7 +95,6 @@ ul {
   display: block;
   position: relative;
   visibility: hidden;
-  top: -10em;
 }
 .anchor#projects {
   top: -10em;
@@ -174,7 +173,7 @@ header .header__content__title * {
   background-color: #fff;
   box-shadow: none;
 }
-.main-container__card.bio {
+.main-container__card.intro {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -183,7 +182,7 @@ header .header__content__title * {
   justify-content: space-around;
   flex-wrap: wrap;
 }
-.main-container__card .bio__pic {
+.main-container__card .intro__pic {
   width: 200px;
   height: 200px;
   border-radius: 200px;
@@ -191,25 +190,25 @@ header .header__content__title * {
   background-size: 115%;
   box-shadow: none;
 }
-.main-container__card .bio__info__profile-name {
+.main-container__card .intro__info__profile-name {
   text-align: center;
   margin-top: var(--related-space);
 }
-.main-container__card .bio__info__profile-text {
+.main-container__card .intro__info__profile-text {
   margin-top: var(--related-space);
   text-align: center;
   text-justify: inter-word;
   line-height: var(--p-size);
 }
-.main-container__card .bio__info__profile-job {
+.main-container__card .intro__info__profile-job {
   text-align: center;
   margin-top: var(--related-space);
   margin-bottom: var(--related-space);
 }
-.main-container__card .intro__content__title {
+.main-container__card .bio__content__title {
   text-align: center;
 }
-.main-container__card .intro__content__text {
+.main-container__card .bio__content__text {
   margin-top: var(--related-space);
   text-align: justify;
   text-justify: inter-word;
@@ -372,9 +371,9 @@ header .header__content__title * {
 .main-container__card .projects__card__pic.ufape,
 .main-container__card .ref__card__pic.ufape,
 .main-container__card .contact__card__pic.ufape {
-  background-color: #1B2D4F;
+  background-color: #FFFFFF;
   background-image: url("../../assets/logo/ufape.png");
-  background-size: 50%;
+  background-size: 95%;
 }
 .main-container__card .skills__card__pic.alive,
 .main-container__card .projects__card__pic.alive,
@@ -565,11 +564,12 @@ footer .footer__card__title a:hover {
 }
 @media only screen and (max-width: 768px) {
   :root {
+    scroll-padding-top: 6em;
     --base-padding: 0.5em;
     --bottom-padding: 1.5em;
     --card-padding: 2em;
-    --header-height: 10em;
-    --footer-height: 20em;
+    --header-height: 0em;
+    --footer-height: 14em;
   }
   header {
     margin: 0;
@@ -584,14 +584,15 @@ footer .footer__card__title a:hover {
 }
 @media only screen and (max-width: 413px) {
   :root {
+    scroll-padding-top: 6em;
     --base-padding: 0.5em;
     --h1-size: 1.75em;
     --h2-size: 1.75em;
     --h3-size: 1.375em;
     --h4-size: 1.375em;
     --p-size: 1.25em;
-    --header-height: 8.5em;
-    --footer-height: 15em;
+    --header-height: 0em;
+    --footer-height: 7em;
     --base-width: 832px;
     --related-space: 0.25em;
     --unrelated-space: 1em;

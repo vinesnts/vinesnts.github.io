@@ -1,12 +1,13 @@
 @media only screen and (max-width: 768px) {
     :root {
+        scroll-padding-top: 6em;
 
         --base-padding: 0.5em;
         --bottom-padding: 1.5em;
         --card-padding: 2em;
 
-        --header-height: 10em;
-        --footer-height: 20em;
+        --header-height: 0em;
+        --footer-height: 14em;
     }
 
     header {

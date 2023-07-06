@@ -6,7 +6,7 @@
 
 :root {
     scroll-behavior: smooth;
-    scroll-padding-top: 48px;
+    scroll-padding-top: 10em;
 
     --base-width: 832px;
 
@@ -95,7 +95,7 @@ ul {
     display: block;
     position: relative;
     visibility: hidden;
-    top: -10em;
+    // top: -10em;
 
     &#projects {
         top: -10em;

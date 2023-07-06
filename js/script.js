@@ -10,15 +10,15 @@ const scrollOffsetAnimate = 10;
 const scrollElementAnimateTrigger = document.querySelector("#navbar");
 const scrollElementAnimate = scrollElementAnimateTrigger;
 
-const scrollOffsetBio = 10;
-const highlightBio = document.querySelector("a[href='#bio']");
-const highlightBioTrigger = document.querySelector("#bio");
-
-const scrollOffsetIntro = 0;
+const scrollOffsetIntro = 20;
 const highlightIntro = document.querySelector("a[href='#intro']");
 const highlightIntroTrigger = document.querySelector("#intro");
 
-const scrollOffsetSkill = 0;
+const scrollOffsetBio = 17;
+const highlightBio = document.querySelector("a[href='#bio']");
+const highlightBioTrigger = document.querySelector("#bio");
+
+const scrollOffsetSkill = 18;
 const highlightSkill = document.querySelector("a[href='#skills']");
 const highlightSkillTrigger = document.querySelector("#skills");
 
@@ -26,9 +26,13 @@ const highlightSkillTrigger = document.querySelector("#skills");
 // const highlightProjects = document.querySelector("a[href='#projects']");
 // const highlightProjectsTrigger = document.querySelector("#projects");
 
-const scrollOffsetRef = 0;
+const scrollOffsetRef = 20;
 const highlightRef = document.querySelector("a[href='#ref']");
 const highlightRefTrigger = document.querySelector("#ref");
+
+const scrollOffsetContact = 95;
+const highlightContact = document.querySelector("a[href='#contact']");
+const highlightContactTrigger = document.querySelector("#contact");
 
 const elementInView = (el, offset = 0, t = false) => {
     const elementTop = el.getBoundingClientRect().top;
@@ -73,7 +77,7 @@ const handleScrollColorNavbar = (scrollElementTrigger, scrollElement, scrollOffs
     }
 }
 
-const handleScrollHighlight = (scrollElementTrigger, scrollElement, scrollOffset, t = true) => {
+const handleScrollHighlight = (scrollElementTrigger, scrollElement, scrollOffset, t = true, scrollNavbar = false) => {
     if (elementInView(scrollElementTrigger, scrollOffset, t)) {
         highlightBio.classList = "";
         highlightSkill.classList = "";
@@ -81,18 +85,53 @@ const handleScrollHighlight = (scrollElementTrigger, scrollElement, scrollOffset
         highlightIntro.classList = "";
         highlightRef.classList = "";
         scrollElement.classList = "active";
+        if (scrollNavbar) {
+            document.getElementById('navbar').scrollTo({left: document.getElementById('navbar').offsetWidth, behavior: 'smooth'});
+        } else {
+            document.getElementById('navbar').scrollTo({left: 0, behavior: 'smooth'});
+        }
     } else {
         scrollElement.classList = "";
     }
+}
+
+const handleScrollBottom = (scrollElementTrigger) => {
+    const currentPosition = window.scrollY;
+    const maxPosition = document.body.offsetHeight - window.innerHeight;
+
+    if (currentPosition === maxPosition) {
+        highlightBio.classList = "";
+        highlightSkill.classList = "";
+        highlightIntro.classList = "";
+        highlightRef.classList = "";
+        scrollElementTrigger.classList.add('active')
+    }
+    else {
+        scrollElementTrigger.classList.remove('active')
+    }
+}
+
+const scrollBottom = (event) => {
+    event.preventDefault();
+    window.scrollTo(0, document.body.scrollHeight);
+}
+
+const scrollToElement = (event, elementId) => {
+    event.preventDefault();
+    const element = document.getElementById(elementId);
+    const elementPosition = element.getBoundingClientRect().top - document.body.getBoundingClientRect().top
+    window.scrollTo({top: elementPosition - 100, behavior: 'smooth'});
 }
 
 window.addEventListener('scroll', () => {
     handleScrollFade(scrollElementTrigger, scrollElement, scrollOffset);
     handleScrollFade(scrollElementFadeInTrigger, scrollElementFadeIn, scrollOffsetFadeIn, false);
     handleScrollColorNavbar(scrollElementAnimateTrigger, scrollElementAnimate, scrollOffsetAnimate);
+    handleScrollHighlight(highlightIntroTrigger, highlightIntro, scrollOffsetIntro);
     handleScrollHighlight(highlightBioTrigger, highlightBio, scrollOffsetBio);
     handleScrollHighlight(highlightSkillTrigger, highlightSkill, scrollOffsetSkill);
-    handleScrollHighlight(highlightIntroTrigger, highlightIntro, scrollOffsetIntro);
     // handleScrollHighlight(highlightProjectsTrigger, highlightProjects, scrollOffsetProjects);
-    handleScrollHighlight(highlightRefTrigger, highlightRef, scrollOffsetRef);
+    handleScrollHighlight(highlightRefTrigger, highlightRef, scrollOffsetRef, true, true);
+    handleScrollHighlight(highlightContactTrigger, highlightContact, scrollOffsetContact);
+    handleScrollBottom(highlightContact);
 })

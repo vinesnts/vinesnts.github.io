@@ -55,7 +55,7 @@
         background-color: $white-color;
         box-shadow: $shadow-button;
 
-        &.bio {
+        &.intro {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -70,7 +70,7 @@
             flex-wrap: wrap;
         }
 
-        .bio {
+        .intro {
             &__pic {
                 width: 200px;
                 height: 200px;
@@ -102,7 +102,7 @@
 
         }
 
-        .intro {
+        .bio {
 
             &__content {
                 &__title {
@@ -239,9 +239,9 @@
                     }
     
                     &.ufape {
-                        background-color: #1B2D4F;
+                        background-color: #FFFFFF;
                         background-image: $asset-logo-ufape;
-                        background-size: 50%;
+                        background-size: 95%;
                     }
     
                     &.alive {
