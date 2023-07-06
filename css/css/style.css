@@ -400,10 +400,14 @@ header .header__content__title * {
   text-align: left;
   flex: 1 1 100%;
 }
-.main-container__card .skills__card__description:has(.tag),
-.main-container__card .projects__card__description:has(.tag),
-.main-container__card .ref__card__description:has(.tag),
-.main-container__card .contact__card__description:has(.tag) {
+.main-container__card .skills__card__list,
+.main-container__card .projects__card__list,
+.main-container__card .ref__card__list,
+.main-container__card .contact__card__list {
+  margin-top: var(--related-space);
+  font-size: 1em;
+  text-align: left;
+  flex: 1 1 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5em;
