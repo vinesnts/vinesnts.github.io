@@ -1,9 +1,9 @@
-footer .footer {
+footer .footer__card {
   display: flex;
   flex-direction: row;
 }
 
-footer .footer__card, .main-container__card.skills, .main-container__card.projects, .main-container__card.ref, .main-container__card.contact {
+footer .footer, .main-container__card.skills, .main-container__card.projects, .main-container__card.ref, .main-container__card.contact {
   display: flex;
   flex-direction: column;
 }
@@ -26,7 +26,7 @@ footer .footer__card, .main-container__card.skills, .main-container__card.projec
   --related-space: 0.375em;
   --unrelated-space: 1.25em;
   --header-height: 0em;
-  --footer-height: calc(var(--header-height) + 4em);
+  --footer-height: calc(var(--header-height) + 12em);
   --h1-size: 4em;
   --h2-size: 3em;
   --h3-size: 2em;
@@ -133,7 +133,6 @@ header .header__content__title * {
   margin: 0 auto;
   top: var(--header-height);
   padding: 0 var(--base-padding);
-  padding-bottom: var(--bottom-padding);
 }
 .main-container .navbar {
   position: sticky;
@@ -150,16 +149,24 @@ header .header__content__title * {
   padding: var(--base-padding);
   margin: 0 auto;
 }
+.main-container .navbar li.align-right {
+  margin-left: auto;
+}
 .main-container .navbar a {
   display: inline-block;
   padding: 0.75em 1.5em;
   color: #fff;
   text-decoration: none;
+  border: 1px solid #222;
 }
 .main-container .navbar a.active {
   background-color: #fff;
+  border: 1px solid #fff;
   color: #333;
   border-radius: 0px;
+}
+.main-container .navbar a:hover {
+  border: 1px solid #fff;
 }
 .main-container .navbar.darken {
   background-color: #222;
@@ -186,7 +193,7 @@ header .header__content__title * {
   width: 200px;
   height: 200px;
   border-radius: 200px;
-  background: #222 url("../../assets/profile-pic.png") no-repeat 50% 20%;
+  background: #222 url("../../assets/profile-pic-alt.png") no-repeat 50% 20%;
   background-size: 115%;
   box-shadow: none;
 }
@@ -316,6 +323,13 @@ header .header__content__title * {
 .main-container__card .ref__card__pic.linkedin,
 .main-container__card .contact__card__pic.linkedin {
   background-image: url("../../assets/logo/linkedin-icon.png");
+  background-size: 50%;
+}
+.main-container__card .skills__card__pic.github,
+.main-container__card .projects__card__pic.github,
+.main-container__card .ref__card__pic.github,
+.main-container__card .contact__card__pic.github {
+  background-image: url("../../assets/logo/github-icon.png");
   background-size: 50%;
 }
 .main-container__card .skills__card__pic.casaong,
@@ -484,12 +498,12 @@ form .form-group__form-control {
   /* z-index: 3; */
 }
 
-footer .footer {
+footer .footer__card {
   display: flex;
   flex-direction: row;
 }
 
-footer .footer__card, .main-container__card.skills, .main-container__card.projects, .main-container__card.ref, .main-container__card.contact {
+footer .footer, .main-container__card.skills, .main-container__card.projects, .main-container__card.ref, .main-container__card.contact {
   display: flex;
   flex-direction: column;
 }
@@ -511,12 +525,12 @@ footer .footer__card {
   align-items: center;
   flex: 0 1 25%;
   margin: 0 1em;
-  margin-top: var(--unrelated-space);
+  margin-top: var(--related-space);
   text-align: center;
 }
 footer .footer__card__pic {
-  width: 60px;
-  height: 60px;
+  width: 30px;
+  height: 30px;
   border-radius: 200px;
   background: #222 no-repeat 50% 50%;
   background-size: 60%;
@@ -530,6 +544,12 @@ footer .footer__card__pic.phone {
 }
 footer .footer__card__pic.linkedin {
   background-image: url("../../assets/logo/linkedin-icon.png");
+}
+footer .footer__card__pic.github {
+  background-image: url("../../assets/logo/github-icon.png");
+}
+footer .footer__card__pic.lattes {
+  background-image: url("../../assets/logo/lattes-icon.png");
 }
 footer .footer__card__title {
   padding: var(--related-space);
@@ -573,7 +593,7 @@ footer .footer__card__title a:hover {
     --bottom-padding: 1.5em;
     --card-padding: 2em;
     --header-height: 0em;
-    --footer-height: 14em;
+    --footer-height: 12em;
   }
   header {
     margin: 0;
@@ -596,14 +616,13 @@ footer .footer__card__title a:hover {
     --h4-size: 1.375em;
     --p-size: 1.25em;
     --header-height: 0em;
-    --footer-height: 7em;
+    --footer-height: 11em;
     --base-width: 832px;
     --related-space: 0.25em;
     --unrelated-space: 1em;
   }
   .main-container {
     padding: var(--base-padding);
-    padding-bottom: var(--bottom-padding);
   }
   .main-container .navbar {
     margin: var(--bottom-space) auto;

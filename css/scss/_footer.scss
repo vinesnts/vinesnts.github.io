@@ -6,7 +6,7 @@ footer {
     width: 100%;
 
     .footer {
-        @extend %d-flex-row;
+        @extend %d-flex-column;
         justify-content: space-around;
         flex-wrap: wrap;
         width: 100%;
@@ -15,16 +15,16 @@ footer {
         margin-bottom: var(--unrelated-space);
     
         &__card {
-            @extend %d-flex-column;
+            @extend %d-flex-row;
             align-items: center;
             flex: 0 1 25%;
             margin: 0 1em;
-            margin-top: var(--unrelated-space);
+            margin-top: var(--related-space);
             text-align: center;
             
             &__pic {
-                width: 60px;
-                height: 60px;
+                width: 30px;
+                height: 30px;
                 border-radius: 200px;
                 background: $primary-color no-repeat 50% 50%;
                 background-size: 60%;
@@ -40,6 +40,14 @@ footer {
         
                 &.linkedin {
                     background-image: $asset-logo-linkedin;
+                }
+
+                &.github {
+                    background-image: $asset-logo-github;
+                }
+
+                &.lattes {
+                    background-image: $asset-logo-lattes;
                 }
             }
 

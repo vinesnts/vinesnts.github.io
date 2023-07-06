@@ -10,7 +10,7 @@
     margin: 0 auto;
     top: var(--header-height);
     padding: 0 var(--base-padding);
-    padding-bottom: var(--bottom-padding);
+    // padding-bottom: var(--bottom-padding);
 
     .navbar {
         position: sticky;
@@ -27,17 +27,27 @@
             padding: var(--base-padding);
             margin: 0 auto;
         }
+
+        li.align-right {
+            margin-left: auto;
+        }
     
         a {
             display: inline-block;
             padding: 0.75em 1.5em;
             color: $white-color;
             text-decoration: none;
-    
+            border: 1px solid $primary-color;
+            
             &.active {
                 background-color: $white-color;
+                border: 1px solid $white-color;
                 color: $black-color;
                 border-radius: $border-radius-sm;
+            }
+
+            &:hover {
+                border: 1px solid $white-color;
             }
         }
     
@@ -75,7 +85,7 @@
                 width: 200px;
                 height: 200px;
                 border-radius: 200px;
-                background: $primary-color $asset-pic-profile no-repeat 50% 20%;
+                background: $primary-color $asset-pic-profile-alt no-repeat 50% 20%;
                 background-size: 115%;
                 box-shadow: $shadow-button
             }
@@ -198,6 +208,11 @@
     
                     &.linkedin {
                         background-image: $asset-logo-linkedin;
+                        background-size: 50%;
+                    }
+
+                    &.github {
+                        background-image: $asset-logo-github;
                         background-size: 50%;
                     }
     

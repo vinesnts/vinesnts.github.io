@@ -11,7 +11,7 @@
         --p-size: 1.25em;
 
         --header-height: 0em;
-        --footer-height: 7em;
+        --footer-height: 11em;
 
         --base-width: 832px;
         --related-space: 0.25em;
@@ -20,7 +20,7 @@
 
     .main-container {
         padding: var(--base-padding);
-        padding-bottom: var(--bottom-padding);
+        // padding-bottom: var(--bottom-padding);
 
         .navbar {
             margin: var(--bottom-space) auto;
