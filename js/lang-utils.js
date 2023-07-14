@@ -2,7 +2,7 @@ import lang from './lang.js';
 
 const translate = (language) => {
   const translation = lang(language);
-
+  if (!translation) return;
   Object.entries(translation).forEach(([key, value]) => {
     document.querySelectorAll(`[data-lang="${key}"`).forEach((el) => {
       el.innerHTML = value;
