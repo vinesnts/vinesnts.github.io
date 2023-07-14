@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vinícius Almeida Developer</title>
+    <title data-lang="title">Vinícius Almeida | Desenvolvedor</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -26,44 +26,75 @@
 </head>
 <body>
     <div class="main-container">
-        <nav class="navbar" id="navbar" data-animate="trigger-fade-out">
+        <nav
+            id="navbar"
+            class="navbar"
+            data-animate="trigger-fade-out"
+        >
             <ul>
                 <li>
-                    <a href="#intro" class="active" onclick="scrollToElement(event, 'intro')">
+                    <a 
+                        class="active"
+                        href="#intro"
+                        data-lang="home"
+                        onclick="scrollToElement(event, 'intro')"
+                    >
                         Início
                     </a>
                 </li>
                 <li>
-                    <a href="#bio" onclick="scrollToElement(event, 'bio')">
+                    <a
+                        href="#bio"
+                        data-lang="bio"
+                        onclick="scrollToElement(event, 'bio')"
+                    >
                         Bio
                     </a>
                 </li>
                 <li>
-                    <a href="#skills" onclick="scrollToElement(event, 'skills')">
-                        Skills
+                    <a 
+                        href="#skills"
+                        data-lang="skills"
+                        onclick="scrollToElement(event, 'skills')"
+                    >
+                        Habilidades
                     </a>
                 </li>
                 <li>
-                    <a href="#ref" onclick="scrollToElement(event, 'ref')">
+                    <a
+                        href="#ref"
+                        data-lang="references"
+                        onclick="scrollToElement(event, 'ref')"
+                    >
                         Referenciais
                     </a>
                 </li>
                 <li>
-                    <a href="#contact" onclick="scrollBottom(event)">
+                    <a
+                        href="#contact"
+                        data-lang="contact"
+                        onclick="scrollBottom(event)"
+                    >
                         Contato
                     </a>
                 </li>
                 <li class="align-right">
-                    <a href="https://drive.google.com/file/d/1pe-2QkKGAPJPN9lZuA_yGxbfxjmBC9kP/view?usp=sharing" target="_blank">
+                    <a
+                        href="https://drive.google.com/file/d/1pe-2QkKGAPJPN9lZuA_yGxbfxjmBC9kP/view?usp=sharing"
+                        target="_blank"
+                        data-lang="downloadCv"
+                    >
                         Baixar&nbsp;currículo
                     </a>
                 </li>
             </ul>
         </nav>
         <div class="content">
-            <div class="main-container__card intro"
+            <div 
+                class="main-container__card intro"
                 data-aos="fade-up"
-                data-aos-anchor-placement="top-bottom">
+                data-aos-anchor-placement="top-bottom"
+            >
                 <a class="anchor" id="intro"></a>
                 <div class="intro__pic">
                     <!-- Self picture here -->
@@ -72,7 +103,7 @@
                     <h2 class="intro__info__profile-name">
                         Vinícius Almeida
                     </h2>
-                    <p class="intro__info__profile-text">
+                    <p class="intro__info__profile-text" data-lang="developer">
                         Desenvolvedor
                     </p>
                 </div>
@@ -85,7 +116,7 @@
                     <h2 class="bio__content__title">
                         Bio
                     </h2>
-                    <p class="bio__content__text">
+                    <p class="bio__content__text" data-lang="bioText">
                         No <strong>Front-end</strong> trabalho com as principais tecnologias básicas como HTML, CSS e Javascript,
                         além do framework Angular e bibliotecas como Bootstrap e jQuery.
                         <br><br>
@@ -102,7 +133,7 @@
                 data-aos="fade-up"
                 data-aos-anchor-placement="top-bottom">
                 <a class="anchor" id="skills"></a>
-                <h2 class="skills__title">Skills</h2>
+                <h2 class="skills__title" data-lang="skills">Skills</h2>
                 <div class="skills__card">
                     <div class="skills__card__pic frontend"></div>
                     <h4 class="skills__card__title">Front-end</h4>
@@ -136,7 +167,7 @@
                     <div class="skills__card__pic other">
                         <span>...</span>
                     </div>
-                    <h4 class="skills__card__title">Outros</h4>
+                    <h4 class="skills__card__title" data-lang="misc">Outros</h4>
                     <ul class="skills__card__list">
                         <li class="tag yellow">Linux</li>
                         <li class="tag">cron</li>
@@ -154,7 +185,7 @@
                 data-aos-anchor-placement="top-bottom"
                 data-animate="trigger-fade-in">
                 <a class="anchor" id="ref"></a>
-                <h2 class="ref__title">Referenciais</h2>
+                <h2 class="ref__title" data-lang="references">Referenciais</h2>
                 <div class="ref__card">
                     <div class="ref__card__pic tecnosolve"></div>
                     <h4 class="ref__card__title">
@@ -162,7 +193,7 @@
                             Tecnosolve
                         </a>
                     </h4>
-                    <p class="ref__card__description">
+                    <p class="ref__card__description" data-lang="tecnosolveText">
                         Desenvolvimento e manutenção de sistemas e APIs usando tecnologias como: Python (Falcon e Django), Angular, Java Spring Boot, PostgreSQL e GIT.
                     </p>
                 </div>
@@ -173,7 +204,7 @@
                             UFAPE
                         </a>
                     </h4>
-                    <p class="ref__card__description">
+                    <p class="ref__card__description" data-lang="ufapeText">
                         Graduação em Ciência da Computação. Desenvolvimento de Pesquisa e Extensão.
                     </p>
                 </div>
@@ -184,7 +215,7 @@
                             Show Tecnologia
                         </a>
                     </h4>
-                    <p class="ref__card__description">
+                    <p class="ref__card__description" data-lang="showText">
                         Desenvolvimento e manutenção de sistemas e APIs em PHP CodeIgniter, NodeJS, HTML/CSS e MySQL.
                     </p>
                 </div>
@@ -195,7 +226,7 @@
                             CASA ONG
                         </a>
                     </h4>
-                    <p class="ref__card__description">
+                    <p class="ref__card__description" data-lang="casaOngText">
                         Desenvolvimento e gerenciamento do site da ONG Centro de Apoio Social e Ambiental.
                     </p>
                 </div>
@@ -206,7 +237,7 @@
                             Alive SI
                         </a>
                     </h4>
-                    <p class="ref__card__description">
+                    <p class="ref__card__description" data-lang="aliveText">
                         Desenvolvimento do frontend da plataforma MeuPregão usando tecnologias como HTML, CSS, JS e Bootstrap, além de consumo de APIs por meio de ajax.
                     </p>
                 </div>
@@ -221,7 +252,11 @@
             <div class="footer__card">
                 <div class="footer__card__pic email"></div>
                 <div class="footer__card__title">
-                    <a href="mailto:contato@viniciusalmeida.com" target="_blank">
+                    <a 
+                        href="mailto:contato@viniciusalmeida.com"
+                        target="_blank"
+                        data-lang="emailAddress"
+                    >
                         contato@viniciusalmeida.dev
                     </a>
                 </div>
@@ -230,7 +265,7 @@
                 <div class="footer__card__pic phone"></div>
                 <div class="footer__card__title">
                     <a href="https://wa.me/message/P2IWW4QTZN7TI1" target="_blank">
-                        + 55 81 981645401
+                        + 55 &#40;81&#41; 981645401
                     </a>
                 </div>
             </div>
@@ -253,7 +288,11 @@
             <div class="footer__card">
                 <div class="footer__card__pic lattes"></div>
                 <div class="footer__card__title">
-                    <a href="https://lattes.cnpq.br/3076429582182777" target="_blank">
+                    <a 
+                        href="https://lattes.cnpq.br/3076429582182777"
+                        target="_blank"
+                        data-lang="lattesCv"
+                    >
                         Currículo Lattes
                     </a>
                 </div>
@@ -262,6 +301,7 @@
         <a class="anchor" id="contact"></a>
         <script src="node_modules/aos/dist/aos.js"></script>
         <script src="js/script.js"></script>
+        <script src="js/lang-utils.js" type="module"></script>
         <script>
             AOS.init();
         </script>
