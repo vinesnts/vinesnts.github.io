@@ -262,7 +262,6 @@ header .header__content__title * {
   flex-wrap: wrap;
   align-items: center;
   flex: 0 1 25%;
-  margin: 0 1em;
   margin-top: var(--between-space-y);
   text-align: center;
 }
@@ -663,7 +662,6 @@ footer .footer__card__title a:hover {
 .main-container__card .ref__card {
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
   }
   .main-container__card .skills__card__pic,
 .main-container__card .projects__card__pic,
@@ -675,13 +673,11 @@ footer .footer__card__title a:hover {
 .main-container__card .projects__card__title,
 .main-container__card .ref__card__title {
     margin: 0;
-    margin-left: 1em;
   }
   .main-container__card .skills__card ul,
 .main-container__card .projects__card ul,
 .main-container__card .ref__card ul {
     flex: 1 1 100%;
-    margin-left: 3.5em;
     text-align: left;
   }
   footer .footer {
