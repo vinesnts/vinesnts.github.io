@@ -2,8 +2,8 @@ const EN = 'en';
 const PT = 'pt';
 
 export const LANG = {
-  [EN]: 'English (EN)',
-  [PT]: 'Português (PT)'
+  [EN]: 'English',
+  [PT]: 'Português'
 }
 
 const lang_en = {
@@ -53,7 +53,7 @@ const lang_pt = {
   bioHref: '#',
   skills: 'Habilidades',
   skillsHref: '#',
-  references: 'Rereferências',
+  references: 'Rereferenciais',
   referencesHref: '#',
   contact: 'Contato',
   contactHref: '#',
