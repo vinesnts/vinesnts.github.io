@@ -100,6 +100,23 @@ ul {
   top: -10em;
 }
 
+select {
+  background-color: #222;
+  border: 1px solid #222;
+  color: #fff;
+  padding: 0.75em 1.5em;
+  font-size: 1em;
+}
+select.active {
+  background-color: #fff;
+  border: 1px solid #fff;
+  color: #333;
+  border-radius: 0px;
+}
+select:hover {
+  border: 1px solid #fff;
+}
+
 header {
   display: flex;
   align-items: center;
