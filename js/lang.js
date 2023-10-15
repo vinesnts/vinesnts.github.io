@@ -47,7 +47,7 @@ const lang_en = {
 const lang_pt = {
   selectLang: 'Selecionar idioma',
   title: 'Vinícius Almeida | Desenvolvedor',
-  home: 'Inícius',
+  home: 'Início',
   homeHref: '#',
   bio: 'Bio',
   bioHref: '#',

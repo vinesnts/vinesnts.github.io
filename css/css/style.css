@@ -26,7 +26,7 @@ footer .footer, .main-container__card.skills, .main-container__card.projects, .m
   --related-space: 0.375em;
   --unrelated-space: 1.25em;
   --header-height: 0em;
-  --footer-height: calc(var(--header-height) + 12em);
+  --footer-height: calc(var(--header-height) + 16em);
   --h1-size: 4em;
   --h2-size: 3em;
   --h3-size: 2em;
@@ -111,10 +111,11 @@ select.active {
   background-color: #fff;
   border: 1px solid #fff;
   color: #333;
-  border-radius: 0px;
+  border-radius: 6px;
 }
 select:hover {
   border: 1px solid #fff;
+  border-radius: 6px;
 }
 
 header {
@@ -180,10 +181,11 @@ header .header__content__title * {
   background-color: #fff;
   border: 1px solid #fff;
   color: #333;
-  border-radius: 0px;
+  border-radius: 6px;
 }
 .main-container .navbar a:hover {
   border: 1px solid #fff;
+  border-radius: 6px;
 }
 .main-container .navbar.darken {
   background-color: #222;
@@ -193,7 +195,7 @@ header .header__content__title * {
   margin-top: 0;
   margin-bottom: var(--bottom-padding);
   padding: var(--card-padding);
-  border-radius: 0px;
+  border-radius: 12px;
   background-color: #fff;
   box-shadow: none;
 }
@@ -210,8 +212,8 @@ header .header__content__title * {
   width: 200px;
   height: 200px;
   border-radius: 200px;
-  background: #222 url("../../assets/profile-pic-alt.png") no-repeat 50% 20%;
-  background-size: 115%;
+  background: #222 url("../../assets/profile-pic-alt.png") no-repeat 50% 50%;
+  background-size: 130%;
   box-shadow: none;
 }
 .main-container__card .intro__info__profile-name {
@@ -544,6 +546,9 @@ footer .footer__card {
   margin-top: var(--related-space);
   text-align: center;
 }
+footer .footer__card.center {
+  justify-content: center;
+}
 footer .footer__card__pic {
   width: 30px;
   height: 30px;
@@ -551,6 +556,9 @@ footer .footer__card__pic {
   background: #222 no-repeat 50% 50%;
   background-size: 60%;
   box-shadow: none;
+  color: #fff;
+  line-height: 30px;
+  font-size: 20px;
 }
 footer .footer__card__pic.email {
   background-image: url("../../assets/icon/email-icon.png");
@@ -595,7 +603,7 @@ footer .footer__card__title a:hover {
     --p-size: 1.25em;
   }
   .main-container__card {
-    border-radius: 0px;
+    border-radius: 12px;
   }
   .main-container__card .bio__pic {
     width: 125px;
@@ -609,7 +617,7 @@ footer .footer__card__title a:hover {
     --bottom-padding: 1.5em;
     --card-padding: 2em;
     --header-height: 0em;
-    --footer-height: 12em;
+    --footer-height: 17em;
   }
   header {
     margin: 0;
@@ -619,7 +627,7 @@ footer .footer__card__title a:hover {
     align-items: center;
   }
   .main-container__card {
-    border-radius: 0px;
+    border-radius: 12px;
   }
 }
 @media only screen and (max-width: 413px) {
@@ -632,7 +640,7 @@ footer .footer__card__title a:hover {
     --h4-size: 1.375em;
     --p-size: 1.25em;
     --header-height: 0em;
-    --footer-height: 11em;
+    --footer-height: 17em;
     --base-width: 832px;
     --related-space: 0.25em;
     --unrelated-space: 1em;
@@ -648,35 +656,35 @@ footer .footer__card__title a:hover {
     align-items: flex-start;
   }
   .main-container__card .skills__title,
-.main-container__card .projects__title,
-.main-container__card .ref__title {
+  .main-container__card .projects__title,
+  .main-container__card .ref__title {
     width: 100%;
   }
   .main-container__card .skills__note,
-.main-container__card .projects__note,
-.main-container__card .ref__note {
+  .main-container__card .projects__note,
+  .main-container__card .ref__note {
     width: 100%;
   }
   .main-container__card .skills__card,
-.main-container__card .projects__card,
-.main-container__card .ref__card {
+  .main-container__card .projects__card,
+  .main-container__card .ref__card {
     flex-direction: row;
     flex-wrap: wrap;
   }
   .main-container__card .skills__card__pic,
-.main-container__card .projects__card__pic,
-.main-container__card .ref__card__pic {
+  .main-container__card .projects__card__pic,
+  .main-container__card .ref__card__pic {
     width: 30px;
     height: 30px;
   }
   .main-container__card .skills__card__title,
-.main-container__card .projects__card__title,
-.main-container__card .ref__card__title {
+  .main-container__card .projects__card__title,
+  .main-container__card .ref__card__title {
     margin: 0;
   }
   .main-container__card .skills__card ul,
-.main-container__card .projects__card ul,
-.main-container__card .ref__card ul {
+  .main-container__card .projects__card ul,
+  .main-container__card .ref__card ul {
     flex: 1 1 100%;
     text-align: left;
   }

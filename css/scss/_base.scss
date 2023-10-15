@@ -20,7 +20,7 @@
     --unrelated-space: 1.25em;
 
     --header-height: 0em;
-    --footer-height: calc(var(--header-height) + 12em);
+    --footer-height: calc(var(--header-height) + 16em);
 
     --h1-size: 4em;
     --h2-size: 3em;
@@ -118,5 +118,6 @@ select {
 
     &:hover {
         border: 1px solid $white-color;
+        border-radius: $border-radius-sm;
     }
 }
