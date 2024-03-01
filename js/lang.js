@@ -39,7 +39,8 @@ const lang_en = {
   lattesCvHref: 'https://lattes.cnpq.br/3076429582182777',
   tecnosolveText: 'Developing and maintaining systems and APIs using technologies such as Python (Falcon and Django), Angular, Java Spring Boot, PostgreSQL and GIT.',
   showText: 'Developing and maintaining systems and APIs in PHP CodeIgniter, NodeJS, HTML/CSS and MySQL.',
-  ufapeText: 'Computer Science Bachelor\'s Degree. Develping research and extension projects.',
+  ufapeText: 'Computer Science Bachelor\'s Degree.',
+  cinufpeText: 'Computer Science Master\'s Degree Student.',
   aliveText: 'Developing the Front-End of the MeuPregão platform using technologies such as HTML, CSS, JS and Bootstrap, as well as consuming APIs using ajax.',
   casaOngText: 'Developing and management of the NGO Centro de Apoio Social e Ambiental website.',
 }
@@ -78,7 +79,8 @@ const lang_pt = {
   lattesCvHref: 'https://lattes.cnpq.br/3076429582182777',
   tecnosolveText: 'Desenvolvimento e manutenção de sistemas e APIs usando tecnologias como: Python (Falcon e Django), Angular, Java Spring Boot, PostgreSQL e GIT.',
   showText: 'Desenvolvimento e manutenção de sistemas e APIs em PHP CodeIgniter, NodeJS, HTML/CSS e MySQL.',
-  ufapeText: 'Graduação em Ciência da Computação. Desenvolvimento de Pesquisa e Extensão.',
+  ufapeText: 'Graduação em Ciência da Computação.',
+  cinufpeText: 'Mestrando em Ciência da Computação.',
   aliveText: 'Desenvolvimento do Front-End da plataforma MeuPregão usando tecnologias como HTML, CSS, JS e Bootstrap, além de consumo de APIs por meio de ajax.',
   casaOngText: 'Desenvolvimento e gerenciamento do site da ONG Centro de Apoio Social e Ambiental.',
 }

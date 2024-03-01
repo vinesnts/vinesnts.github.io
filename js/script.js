@@ -135,3 +135,5 @@ window.addEventListener('scroll', () => {
     handleScrollHighlight(highlightContactTrigger, highlightContact, scrollOffsetContact);
     handleScrollBottom(highlightContact);
 })
+
+document.querySelector('#copyright-year').textContent = (new Date()).getFullYear();

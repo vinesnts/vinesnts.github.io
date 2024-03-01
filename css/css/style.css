@@ -585,6 +585,9 @@ footer .footer__card__title a {
 footer .footer__card__title a:hover {
   text-decoration: underline;
 }
+footer .footer__card__title span {
+  color: #fff;
+}
 
 .footer-space {
   position: relative;
