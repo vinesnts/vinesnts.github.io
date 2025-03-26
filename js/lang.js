@@ -23,7 +23,7 @@ const lang_en = {
   downloadCvHref: 'https://drive.google.com/file/d/1N0gQ_BWTf1Q7YVGn2yXRU6K484rqMDj6/view?usp=sharing',
   developer: 'Developer and Researcher',
   bioText: `
-    I am a <strong>software developer</strong> with experience in the Angular framework and libraries like Bootstrap and jQuery,
+    I am a <strong>software developer</strong> with experience in the Angular framework and
     Python with frameworks like Django, Falcon, Flask and FastAPI.
     I also work with databases such as Postgres and MySQL,
     and I have experience with AWS services like S3, EC2 and Lambda,
@@ -64,7 +64,7 @@ const lang_pt = {
   downloadCvHref: "https://drive.google.com/file/d/1pe-2QkKGAPJPN9lZuA_yGxbfxjmBC9kP/view?usp=sharing",
   developer: 'Desenvolvedor de Softwares e Pesquisador',
   bioText: `
-    Eu sou um <strong>desenvolvedor de softwares</strong> com experiência no framework Angular,
+    Eu sou um <strong>desenvolvedor de softwares</strong> com experiência no framework Angular e
     Python com frameworks como Django, Falcon, Flask e FastAPI.
     Eu também trabalho com bancos de dados, como Postgres and MySQL,
     e tenho experiência com serviços AWS, como S3, EC2 and Lambda,
