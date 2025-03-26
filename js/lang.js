@@ -8,7 +8,7 @@ export const LANG = {
 
 const lang_en = {
   selectLang: 'Select language',
-  title: 'Vinícius Almeida | Developer',
+  title: 'Vinícius Almeida | Software Developer and Researcher',
   home: 'Home',
   homeHref: '#',
   bio: 'Bio',
@@ -21,16 +21,16 @@ const lang_en = {
   contactHref: '#',
   downloadCv: 'Download&nbsp;CV',
   downloadCvHref: 'https://drive.google.com/file/d/1N0gQ_BWTf1Q7YVGn2yXRU6K484rqMDj6/view?usp=sharing',
-  developer: 'Developer',
+  developer: 'Developer and Researcher',
   bioText: `
-    As a <strong>Front-end</strong> developer, I work with the Angular framework. But I also have experience on the major basic web tools,
-    like HTML, CSS and JavaScript and the most popular libs, such as Bootstrap and jQuery.
+    I am a <strong>software developer</strong> with experience in the Angular framework and libraries like Bootstrap and jQuery,
+    Python with frameworks like Django, Falcon, Flask and FastAPI.
+    I also work with databases such as Postgres and MySQL,
+    and I have experience with AWS services like S3, EC2 and Lambda,
+    as well as Docker containers and CI/CD pipelines.
     <br><br>
-    As a <strong>Back-end</strong> developer, I work with Python with the frameworks Django and Falcon, and Java Spring Boot.
-    Also, I have worked with PHP with Laravel and CodeIgniter.
-    <br><br>
-    As a <strong>Full-Stack</strong> developer, I've acquired experience with management of server projects using technologies
-    such as Apache, httpd, cron and Linux commands. I also work with databases such as Postgres and MySQL.
+    I am also a <strong>researcher</strong> in the field of performance, reliability and availability modeling of computing systems,
+    with experience in the development of stochastic models for analysis and simulation through the Mercury tool.
   `,
   misc: 'Misc',
   emailAddress: 'contact@viniciusalmeida.dev',
@@ -43,11 +43,13 @@ const lang_en = {
   cinufpeText: 'Computer Science Master\'s Degree Student.',
   aliveText: 'Developing the Front-End of the MeuPregão platform using technologies such as HTML, CSS, JS and Bootstrap, as well as consuming APIs using ajax.',
   casaOngText: 'Developing and management of the NGO Centro de Apoio Social e Ambiental website.',
+  eCamaraDigitalText: 'Platform for presence registering, voting and session managemment of city councils.',
+  modcsText: 'Research group on modeling the performance, reliability and availability of computing systems.',
 }
 
 const lang_pt = {
   selectLang: 'Selecionar idioma',
-  title: 'Vinícius Almeida | Desenvolvedor',
+  title: 'Vinícius Almeida | Desenvolvedor e Pesquisador',
   home: 'Início',
   homeHref: '#',
   bio: 'Bio',
@@ -60,17 +62,16 @@ const lang_pt = {
   contactHref: '#',
   downloadCv: 'Baixar&nbsp;Currículo',
   downloadCvHref: "https://drive.google.com/file/d/1pe-2QkKGAPJPN9lZuA_yGxbfxjmBC9kP/view?usp=sharing",
-  developer: 'Desenvolvedor',
+  developer: 'Desenvolvedor de Softwares e Pesquisador',
   bioText: `
-    No <strong>Front-end</strong> trabalho com as principais tecnologias básicas como HTML, CSS e Javascript,
-    além do framework Angular e bibliotecas como Bootstrap e jQuery.
+    Eu sou um <strong>desenvolvedor de softwares</strong> com experiência no framework Angular,
+    Python com frameworks como Django, Falcon, Flask e FastAPI.
+    Eu também trabalho com bancos de dados, como Postgres and MySQL,
+    e tenho experiência com serviços AWS, como S3, EC2 and Lambda,
+    assim como containers Docker e processos de CI/CD.
     <br><br>
-    No <strong>Back-end</strong>, tenho experiência com Python, nos frameworks Django e Falcon, 
-    além de Java Spring Boot e PHP com Laravel e CodeIgniter.
-    <br><br>
-    Como <strong>Full-Stack</strong>, adquiri experiência em gerenciamento de projetos em servidores,
-    usando tecnologias como Apache, httpd, cron e comandos Linux. Além disso, também projeto bancos de dados
-    nos mais conhecidos SGBDs, como Postgres e MySQL.
+    Eu também sou um<strong>pesquisador</strong> no campo do modelamento de performance, confiabilidade e disponibilidade de sistemas computacionais,
+    com experiência no desenvolvimento de modelos estocásticos para análise e simulação na ferramenta Mercury.
   `,
   misc: 'Outros',
   emailAddress: 'contato@viniciusalmeida.dev',
@@ -83,6 +84,8 @@ const lang_pt = {
   cinufpeText: 'Mestrando em Ciência da Computação.',
   aliveText: 'Desenvolvimento do Front-End da plataforma MeuPregão usando tecnologias como HTML, CSS, JS e Bootstrap, além de consumo de APIs por meio de ajax.',
   casaOngText: 'Desenvolvimento e gerenciamento do site da ONG Centro de Apoio Social e Ambiental.',
+  eCamaraDigitalText: 'Plataforma de marcação de presenças, votações e gerenciamento de sessões de câmaras municipais.',
+  modcsText: 'Grupo de pesquisa de modelagem de performance, confiabilidade e disponibilidade de sistemas computacionais.',
 }
 
 const lang = (lang) => {
