@@ -1,4 +1,5 @@
 import lang, { LANG } from './lang.js';
+import { updateCopyrightYear } from './copyright-year-utils.js';
 
 const userLang = navigator.language || navigator.userLanguage;
 const localLang = window.localStorage.getItem('lang.viniciusalmeida.dev');
@@ -30,5 +31,6 @@ function translate(language) {
       el.innerHTML = value;
       if (el.href) el.href = translation[`${key}Href`]
     });
+    updateCopyrightYear();
   });
 }

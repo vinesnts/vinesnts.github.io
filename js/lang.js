@@ -15,7 +15,7 @@ const lang_en = {
   bioHref: '#',
   skills: 'Skills',
   skillsHref: '#',
-  references: 'Rereferences',
+  references: 'References',
   referencesHref: '#',
   contact: 'Contact',
   contactHref: '#',
@@ -45,6 +45,7 @@ const lang_en = {
   casaOngText: 'Developing and management of the NGO Centro de Apoio Social e Ambiental website.',
   eCamaraDigitalText: 'Platform for presence registering, voting and session managemment of city councils.',
   modcsText: 'Research group on modeling the performance, reliability and availability of computing systems.',
+  copyright: '<span id="copyright-year"></span>&nbsp;Vinicius&nbsp;Almeida&nbsp;Dev. All&nbsp;rights&nbsp;reserved.'
 }
 
 const lang_pt = {
@@ -56,7 +57,7 @@ const lang_pt = {
   bioHref: '#',
   skills: 'Habilidades',
   skillsHref: '#',
-  references: 'Rereferenciais',
+  references: 'Referenciais',
   referencesHref: '#',
   contact: 'Contato',
   contactHref: '#',
@@ -86,6 +87,7 @@ const lang_pt = {
   casaOngText: 'Desenvolvimento e gerenciamento do site da ONG Centro de Apoio Social e Ambiental.',
   eCamaraDigitalText: 'Plataforma de marcação de presenças, votações e gerenciamento de sessões de câmaras municipais.',
   modcsText: 'Grupo de pesquisa de modelagem de performance, confiabilidade e disponibilidade de sistemas computacionais.',
+  copyright: '<span id="copyright-year"></span>&nbsp;Vinicius&nbsp;Almeida&nbsp;Dev. Todos&nbsp;os&nbsp;direitos&nbsp;reservados.'
 }
 
 const lang = (lang) => {
