@@ -1,4 +1,4 @@
-@import './variables';
+@use 'variables';
 
 *,
 *::before,
@@ -31,12 +31,13 @@
     --h3-size: 2rem;
     --h4-size: 1.5rem;
     --p-size: 1.375rem;
+    --p-size-sm: 1rem;
 
     color-scheme: light dark;
 }
 
 body {
-    font-family: $font-stack;
+    font-family: variables.$font-stack;
     font-weight: 500;
     display: flex;
     flex-direction: column;
@@ -48,7 +49,7 @@ body {
         position: fixed;
         width: 100%;
         height: 100vh;
-        background-color: $primary-color;
+        background-color: variables.$primary-color;
     }
 }
 
@@ -61,7 +62,11 @@ h5,
 h6 {
     margin: 0;
     padding: 0;
-    color: light-dark($black-color, $white-color);
+    color: light-dark(variables.$black-color, variables.$white-color);
+    
+    &::selection {
+        background-color: variables.$accent-color;
+    }
 }
 
 %h1 {
@@ -95,6 +100,11 @@ ul {
     padding: 0;
 }
 
+a {
+    color: variables.$white-color;
+    text-decoration: none;
+}
+
 .anchor {
     display: block;
     position: relative;
@@ -107,21 +117,109 @@ ul {
 }
 
 select {
-    background-color: $primary-color;
-    border: 1px solid $primary-color;
-    color: $white-color;
+    background-color: variables.$primary-color;
+    border: 1px solid variables.$primary-color;
+    color: variables.$white-color;
     padding: 0.75em 1.5em;
     font-size: 1em;
 
     &.active {
-        background-color: $white-color;
-        border: 1px solid $white-color;
-        color: $black-color;
-        border-radius: $border-radius-sm;
+        background-color: variables.$white-color;
+        border: 1px solid variables.$white-color;
+        color: variables.$black-color;
+        border-radius: variables.$border-radius-sm;
     }
 
     &:hover {
-        border: 1px solid $white-color;
-        border-radius: $border-radius-sm;
+        border: 1px solid variables.$white-color;
+        border-radius: variables.$border-radius-sm;
+    }
+}
+
+a strong {
+    font-weight: 600;
+}
+
+strong {
+    font-weight: 500;
+    position: relative;
+    color: light-dark(variables.$black-color, variables.$white-color);
+
+    &:not(:has(a))::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 0;
+        height: var(--h4-size);
+        background-color: light-dark(variables.$light-primary-color, variables.$accent-color);
+        bottom: -2px;
+        left: 0;
+        box-shadow: variables.$shadow-button;
+
+        animation: underline-grow 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+
+        @keyframes underline-grow {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+    }
+
+    &:has(a)::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 0;
+        height: 3px;
+        background-color: variables.$accent-color;
+        bottom: 2px;
+        left: 0;
+        box-shadow: variables.$shadow-button;
+
+        animation: underline-grow 1.2s cubic-bezier(0.4, 0, 0.2, 1) 300ms forwards;
+
+        @keyframes underline-grow {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+    }
+}
+
+html {
+    &[lang="en"] {
+        .works__card__copy-btn {
+    
+            &.copied {
+                &::before {
+                    content: "Copied!"
+                }
+            }
+    
+            &::before {
+                content: "Copy BibTeX";
+            }
+        }
+    }
+
+    &[lang="pt"] {
+        .works__card__copy-btn {
+    
+            &.copied {
+                &::before {
+                    content: "Copiado!"
+                }
+            }
+    
+            &::before {
+                content: "Copiar BibTeX";
+            }
+        }
     }
 }

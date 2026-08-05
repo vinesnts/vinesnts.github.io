@@ -1,3 +1,5 @@
+@use "../variables";
+
 @media only screen and (max-width: 840px) {
     
     :root {
@@ -13,7 +15,7 @@
 
     .main-container {
         &__card {
-            border-radius: $border-radius-lg;
+            border-radius: variables.$border-radius-lg;
 
             .bio {
                 &__pic {

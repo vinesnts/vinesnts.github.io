@@ -8,6 +8,7 @@ const selectedLang = localLang ?? userLang;
 const langSelector = document.querySelector('#lang');
 langSelector.addEventListener('change', () => {
   const value = langSelector.value;
+  document.querySelector('html[lang]').setAttribute("lang", value);
   window.localStorage.setItem('lang.viniciusalmeida.dev', value);
   translate(value);
 });

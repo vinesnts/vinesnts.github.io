@@ -1,3 +1,5 @@
+@use "../variables";
+
 @media only screen and (max-width: 768px) {
     :root {
         scroll-padding-top: 6rem;
@@ -23,7 +25,7 @@
 
     .main-container {
         &__card {
-            border-radius: $border-radius-md;
+            border-radius: variables.$border-radius-md;
         }
     }
 

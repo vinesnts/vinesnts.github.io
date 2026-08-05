@@ -1,6 +1,7 @@
-@import './variables';
-@import './base';
-@import './header';
+@use "sass:meta";
+@use 'variables';
+@use 'base';
+@use 'header';
 
 .main-container {
     position: relative;
@@ -22,7 +23,7 @@
         overflow-y: hidden;
         
         ul {
-            background-color: $primary-color;
+            background-color: variables.$primary-color;
             display: flex;
             width: max-content;
             min-width: 100%;
@@ -37,25 +38,25 @@
         a {
             display: inline-block;
             padding: 0.75em 1.5em;
-            color: $white-color;
+            color: variables.$white-color;
             text-decoration: none;
-            border: 1px solid $primary-color;
+            border: 1px solid variables.$primary-color;
             
             &.active {
-                background-color: $white-color;
-                border: 1px solid $white-color;
-                color: $black-color;
-                border-radius: $border-radius-sm;
+                background-color: variables.$accent-color;
+                border: 1px solid variables.$white-color;
+                color: variables.$white-color;
+                border-radius: variables.$border-radius-sm;
             }
 
             &:hover {
-                border: 1px solid $white-color;
-                border-radius: $border-radius-sm;
+                border: 1px solid variables.$white-color;
+                border-radius: variables.$border-radius-sm;
             }
         }
     
         &.darken {
-            background-color: $primary-color;
+            background-color: variables.$primary-color;
         }
     }
 
@@ -64,18 +65,18 @@
         margin-top: 0;
         margin-bottom: var(--bottom-padding);
         padding: var(--card-padding);
-        border-radius: $border-radius-lg;
-        background-color: light-dark($white-color, $primary-color);
-        color: light-dark($black-color, $white-color);
+        border-radius: variables.$border-radius-lg;
+        background-color: light-dark(variables.$white-color, variables.$primary-color);
+        color: light-dark(variables.$black-color, variables.$white-color);
 
         @media (prefers-color-scheme: light) {
-            box-shadow: $shadow-button;
+            box-shadow: variables.$shadow-button;
             border: 1px solid none;
         }
 
         @media (prefers-color-scheme: dark) {
             box-shadow: none;
-            border: 1px solid $light-color;
+            border: 1px solid variables.$light-color;
         }
 
 
@@ -100,9 +101,9 @@
                 width: 200px;
                 height: 200px;
                 border-radius: 300px;
-                background: $primary-color $asset-pic-profile-alt no-repeat 40% 40%;
+                background: variables.$primary-color variables.$asset-pic-profile-alt no-repeat 40% 40%;
                 background-size: 150%;
-                box-shadow: $shadow-button
+                box-shadow: variables.$shadow-button
             }
 
             &__info {
@@ -138,6 +139,7 @@
                     margin-top: var(--related-space);
                     text-align: justify;
                     text-justify: inter-word;
+                    font-size: var(--p-size-sm);
                     line-height: var(--p-size);
                 }
             }
@@ -171,9 +173,10 @@
 
                 &__title {
                     font-weight: 600;
+                    font-size: var(--p-size-sm);
 
                     a {
-                        color: light-dark($black-color, $light-color);
+                        color: light-dark(variables.$black-color, variables.$light-color);
                         text-decoration: none;
 
                         &:active,
@@ -187,116 +190,116 @@
                     width: 50px;
                     height: 50px;
                     border-radius: 200px;
-                    background: $primary-color no-repeat 50% 50%;
+                    background: variables.$primary-color no-repeat 50% 50%;
                     background-size: 60%;
-                    box-shadow: $shadow-button;
+                    box-shadow: variables.$shadow-button;
                     margin-right: var(--unrelated-space);
-                    border: 1px solid $primary-color;
+                    border: 1px solid variables.$primary-color;
 
                     span {
-                        color: $white-color;
+                        color: variables.$white-color;
                         font-size: 3em;
                         line-height: 24px;
                     }
     
                     &.frontend {
-                        background-image: $asset-icon-frontend;
+                        background-image: variables.$asset-icon-frontend;
                         background-size: 70%;
                     }
     
                     &.backend {
-                        background-image: $asset-icon-backend;
+                        background-image: variables.$asset-icon-backend;
                     }
     
                     &.design {
-                        background-image: $asset-icon-design;
+                        background-image: variables.$asset-icon-design;
                     }
     
                     &.email {
-                        background-image: $asset-icon-email;
+                        background-image: variables.$asset-icon-email;
                     }
     
                     &.phone {
-                        background-image: $asset-icon-phone;
+                        background-image: variables.$asset-icon-phone;
                         background-size: 50%;
                     }
     
                     &.linkedin {
-                        background-image: $asset-logo-linkedin;
+                        background-image: variables.$asset-logo-linkedin;
                         background-size: 50%;
                     }
 
                     &.github {
-                        background-image: $asset-logo-github;
+                        background-image: variables.$asset-logo-github;
                         background-size: 50%;
                     }
     
                     &.casaong {
                         background-color: #BEF0B8;
-                        background-image: $asset-logo-casaong;
+                        background-image: variables.$asset-logo-casaong;
                         background-size: 80%;
                     }
     
                     &.lapa {
                         background-color: #FFF;
-                        background-image: $asset-logo-lapa;
+                        background-image: variables.$asset-logo-lapa;
                         background-size: 55%;
                     }
     
                     &.daroca {
                         background-color: #DCFFEE;
-                        background-image: $asset-logo-daroca;
+                        background-image: variables.$asset-logo-daroca;
                         background-size: 70%;
                     }
     
                     &.tecnosolve {
                         background-color: rgb(0,39,96);
-                        background-image: $asset-logo-tecnosolve;
+                        background-image: variables.$asset-logo-tecnosolve;
                         background-position: center;
                         background-size: 125%;
                     }
     
                     &.showtecnologia {
                         background-color: #FFFFFF;
-                        background-image: $asset-logo-showtecnologia;
+                        background-image: variables.$asset-logo-showtecnologia;
                         background-size: 110%;
                     }
     
                     &.gestor {
                         background-color: #08469a;
-                        background-image: $asset-logo-gestor;
+                        background-image: variables.$asset-logo-gestor;
                         background-size: 95%;
                     }
     
                     &.ufape {
                         background-color: #FFFFFF;
-                        background-image: $asset-logo-ufape;
+                        background-image: variables.$asset-logo-ufape;
                         background-size: 95%;
                     }
     
                     &.alive {
                         background-color: #FFFFFF;
-                        background-image: $asset-logo-alive;
+                        background-image: variables.$asset-logo-alive;
                         background-size: 100%;
                     }
     
                     &.meupregao {
                         background-color: #FFFFFF;
-                        background-image: $asset-logo-meupregao;
+                        background-image: variables.$asset-logo-meupregao;
                         background-size: 50%;
                     }
                 }
 
                 &__description, &__author, &__venue {
                     margin-top: var(--related-space);
-                    font-size: 1em;
+                    font-size: var(--p-size-sm);
                     text-align: left;
                     flex: 1 1 100%;
                 }
 
                 &__list {
                     margin-top: var(--related-space);
-                    font-size: 1em;
+                    font-size: var(--p-size-sm);
                     text-align: left;
                     flex: 1 1 100%;
                     display: flex;
@@ -309,7 +312,7 @@
                 ~ .works {
                     &__card {
                         padding-top: var(--unrelated-space);
-                        border-top: 1px solid $dark-shadow-color;
+                        border-top: 1px solid variables.$dark-shadow-color;
                     }
                 }
             }
@@ -325,34 +328,43 @@
                 }
 
                 &__copy-btn {
+                    display: inline;
                     position: relative;
-                    background-color: $black-color;
+                    background-image: url("../../assets/icon/copy.png");
+                    background-position: 50% 50%;
+                    background-size: 75%;
+                    background-repeat: no-repeat;
+                    background-color: light-dark(variables.$white-color, variables.$black-color);
                     border: none;
                     border-radius: 20px;
-                    padding: 4px 6px;
+                    width: 22px;
+                    height: 22px;
+                    padding: 4px 0;
                     margin: 0 8px;
                     cursor: pointer;
+                    transition: transform ease-in-out 200ms;
 
-                    img {
-                        transform: translateY(2px);
+                    @media (prefers-color-scheme: light) {
+                        background-image: url("../../assets/icon/copy-dark.png");
+                        &.copied {
+                            background-image: url("../../assets/icon/copied-dark.png");
+                        }
+                    }
+
+                    @media (prefers-color-scheme: dark) {
+                        background-image: url("../../assets/icon/copy.png");
+                        &.copied {
+                            background-image: url("../../assets/icon/copied.png");
+                        }
                     }
                     
                     &:hover {
-                        img {
-                            transform: scale(1.1) translateY(2px);
-                        }
+                        transform: scale(1.2);
 
                         &::before {
                             opacity: 1;
                             transition: opacity ease-in-out 200ms 500ms;
                         }
-                    }
-
-                    img {
-                        width: 16px;
-                        height: 16px;
-                        transition: transform 200ms ease-in-out;
-                        
                     }
                     
 
@@ -363,8 +375,8 @@
                         left: 50%;
                         transform: translateX(-50%);
                         font-size: 12px;
-                        background-color: #333;
-                        color: $white-color;
+                        background-color: light-dark(variables.$black-color, variables.$white-color);
+                        color: light-dark(variables.$white-color, variables.$black-color);
                         padding: 2px 6px;
                         border-radius: 4px;
                         opacity: 0;
@@ -387,12 +399,12 @@
 
 .tag {
     border-radius: 5px;
-    background-color: $primary-color;
-    color: $white-color;
+    background-color: variables.$primary-color;
+    color: variables.$white-color;
     padding: .25em;
 
     &.yellow {
-        color: $black-color;
+        color: variables.$black-color;
         background-color: #FFCA28;
     }
 
@@ -426,7 +438,7 @@ form {
         margin-top: var(--unrelated-space);
 
         &__form-control {
-            border: 1px solid $black-color;
+            border: 1px solid variables.$black-color;
             border-radius: 5px;
             padding: 1em;
         }
@@ -457,8 +469,8 @@ form {
     pointer-events: all;
 }
 
-@import './footer';
-@import './media/screen_lg';
-@import './media/screen_md';
-@import './media/screen_sm';
-@import './media/screen_xs';
+@include meta.load-css('footer');
+@include meta.load-css('media/screen_lg');
+@include meta.load-css('media/screen_md');
+@include meta.load-css('media/screen_sm');
+@include meta.load-css('media/screen_xs');

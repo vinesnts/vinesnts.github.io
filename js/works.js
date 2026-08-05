@@ -1,7 +1,7 @@
 export const works = [
     {
         "author": ["Vinícius Almeida", "Jônatas Silva", "Marcelo Santana", "David Cavalcanti", "Renata Dantas", "Paulo Maciel"],
-        "title": "Stochastic modeling of VM migration in vehicular clouds for smart mobility fleets",
+        "title": "<strong>Stochastic modeling</strong> of <strong>VM migration</strong> in <strong>vehicular clouds</strong> for smart mobility fleets",
         "booktitle": "12th IEEE International Smart Cities Conference (ISC2)",
         "location": "Porto, Portugal",
         "year": 2026,
@@ -16,7 +16,7 @@ export const works = [
     },
     {
         "author": ["Vinícius Almeida", "Jônatas Silva", "Marcelo Santana", "Renata Dantas", "Paulo Maciel"],
-        "title": "Modeling for Design Guidance of Static Vehicular Cloud Systems in Car Rental Scenarios",
+        "title": "Modeling for Design Guidance of Static <strong>Vehicular Cloud</strong> Systems in Car Rental Scenarios",
         "booktitle": "2025 IEEE International Conference on Systems, Man, and Cybernetics (SMC)",
         "location": "Vienna, Austria",
         "year": 2025,
@@ -31,21 +31,8 @@ export const works = [
         "cover": "./static/works-cover/smc2025.png",
     },
     {
-        "title": "Investigating Vulnerability-Fixing Commits",
-        "volume": 31,
-        "url": "https://journals-sol.sbc.org.br/index.php/jbcs/article/view/4675",
-        "doi": "10.5753/jbcs.2025.4675",
-        "abstractNote": "An insecure software can cause severe damage to the user experience and privacy. Therefore, developers should prevent software vulnerabilities. However, detecting such problems is expensive and time-consuming. To address this issue, researchers propose vulnerability datasets that facilitate the investigation of their properties. In this regard, we investigate one of these datasets to better understand the vulnerabilities, their corrections, the authors involved, and the properties of the correction commits. Our results indicate that some vulnerabilities require many patches to solve. Furthermore, among the projects included in the target dataset, the Chromium project is the most affected by these vulnerabilities. We also find that in most cases correction commits are small in terms of the number of files and lines affected. Additionally, the authors of the corrections are mostly not new to the files that need fixing. Finally, we find that most corrections involve changes that affect other developers and rarely affect the developer who introduced the problem. Therefore, corrections are usually made by other developers rather than by those who introduced the problem. We believe that our findings can help developers resolve vulnerabilities with fewer resources, such as time, budget, and manpower.",
-        "number": 1,
-        "journal": "Journal of the Brazilian Computer Society",
-        "author": ["Vinícius Almeida", "Rodrigo Andrade"],
-        "year": 2025,
-        "month": "May",
-        "pages": "294–309"
-    },
-    {
         "author": ["Thiago Pinheiro", "Vinícius Almeida", "Marcelo Santana", "Jonatas Silva", "Marco Mialaret Jr", "Paulo Maciel"],
-        "title": "Mercury 6.1: A Unified Platform for Stochastic Modeling, Analysis, and Decision Support",
+        "title": "Mercury 6.1: A Unified Platform for <strong>Stochastic Modeling</strong>, <strong>Analysis</strong>, and Decision Support",
         "booktitle": "The 36th IEEE International Symposium on Software Reliability Engineering (ISSRE-2025) - Industry Track",
         "location": "São Paulo, Brazil",
         "year": 2025,
@@ -60,7 +47,7 @@ export const works = [
     },
     {
         "author": ["David Cavalcanti", "Nelson Rosa", "Paulo Maciel", "Vinícius Almeida", "Luiz Silva"],
-        "title": "Midd4VC: A Middleware for Vehicular Cloud Computing",
+        "title": "Midd4VC: A Middleware for <strong>Vehicular Cloud Computing</strong>",
         "booktitle": "2025 IEEE International Smart Cities Conference (ISC2-2025)",
         "location": "Patras, Greece",
         "year": 2025,
@@ -75,7 +62,7 @@ export const works = [
     },
     {
         "author": ["Jônatas Silva", "Vinícius Almeida", "Marcelo Santana", "Renata Dantas", "Daliton da Silva", "Paulo Maciel"],
-        "title": "A Stochastic Performance Model And a Sensitivity Analysis of a Battery Swapping Station System for Electric Vehicles",
+        "title": "A <strong>Stochastic</strong> Performance Model And a <strong>Sensitivity Analysis</strong> of a Battery Swapping Station System for Electric Vehicles",
         "booktitle": "2025 IEEE International Conference on Systems, Man, and Cybernetics (SMC)",
         "location": "Vienna, Austria",
         "year": 2025,
@@ -90,7 +77,7 @@ export const works = [
     },
     {
         "author": ["Marcelo Santana", "Jônatas Silva", "Vinícius Almeida", "Paulo Maciel"],
-        "title": "Stochastic Battery Degradation Modeling Considering Cell-to-Cell Current Interactions",
+        "title": "<strong>Stochastic</strong> Battery Degradation <strong>Modeling</strong> Considering Cell-to-Cell Current Interactions",
         "booktitle": "2025 IEEE International Conference on Systems, Man, and Cybernetics (SMC)",
         "location": "Vienna, Austria",
         "year": 2025,
@@ -102,6 +89,19 @@ export const works = [
         "address": "Vienna, Austria",
         "doi": "10.1109/SMC58881.2025.11343385",
         "url": "https://ieeexplore.ieee.org/document/11343385"
+    },
+    {
+        "title": "Investigating Vulnerability-Fixing Commits",
+        "volume": 31,
+        "url": "https://journals-sol.sbc.org.br/index.php/jbcs/article/view/4675",
+        "doi": "10.5753/jbcs.2025.4675",
+        "abstractNote": "An insecure software can cause severe damage to the user experience and privacy. Therefore, developers should prevent software vulnerabilities. However, detecting such problems is expensive and time-consuming. To address this issue, researchers propose vulnerability datasets that facilitate the investigation of their properties. In this regard, we investigate one of these datasets to better understand the vulnerabilities, their corrections, the authors involved, and the properties of the correction commits. Our results indicate that some vulnerabilities require many patches to solve. Furthermore, among the projects included in the target dataset, the Chromium project is the most affected by these vulnerabilities. We also find that in most cases correction commits are small in terms of the number of files and lines affected. Additionally, the authors of the corrections are mostly not new to the files that need fixing. Finally, we find that most corrections involve changes that affect other developers and rarely affect the developer who introduced the problem. Therefore, corrections are usually made by other developers rather than by those who introduced the problem. We believe that our findings can help developers resolve vulnerabilities with fewer resources, such as time, budget, and manpower.",
+        "number": 1,
+        "journal": "Journal of the Brazilian Computer Society",
+        "author": ["Vinícius Almeida", "Rodrigo Andrade"],
+        "year": 2025,
+        "month": "May",
+        "pages": "294–309"
     },
     {
         "author": ["Rodrigo Andrade", "Vinícius Santos"],
@@ -132,10 +132,12 @@ function createBibTeXCitation(work) {
     return `${lastName}, ${firstNames}`;
   }).join(" and ");
 
+  const title = document.createElement('p');
+  title.innerHTML = work.title;
   if (work.journal)
     return `
       @article{${key},
-        title = {Performance Evaluation of IoT-Based Industrial Automation Using Edge, Fog, and Cloud Architectures},
+        title = {${title.innerText}},
         author = {${authors}},
         journal = {${work.journal}},
         volume = {${work?.volume || ""}},
@@ -148,7 +150,7 @@ function createBibTeXCitation(work) {
     @inproceedings{${key},
       author = {${authors}},
       booktitle = {${work.booktitle}},
-      title = {${work.title}},
+      title = {${title.innerText}},
       year = {${work.year}},
       volume = {${work?.volume || ""}},
       issn = {${work?.issn || ""}},
@@ -176,32 +178,21 @@ works.forEach((work) => {
 
     const titleLink = document.createElement('a');
     titleLink.href = work.url || '#';
-    titleLink.textContent = work.title;
+    titleLink.innerHTML = work.title;
     if (work.url && !work.url.includes('#')) {
         titleLink.target = '_blank';
         titleLink.rel = 'noopener noreferrer';
     }
     title.append(titleLink);
 
-    const imgCopy = document.createElement('img');
-    imgCopy.setAttribute('src', '../../assets/icon/copy.png');
-
-    const imgCopied = document.createElement('img');
-    imgCopied.setAttribute('src', '../../assets/icon/copied.png');
-
     const copyButton = document.createElement('button');
     copyButton.className = 'works__card__copy-btn';
     copyButton.type = 'button';
-    copyButton.appendChild(imgCopy);
     copyButton.addEventListener('click', () => {
         window.navigator.clipboard.writeText(
             createBibTeXCitation(work));
-        copyButton.innerHTML = '';
-        copyButton.appendChild(imgCopied);
         copyButton.classList.add('copied');
         window.setTimeout(() => {
-            copyButton.innerHTML = '';
-            copyButton.appendChild(imgCopy);
             copyButton.classList.remove('copied');
         }, 3000);
     });

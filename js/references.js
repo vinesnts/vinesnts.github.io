@@ -25,11 +25,6 @@ export const references = [
     descriptionKey: 'showText',
   },
   {
-    name: 'E-Câmara Digital',
-    url: '#',
-    descriptionKey: 'eCamaraDigitalText',
-  },
-  {
     name: 'CASA ONG',
     url: 'https://casaong.org',
     descriptionKey: 'casaOngText',
