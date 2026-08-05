@@ -25,6 +25,73 @@
     </script>
 </head>
 <body>
+    <a class="anchor" id="intro"></a>
+    <div class="header-space">
+        <!-- Element to reserve header space -->
+    </div>
+    <header data-animate="fade-out">
+        <div
+            class="intro"
+            data-aos="fade-down"
+            data-aos-anchor-placement="top-bottom"
+        >
+            <div class="intro__pic">
+                <!-- Self picture here -->
+            </div>
+            <div class="intro__info">
+                <h2 class="intro__info__profile-name">
+                    Vinícius Almeida
+                </h2>
+                <p class="intro__info__profile-text" data-lang="developer">
+                    Desenvolvedor
+                </p>
+            </div>
+            <div class="intro__links">
+                <div class="intro__links__card">
+                    <a 
+                        href="mailto:contato@viniciusalmeida.com"
+                        target="_blank"
+                        data-lang="emailAddress"
+                        title="me@viniciusalmeida.dev">
+                        <div class="intro__links__card__pic email"></div>
+                    </a>
+                </div>
+                <div class="intro__links__card">
+                    <a 
+                        href="https://wa.me/message/P2IWW4QTZN7TI1"
+                        target="_blank"
+                        title="+ 55 &#40;81&#41; 981645401">
+                        <div class="intro__links__card__pic phone"></div>
+                    </a>
+                </div>
+                <div class="intro__links__card">
+                    <a
+                        href="https://www.linkedin.com/in/viniciusalmeidadev/"
+                        target="_blank"
+                        title="in/viniciusalmeidadev">
+                        <div class="intro__links__card__pic linkedin"></div>
+                    </a>
+                </div>
+                <div class="intro__links__card">
+                    <a 
+                        href="https://github.com/vinesnts"
+                        target="_blank"
+                        title="@vinesnts">
+                        <div class="intro__links__card__pic github"></div>
+                    </a>
+                </div>
+                <div class="intro__links__card">
+                    <a 
+                        href="https://lattes.cnpq.br/3076429582182777"
+                        target="_blank"
+                        data-lang="lattesCv"
+                        title="Currículo Lattes">
+                        <div class="intro__links__card__pic lattes"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
     <div class="main-container">
         <nav
             id="navbar"
@@ -71,6 +138,15 @@
                 </li>
                 <li>
                     <a
+                        href="#works"
+                        data-lang="works"
+                        onclick="scrollToElement(event, 'works')"
+                    >
+                        Publicações
+                    </a>
+                </li>
+                <li>
+                    <a
                         href="#contact"
                         data-lang="contact"
                         onclick="scrollBottom(event)"
@@ -95,24 +171,6 @@
             </ul>
         </nav>
         <div class="content">
-            <div 
-                class="main-container__card intro"
-                data-aos="fade-up"
-                data-aos-anchor-placement="top-bottom"
-            >
-                <a class="anchor" id="intro"></a>
-                <div class="intro__pic">
-                    <!-- Self picture here -->
-                </div>
-                <div class="intro__info">
-                    <h2 class="intro__info__profile-name">
-                        Vinícius Almeida
-                    </h2>
-                    <p class="intro__info__profile-text" data-lang="developer">
-                        Desenvolvedor
-                    </p>
-                </div>
-            </div>
             <div class="main-container__card bio"
                 data-aos="fade-up"
                 data-aos-anchor-placement="top-bottom">
@@ -139,57 +197,7 @@
                 data-aos-anchor-placement="top-bottom">
                 <a class="anchor" id="skills"></a>
                 <h2 class="skills__title" data-lang="skills">Skills</h2>
-                <div class="skills__card">
-                    <!-- <div class="skills__card__pic frontend"></div> -->
-                    <h4 class="skills__card__title">Front-end</h4>
-                    <ul class="skills__card__list">
-                        <li class="tag red">Angular</li>
-                        <li class="tag blue">React</li>
-                        <li class="tag yellow">JavaScript</li>
-                        <li class="tag blue">TypeScript</li>
-                        <li class="tag orange">HTML</li>
-                        <li class="tag blue">CSS</li>
-                        <li class="tag blue">jQuery</li>
-                        <li class="tag purple">Bootstrap</li>
-                    </ul>
-                </div>
-                <div class="skills__card">
-                    <!-- <div class="skills__card__pic backend"></div> -->
-                    <h4 class="skills__card__title">Back-end</h4>
-                    <ul class="skills__card__list">
-                        <li class="tag yellow">Python</li>
-                        <li class="tag green">Django</li>
-                        <li class="tag yellow">Falcon</li>
-                        <li class="tag blue">Flask</li>
-                        <li class="tag green">FastAPI</li>
-                        <li class="tag blue">PHP</li>
-                        <li class="tag red">Laravel</li>
-                        <li class="tag orange">CodeIgniter</li>
-                        <li class="tag blue">Java</li>
-                        <li class="tag green">Spring Boot</li>
-                        <li class="tag purple">WebSockets</li>
-                        <li class="tag blue">postgres</li>
-                        <li class="tag orange">MySQL</li>
-                        <li class="tag blue">pytest</li>
-                        <li class="tag green">Testcontainers</li>
-                    </ul>
-                </div>
-                <div class="skills__card">
-                    <!-- <div class="skills__card__pic other">
-                        <span>...</span>
-                    </div> -->
-                    <h4 class="skills__card__title" data-lang="misc">Outros</h4>
-                    <ul class="skills__card__list">
-                        <li class="tag orange">AWS</li>
-                        <li class="tag blue">Docker</li>
-                        <li class="tag yellow">Linux</li>
-                        <li class="tag">cron</li>
-                        <li class="tag blue">httpd</li>
-                        <li class="tag orange">Apache2</li>
-                        <li class="tag red">Shell Script</li>
-                    </ul>
-                </div>
-                </div>
+                <div id="skills-list"></div>
             </div>
             <div class="main-container__card ref"
                 data-aos="fade-up"
@@ -197,94 +205,15 @@
                 data-animate="trigger-fade-in">
                 <a class="anchor" id="ref"></a>
                 <h2 class="ref__title" data-lang="references">Referenciais</h2>
-                <div class="ref__card">
-                    <!-- <div class="ref__card__pic tecnosolve"></div> -->
-                    <h4 class="ref__card__title">
-                        <a href="http://www.tecnosolve.com" target="blank">
-                            Tecnosolve
-                        </a>
-                    </h4>
-                    <p class="ref__card__description" data-lang="tecnosolveText">
-                        Desenvolvimento e manutenção de sistemas e APIs usando tecnologias como: Python (Falcon e Django), Angular, Java Spring Boot, PostgreSQL e GIT.
-                    </p>
-                </div>
-                <div class="ref__card">
-                    <!-- <div class="ref__card__pic ufape"></div> -->
-                    <h4 class="ref__card__title">
-                        <a href="https://cin.ufpe.br/~vsa" target="blank">
-                            CIn UFPE
-                        </a>
-                    </h4>
-                    <p class="ref__card__description" data-lang="cinufpeText">
-                        Mestrando em Ciência da Computação.
-                    </p>
-                </div>
-                <div class="ref__card">
-                    <!-- <div class="ref__card__pic ufape"></div> -->
-                    <h4 class="ref__card__title">
-                        <a href="https://modcs.org" target="blank">
-                            MoDCS
-                        </a>
-                    </h4>
-                    <p class="ref__card__description" data-lang="modcsText">
-                        Grupo de pesquisa em performance, confiabilidade e disponibilidade de sistemas computacionais.
-                    </p>
-                </div>
-                <div class="ref__card">
-                    <!-- <div class="ref__card__pic ufape"></div> -->
-                    <h4 class="ref__card__title">
-                        <a href="https://ufape.edu.br" target="blank">
-                            UFAPE
-                        </a>
-                    </h4>
-                    <p class="ref__card__description" data-lang="ufapeText">
-                        Graduação em Ciência da Computação. Desenvolvimento de Pesquisa e Extensão.
-                    </p>
-                </div>
-                <div class="ref__card">
-                    <!-- <div class="ref__card__pic showtecnologia"></div> -->
-                    <h4 class="ref__card__title">
-                        <a href="https://www.showtecnologia.com/" target="blank">
-                            Show Tecnologia
-                        </a>
-                    </h4>
-                    <p class="ref__card__description" data-lang="showText">
-                        Desenvolvimento e manutenção de sistemas e APIs em PHP CodeIgniter, NodeJS, HTML/CSS e MySQL.
-                    </p>
-                </div>
-                <div class="ref__card">
-                    <!-- <div class="ref__card__pic casaong"></div> -->
-                    <h4 class="ref__card__title">
-                        <a href="#">
-                            E-Câmara Digital
-                        </a>
-                    </h4>
-                    <p class="ref__card__description" data-lang="eCamaraDigitalText">
-                        Plataforma de marcação de presenças, votações e gerenciamento de sessões de câmaras municipais.
-                    </p>
-                </div>
-                <div class="ref__card">
-                    <!-- <div class="ref__card__pic casaong"></div> -->
-                    <h4 class="ref__card__title">
-                        <a href="https://casaong.org" target="blank">
-                            CASA ONG
-                        </a>
-                    </h4>
-                    <p class="ref__card__description" data-lang="casaOngText">
-                        Desenvolvimento e gerenciamento do site da ONG Centro de Apoio Social e Ambiental.
-                    </p>
-                </div>
-                <div class="ref__card">
-                    <!-- <div class="ref__card__pic alive"></div> -->
-                    <h4 class="ref__card__title">
-                        <a href="https://www.alivesi.com.br/" target="blank">
-                            Alive SI
-                        </a>
-                    </h4>
-                    <p class="ref__card__description" data-lang="aliveText">
-                        Desenvolvimento do frontend da plataforma MeuPregão usando tecnologias como HTML, CSS, JS e Bootstrap, além de consumo de APIs por meio de ajax.
-                    </p>
-                </div>
+                <div id="references-list"></div>
+            </div>
+            <div class="main-container__card works"
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom"
+                data-animate="trigger-fade-in">
+                <a class="anchor" id="works"></a>
+                <h2 class="works__title" data-lang="works">Publicações</h2>
+                <div id="works-list"></div>
             </div>
         </div>
     </div>
@@ -360,6 +289,9 @@
         <a class="anchor" id="contact"></a>
         <script src="node_modules/aos/dist/aos.js"></script>
         <script src="js/script.js"></script>
+        <script src="js/skills.js" type="module"></script>
+        <script src="js/references.js" type="module"></script>
+        <script src="js/works.js" type="module"></script>
         <script src="js/lang-utils.js" type="module"></script>
         <script>
             AOS.init();

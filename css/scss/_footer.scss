@@ -24,7 +24,13 @@ footer {
 
             &.center {
                 justify-content: center;
+                
+                .footer__card__title {
+                    margin-left: 0;
+                    width: min-content;
+                }
             }
+            
             
             &__pic {
                 width: 30px;
@@ -32,7 +38,7 @@ footer {
                 border-radius: 200px;
                 background: $primary-color no-repeat 50% 50%;
                 background-size: 60%;
-                box-shadow: $shadow-button;
+                box-shadow: none;
                 color: $white-color;
                 line-height: 30px;
                 font-size: 20px;
@@ -60,6 +66,8 @@ footer {
 
             &__title {
                 padding: var(--related-space);
+                text-wrap: nowrap;
+
                 a {
                     color: $white-color;
                     text-decoration: none;
@@ -82,4 +90,5 @@ footer {
     position: relative;
     bottom: 0px;
     height: var(--footer-height);
+    pointer-events: none;
 }

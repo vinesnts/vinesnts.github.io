@@ -1,8 +1,8 @@
-const scrollOffset = (screen.width > 413 ? 11 : 20);
+const scrollOffset = (screen.width > 413 ? 35 : 40);
 const scrollElementTrigger = document.querySelector("*[data-animate='trigger-fade-out']");
 const scrollElement = document.querySelector("*[data-animate='fade-out']");
 
-const scrollOffsetFadeIn = 45;
+const scrollOffsetFadeIn = -50;
 const scrollElementFadeInTrigger = document.querySelector("*[data-animate='trigger-fade-in']");
 const scrollElementFadeIn = document.querySelector("*[data-animate='fade-in']");
 
@@ -30,20 +30,52 @@ const scrollOffsetRef = 20;
 const highlightRef = document.querySelector("a[href='#ref']");
 const highlightRefTrigger = document.querySelector("#ref");
 
+const scrollOffsetWorks = 20;
+const highlightWorks = document.querySelector("a[href='#works']");
+const highlightWorksTrigger = document.querySelector("#works");
+
 const scrollOffsetContact = 95;
 const highlightContact = document.querySelector("a[href='#contact']");
 const highlightContactTrigger = document.querySelector("#contact");
 
-const elementInView = (el, offset = 0, t = false) => {
+let suppressNavbarAutoScroll = false;
+let navbarAutoScrollTimeout;
+
+const suppressNavbarScrollDuringNavigation = () => {
+    suppressNavbarAutoScroll = true;
+    window.clearTimeout(navbarAutoScrollTimeout);
+    navbarAutoScrollTimeout = window.setTimeout(() => {
+        suppressNavbarAutoScroll = false;
+    }, 1000);
+}
+
+const elementInView = (el, offset = 0) => {
     const elementTop = el.getBoundingClientRect().top;
     const clientHeight = window.innerHeight || document.documentElement.clientHeight;
-    
-    // if (t) console.log((elementTop <= ((clientHeight * offset) / 100)));
+
     return (
         elementTop <= 
             ((clientHeight * offset) / 100)
     );
 };
+
+const highlightSections = [
+    [highlightIntroTrigger, scrollOffsetIntro],
+    [highlightBioTrigger, scrollOffsetBio],
+    [highlightSkillTrigger, scrollOffsetSkill],
+    [highlightRefTrigger, scrollOffsetRef],
+    [highlightWorksTrigger, scrollOffsetWorks],
+    [highlightContactTrigger, scrollOffsetContact],
+];
+
+const isCurrentHighlight = (trigger) => {
+    const sectionIndex = highlightSections.findIndex(([sectionTrigger]) => sectionTrigger === trigger);
+    if (sectionIndex === -1) return false;
+
+    return highlightSections
+        .slice(sectionIndex + 1)
+        .every(([sectionTrigger, offset]) => !elementInView(sectionTrigger, offset));
+}
 
 const displayScrollElement = (scrollElement) => {
     scrollElement?.classList.add('scrolled');
@@ -77,18 +109,21 @@ const handleScrollColorNavbar = (scrollElementTrigger, scrollElement, scrollOffs
     }
 }
 
-const handleScrollHighlight = (scrollElementTrigger, scrollElement, scrollOffset, t = true, scrollNavbar = false) => {
-    if (elementInView(scrollElementTrigger, scrollOffset, t)) {
+const handleScrollHighlight = (scrollElementTrigger, scrollElement, scrollOffset, scrollNavbar = false) => {
+    if (elementInView(scrollElementTrigger, scrollOffset)) {
+        const wasActive = scrollElement.classList.contains('active');
         highlightBio.classList = "";
         highlightSkill.classList = "";
-        // highlightProjects.classList = "";
         highlightIntro.classList = "";
         highlightRef.classList = "";
+        highlightWorks.classList = "";
         scrollElement.classList = "active";
-        if (scrollNavbar) {
-            document.getElementById('navbar').scrollTo({left: document.getElementById('navbar').offsetWidth, behavior: 'smooth'});
-        } else {
-            document.getElementById('navbar').scrollTo({left: 0, behavior: 'smooth'});
+        if (!wasActive && !suppressNavbarAutoScroll && isCurrentHighlight(scrollElementTrigger)) {
+            if (scrollNavbar) {
+                scrollNavbarToItem(scrollElement);
+            } else {
+                document.getElementById('navbar').scrollTo({left: 0, behavior: 'smooth'});
+            }
         }
     } else {
         scrollElement.classList = "";
@@ -104,6 +139,7 @@ const handleScrollBottom = (scrollElementTrigger) => {
         highlightSkill.classList = "";
         highlightIntro.classList = "";
         highlightRef.classList = "";
+        highlightWorks.classList = "";
         scrollElementTrigger.classList.add('active')
     }
     else {
@@ -113,11 +149,28 @@ const handleScrollBottom = (scrollElementTrigger) => {
 
 const scrollBottom = (event) => {
     event.preventDefault();
+    suppressNavbarScrollDuringNavigation();
+    scrollNavbarToItem(event.currentTarget);
     window.scrollTo(0, document.body.scrollHeight);
+}
+
+const scrollNavbarToItem = (menuItem) => {
+    const navbar = document.getElementById('navbar');
+    if (!navbar || !menuItem) return;
+
+    const navbarRect = navbar.getBoundingClientRect();
+    const menuItemRect = menuItem.getBoundingClientRect();
+    if (Math.abs(menuItemRect.left - navbarRect.left) < 1) return;
+
+    const itemLeft = navbar.scrollLeft + menuItemRect.left - navbarRect.left;
+
+    navbar.scrollTo({left: Math.max(0, itemLeft), behavior: 'smooth'});
 }
 
 const scrollToElement = (event, elementId) => {
     event.preventDefault();
+    suppressNavbarScrollDuringNavigation();
+    scrollNavbarToItem(event.currentTarget);
     const element = document.getElementById(elementId);
     const elementPosition = element.getBoundingClientRect().top - document.body.getBoundingClientRect().top
     window.scrollTo({top: elementPosition - 100, behavior: 'smooth'});
@@ -130,8 +183,8 @@ window.addEventListener('scroll', () => {
     handleScrollHighlight(highlightIntroTrigger, highlightIntro, scrollOffsetIntro);
     handleScrollHighlight(highlightBioTrigger, highlightBio, scrollOffsetBio);
     handleScrollHighlight(highlightSkillTrigger, highlightSkill, scrollOffsetSkill);
-    // handleScrollHighlight(highlightProjectsTrigger, highlightProjects, scrollOffsetProjects);
-    handleScrollHighlight(highlightRefTrigger, highlightRef, scrollOffsetRef, true, true);
-    handleScrollHighlight(highlightContactTrigger, highlightContact, scrollOffsetContact);
+    handleScrollHighlight(highlightRefTrigger, highlightRef, scrollOffsetRef, true);
+    handleScrollHighlight(highlightWorksTrigger, highlightWorks, scrollOffsetWorks, true);
+    handleScrollHighlight(highlightContactTrigger, highlightContact, scrollOffsetContact, true);
     handleScrollBottom(highlightContact);
 })

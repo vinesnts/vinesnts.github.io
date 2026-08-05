@@ -1,30 +1,25 @@
 @media only screen and (max-width: 413px) {
     :root {
-        scroll-padding-top: 6em;
+        scroll-padding-top: 6rem;
 
-        --base-padding: 0.5em;
+        --base-padding: 0.5rem;
 
-        --h1-size: 1.75em;
-        --h2-size: 1.75em;
-        --h3-size: 1.375em;
-        --h4-size: 1.375em;
-        --p-size: 1.25em;
+        --h1-size: 1.75rem;
+        --h2-size: 1.75rem;
+        --h3-size: 1.375rem;
+        --h4-size: 1.375rem;
+        --p-size: 1.25rem;
 
-        --header-height: 0em;
-        --footer-height: 17em;
+        --header-height: 0rem;
+        --footer-height: 17rem;
 
         --base-width: 832px;
-        --related-space: 0.25em;
+        --related-space: 0.25rem;
         --unrelated-space: 1em;
     }
 
     .main-container {
         padding: var(--base-padding);
-        // padding-bottom: var(--bottom-padding);
-
-        .navbar {
-            margin: var(--bottom-space) auto;
-        }
 
         &__card {
             &.skills,
@@ -75,10 +70,6 @@
                 &__pic {
                     width: 30px;
                     height: 30px;
-                }
-
-                &__title {
-                    margin-left: 1em;
                 }
             }
         }

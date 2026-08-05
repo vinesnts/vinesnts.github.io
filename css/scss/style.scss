@@ -18,14 +18,16 @@
         width: 100%;
         margin: 0 auto var(--bottom-space) auto;
         z-index: 4;
-        overflow-y: auto;
+        overflow-x: auto;
+        overflow-y: hidden;
         
         ul {
             background-color: $primary-color;
             display: flex;
-            max-width: 800px;
+            width: max-content;
+            min-width: 100%;
             padding: var(--base-padding);
-            margin: 0 auto;
+            margin: 0;
         }
 
         li.align-right {
@@ -63,8 +65,19 @@
         margin-bottom: var(--bottom-padding);
         padding: var(--card-padding);
         border-radius: $border-radius-lg;
-        background-color: $white-color;
-        box-shadow: $shadow-button;
+        background-color: light-dark($white-color, $primary-color);
+        color: light-dark($black-color, $white-color);
+
+        @media (prefers-color-scheme: light) {
+            box-shadow: $shadow-button;
+            border: 1px solid none;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            box-shadow: none;
+            border: 1px solid $light-color;
+        }
+
 
         &.intro {
             display: flex;
@@ -75,7 +88,8 @@
         &.skills,
         &.projects,
         &.ref,
-        &.contact {
+        &.contact,
+        &.works {
             @extend %d-flex-column;
             justify-content: space-around;
             flex-wrap: wrap;
@@ -85,9 +99,9 @@
             &__pic {
                 width: 200px;
                 height: 200px;
-                border-radius: 200px;
-                background: $primary-color $asset-pic-profile-alt no-repeat 50% 50%;
-                background-size: 130%;
+                border-radius: 300px;
+                background: $primary-color $asset-pic-profile-alt no-repeat 40% 40%;
+                background-size: 150%;
                 box-shadow: $shadow-button
             }
 
@@ -133,7 +147,8 @@
         .skills,
         .projects,
         .ref,
-        .contact {
+        .contact,
+        .works {
             &__title {
                 flex: 1 1 100%;
                 margin-bottom: var(--related-space);
@@ -155,10 +170,10 @@
                 text-align: center;
 
                 &__title {
-                    // margin-top: var(--related-space);
+                    font-weight: 600;
 
                     a {
-                        color: $black-color;
+                        color: light-dark($black-color, $light-color);
                         text-decoration: none;
 
                         &:active,
@@ -272,7 +287,7 @@
                     }
                 }
 
-                &__description {
+                &__description, &__author, &__venue {
                     margin-top: var(--related-space);
                     font-size: 1em;
                     text-align: left;
@@ -290,16 +305,82 @@
                 }
                 
                 ~ .ref,
-                ~ .skills {
+                ~ .skills,
+                ~ .works {
                     &__card {
                         padding-top: var(--unrelated-space);
                         border-top: 1px solid $dark-shadow-color;
                     }
                 }
-                
-
             }
 
+        }
+
+        .works {
+
+            &__card {
+
+                &__body {
+                    text-align: start;;
+                }
+
+                &__copy-btn {
+                    position: relative;
+                    background-color: $black-color;
+                    border: none;
+                    border-radius: 20px;
+                    padding: 4px 6px;
+                    margin: 0 8px;
+                    cursor: pointer;
+
+                    img {
+                        transform: translateY(2px);
+                    }
+                    
+                    &:hover {
+                        img {
+                            transform: scale(1.1) translateY(2px);
+                        }
+
+                        &::before {
+                            opacity: 1;
+                            transition: opacity ease-in-out 200ms 500ms;
+                        }
+                    }
+
+                    img {
+                        width: 16px;
+                        height: 16px;
+                        transition: transform 200ms ease-in-out;
+                        
+                    }
+                    
+
+                    &::before {
+                        content: "Copy BibTeX";
+                        position: absolute;
+                        top: -40px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        font-size: 12px;
+                        background-color: #333;
+                        color: $white-color;
+                        padding: 2px 6px;
+                        border-radius: 4px;
+                        opacity: 0;
+                        transition: none;
+                        z-index: 99;
+                    }
+            
+                    &.copied::before {
+                        content: "Copied!";
+                        top: calc(-30px + 12px);
+                        opacity: 1;
+                        transition: none;
+                    }
+                }
+
+            }
         }
     }
 }
@@ -356,21 +437,24 @@ form {
 *[data-animate="fade-out"] {
     opacity: 1;
     transition: opacity 300ms;
+    pointer-events: all;
 }
 
 *[data-animate="fade-out"].scrolled {
     opacity: 0;
+    pointer-events: none;
 }
 
 *[data-animate="fade-in"] {
     opacity: 0;
     z-index: 0;
     transition: opacity 300ms;
+    pointer-events: none;
 }
 
 *[data-animate="fade-in"].scrolled {
     opacity: 1;
-    /* z-index: 3; */
+    pointer-events: all;
 }
 
 @import './footer';
