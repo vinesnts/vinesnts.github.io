@@ -192,6 +192,46 @@ strong {
     }
 }
 
+.floating-btn {
+    --btn-size: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+    position: fixed;
+    bottom: var(--bottom-padding);
+    right: var(--bottom-padding);
+    z-index: 99;
+    background-image: url("../../assets/icon/chevron-up.png");
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: 50% 50%;
+    background-color: variables.$white-color;
+    color: variables.$black-color;
+    border: none;
+    border-radius: 50%;
+    width: var(--btn-size);
+    height: var(--btn-size);
+
+    box-shadow: variables.$shadow-button;
+
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+
+    &.show {
+        pointer-events: all;
+        opacity: 1;
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+}
+
+
 html {
     &[lang="en"] {
         .works__card__copy-btn {

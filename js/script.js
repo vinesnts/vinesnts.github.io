@@ -1,3 +1,5 @@
+const scrollHomeButton = document.querySelector("#scroll-home");
+
 const scrollOffset = (screen.width > 413 ? 35 : 40);
 const scrollElementTrigger = document.querySelector("*[data-animate='trigger-fade-out']");
 const scrollElement = document.querySelector("*[data-animate='fade-out']");
@@ -147,6 +149,18 @@ const handleScrollBottom = (scrollElementTrigger) => {
     }
 }
 
+const handleScrollAwayFromTop = () => {
+    const currentPosition = window.scrollY;
+    const maxPosition = 100;
+
+    if (currentPosition > maxPosition) {
+        scrollHomeButton.classList.add('show')
+    }
+    else {
+        scrollHomeButton.classList.remove('show')
+    }
+}
+
 const scrollBottom = (event) => {
     event.preventDefault();
     suppressNavbarScrollDuringNavigation();
@@ -187,4 +201,13 @@ window.addEventListener('scroll', () => {
     handleScrollHighlight(highlightWorksTrigger, highlightWorks, scrollOffsetWorks, true);
     handleScrollHighlight(highlightContactTrigger, highlightContact, scrollOffsetContact, true);
     handleScrollBottom(highlightContact);
-})
+    handleScrollAwayFromTop();
+});
+
+scrollHomeButton.addEventListener('click', (event) => {
+    scrollToElement(
+        event,
+        'intro',
+    );
+    document.getElementById('navbar').scrollTo({left: 0, behavior: 'smooth'});
+});

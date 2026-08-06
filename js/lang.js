@@ -21,7 +21,7 @@ const lang_en = {
   contactHref: '#',
   downloadCv: 'Download&nbsp;CV',
   downloadCvHref: 'https://drive.google.com/file/d/1N0gQ_BWTf1Q7YVGn2yXRU6K484rqMDj6/view?usp=sharing',
-  developer: 'Researcher <strong><a href="https://cin.ufpe.br/~vsa" target="_blank">@cin.ufpe</a></strong> and Developer <strong><a href="https://tecnosolve.com" target="_blank">@tecnosolve</a></strong>',
+  developer: 'Researcher&nbsp;<strong><a href="https://cin.ufpe.br/~vsa" target="_blank">@cin.ufpe</a></strong> and Developer&nbsp;<strong><a href="https://tecnosolve.com" target="_blank">@tecnosolve</a></strong>',
   bioText: `
     I am a <strong>software developer</strong> with experience in the <strong>Angular</strong> framework and
     <strong>Python</strong> with frameworks like Django, Falcon, Flask and FastAPI.
@@ -64,7 +64,7 @@ const lang_pt = {
   contactHref: '#',
   downloadCv: 'Baixar&nbsp;Currículo',
   downloadCvHref: "https://drive.google.com/file/d/1pe-2QkKGAPJPN9lZuA_yGxbfxjmBC9kP/view?usp=sharing",
-  developer: 'Pesquisador <strong><a href="https://cin.ufpe.br/~vsa" target="_blank">@cin.ufpe</a></strong> e Desenvolvedor  <strong><a href="https://tecnosolve.com" target="_blank">@tecnosolve</a></strong>',
+  developer: 'Pesquisador&nbsp;<strong><a href="https://cin.ufpe.br/~vsa" target="_blank">@cin.ufpe</a></strong> e Desenvolvedor&nbsp;<strong><a href="https://tecnosolve.com" target="_blank">@tecnosolve</a></strong>',
   bioText: `
     Eu sou um <strong>desenvolvedor de software</strong> com experiência no framework <strong>Angular</strong> e
     <strong>Python</strong> com frameworks como Django, Falcon, Flask e FastAPI.

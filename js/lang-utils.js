@@ -29,7 +29,6 @@ function translate(language) {
   if (!translation) return;
   Object.entries(translation).forEach(([key, value]) => {
     document.querySelectorAll(`[data-lang="${key}"`).forEach((el) => {
-      console.log(key, el.childNodes.length);
       if (el.hasAttribute('title')) {
         el.setAttribute('title', value);
       } else {
