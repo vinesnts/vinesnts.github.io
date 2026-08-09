@@ -15,13 +15,13 @@ export const works = [
         "url": "#to-be-defined-1"
     },
     {
-        "title": "Stochastic Modeling of Battery Swapping Stations for Electric Motorcycles: Thresholds and Sizing Rules",
+        "title": "<strong>Stochastic Modeling</strong> of Battery Swapping Stations for Electric Motorcycles: Thresholds and Sizing Rules",
         "volume": 0,
         "url": "",
         "doi": "",
         "abstractNote": "",
         "number": 0,
-        "journal": "Journal of the Brazilian Computer Society",
+        "journal": "IEEE Transactions on Intelligent Transportation Systems",
         "author": ["Jônatas Silva", "Vinícius Almeida", "Marcelo Santana", "Renata Dantas", "Paulo Maciel"],
         "year": 2026,
         "month": "-",
