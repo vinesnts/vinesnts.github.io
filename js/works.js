@@ -15,6 +15,19 @@ export const works = [
         "url": "#to-be-defined-1"
     },
     {
+        "title": "Stochastic Modeling of Battery Swapping Stations for Electric Motorcycles: Thresholds and Sizing Rules",
+        "volume": 0,
+        "url": "",
+        "doi": "",
+        "abstractNote": "",
+        "number": 0,
+        "journal": "Journal of the Brazilian Computer Society",
+        "author": ["Jônatas Silva", "Vinícius Almeida", "Marcelo Santana", "Renata Dantas", "Paulo Maciel"],
+        "year": 2026,
+        "month": "-",
+        "pages": "-"
+    },
+    {
         "author": ["Vinícius Almeida", "Jônatas Silva", "Marcelo Santana", "Renata Dantas", "Paulo Maciel"],
         "title": "Modeling for Design Guidance of Static <strong>Vehicular Cloud</strong> Systems in Car Rental Scenarios",
         "booktitle": "2025 IEEE International Conference on Systems, Man, and Cybernetics (SMC)",
