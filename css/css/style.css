@@ -555,10 +555,10 @@ header .intro__links__card__pic.linkedin {
   background-image: url("../../assets/logo/linkedin-icon.png");
 }
 header .intro__links__card__pic.github {
-  background-image: url("../../assets/logo/github-icon.png");
+  background-image: url("../../assets/logo/github-icon.webp");
 }
 header .intro__links__card__pic.lattes {
-  background-image: url("../../assets/logo/lattes-icon.png");
+  background-image: url("../../assets/logo/lattes-icon.webp");
 }
 
 .header-space {
@@ -811,7 +811,7 @@ header .intro__links__card__pic.lattes {
 .main-container__card .ref__card__pic.github,
 .main-container__card .contact__card__pic.github,
 .main-container__card .works__card__pic.github {
-  background-image: url("../../assets/logo/github-icon.png");
+  background-image: url("../../assets/logo/github-icon.webp");
   background-size: 50%;
 }
 .main-container__card .skills__card__pic.casaong,
@@ -1320,11 +1320,11 @@ footer .footer__card__pic.linkedin {
 }
 
 footer .footer__card__pic.github {
-  background-image: url("../../assets/logo/github-icon.png");
+  background-image: url("../../assets/logo/github-icon.webp");
 }
 
 footer .footer__card__pic.lattes {
-  background-image: url("../../assets/logo/lattes-icon.png");
+  background-image: url("../../assets/logo/lattes-icon.webp");
 }
 
 footer .footer__card__title {
