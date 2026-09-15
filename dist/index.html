@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A website of a software developer called Vinícius Almeida, his website address is viniciusalmeida.dev. He develops websites and APIs using Python, Java, Angular, Django, Flask, Falcon, FastAPI, Java Spring Boot, Postgres. He has experience with AWS, Docker, CI/CD. He is also a research in the field of performance, availability, and reliability of computing systems.">
+    <title data-lang="title">Vinícius Almeida | Desenvolvedor</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="icon" type="image/png" href="/assets/favicon-CyFScjSz.png"/>
+    <!-- Hotjar Tracking Code for https://viniciusalmeida.dev -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:3056818,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+  <script type="module" crossorigin src="/assets/index-gWRwDkb5.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CaSlHJZi.css">
+</head>
+<body>
+    <button id="scroll-home" aria-label="Scroll home" data-lang="scrollHome" class="floating-btn">
+        <div class="tooltip" data-lang="scrollHome">Scroll home</div>
+    </button>
+    <a class="anchor" id="intro"></a>
+    <div class="header-space">
+        <!-- Element to reserve header space -->
+    </div>
+    <header data-animate="fade-out">
+        <div
+            class="intro"
+            data-aos="fade-down"
+            data-aos-anchor-placement="top-bottom"
+        >
+            <div class="intro__pic">
+                <!-- Self picture here -->
+            </div>
+            <div class="intro__info">
+                <h2 class="intro__info__profile-name">
+                    Vinícius Almeida
+                </h2>
+                <p class="intro__info__profile-text" data-lang="developer">
+                    Desenvolvedor
+                </p>
+            </div>
+            <div class="intro__links">
+                <div class="intro__links__card">
+                    <a 
+                        href="mailto:contato@viniciusalmeida.com"
+                        target="_blank"
+                        data-lang="emailAddress"
+                        title="me@viniciusalmeida.dev">
+                        <div class="intro__links__card__pic email"></div>
+                    </a>
+                </div>
+                <div class="intro__links__card">
+                    <a 
+                        href="https://wa.me/message/P2IWW4QTZN7TI1"
+                        target="_blank"
+                        title="+ 55 &#40;81&#41; 981645401">
+                        <div class="intro__links__card__pic phone"></div>
+                    </a>
+                </div>
+                <div class="intro__links__card">
+                    <a
+                        href="https://www.linkedin.com/in/viniciusalmeidadev/"
+                        target="_blank"
+                        title="in/viniciusalmeidadev">
+                        <div class="intro__links__card__pic linkedin"></div>
+                    </a>
+                </div>
+                <div class="intro__links__card">
+                    <a 
+                        href="https://github.com/vinesnts"
+                        target="_blank"
+                        title="@vinesnts">
+                        <div class="intro__links__card__pic github"></div>
+                    </a>
+                </div>
+                <div class="intro__links__card">
+                    <a 
+                        href="https://lattes.cnpq.br/3076429582182777"
+                        target="_blank"
+                        data-lang="lattesCv"
+                        title="Currículo Lattes">
+                        <div class="intro__links__card__pic lattes"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main-container">
+        <nav
+            id="navbar"
+            class="navbar"
+            data-animate="trigger-fade-out"
+        >
+            <ul>
+                <li>
+                    <a
+                        id="home"
+                        class="active"
+                        href="#intro"
+                        data-lang="home"
+                        onclick="scrollToElement(event, 'intro')"
+                    >
+                        Início
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="#bio"
+                        data-lang="bio"
+                        onclick="scrollToElement(event, 'bio')"
+                    >
+                        Bio
+                    </a>
+                </li>
+                <li>
+                    <a 
+                        href="#skills"
+                        data-lang="skills"
+                        onclick="scrollToElement(event, 'skills')"
+                    >
+                        Habilidades
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="#ref"
+                        data-lang="references"
+                        onclick="scrollToElement(event, 'ref')"
+                    >
+                        Referenciais
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="#works"
+                        data-lang="works"
+                        onclick="scrollToElement(event, 'works')"
+                    >
+                        Publicações
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="#contact"
+                        data-lang="contact"
+                        onclick="scrollBottom(event)"
+                    >
+                        Contato
+                    </a>
+                </li>
+                <li class="align-right">
+                    <select name="lang" id="lang" aria-label="Selecionar idioma" data-lang="selectLang">
+                        <!-- <option value="" selected disabled data-lang="selectLang">Selecionar idioma</option> -->
+                    </select>
+                </li>
+                <!-- <li class="align-right">
+                    <a
+                        href="https://drive.google.com/file/d/1pe-2QkKGAPJPN9lZuA_yGxbfxjmBC9kP/view?usp=sharing"
+                        target="_blank"
+                        data-lang="downloadCv"
+                    >
+                        Baixar&nbsp;currículo
+                    </a>
+                </li> -->
+            </ul>
+        </nav>
+        <div class="content">
+            <div class="main-container__card bio"
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom">
+                <a class="anchor" id="bio"></a>
+                <div class="bio__content">
+                    <h2 class="bio__content__title">
+                        Bio
+                    </h2>
+                    <p class="bio__content__text" data-lang="bioText">
+                        No <strong>Front-end</strong> trabalho com as principais tecnologias básicas como HTML, CSS e Javascript,
+                        além do framework Angular e bibliotecas como Bootstrap e jQuery.
+                        <br><br>
+                        No <strong>Back-end</strong>, tenho experiência com Python, nos frameworks Django e Falcon, 
+                        além de Java Spring Boot e PHP com Laravel e CodeIgniter.
+                        <br><br>
+                        Como <strong>Full-Stack</strong>, adquiri experiência em gerenciamento de projetos em servidores,
+                        usando tecnologias como Apache, httpd, cron e comandos Linux. Além disso, também projeto bancos de dados
+                        nos mais conhecidos SGBDs, como Postgres e MySQL.
+                    </p>
+                </div>
+            </div>
+            <div class="main-container__card skills"
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom">
+                <a class="anchor" id="skills"></a>
+                <h2 class="skills__title" data-lang="skills">Skills</h2>
+                <div id="skills-list"></div>
+            </div>
+            <div class="main-container__card ref"
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom"
+                data-animate="trigger-fade-in">
+                <a class="anchor" id="ref"></a>
+                <h2 class="ref__title" data-lang="references">Referenciais</h2>
+                <div id="references-list"></div>
+            </div>
+            <div class="main-container__card works"
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom"
+                data-animate="trigger-fade-in">
+                <a class="anchor" id="works"></a>
+                <h2 class="works__title" data-lang="works">Publicações</h2>
+                <div id="works-list"></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-space">
+        <!-- Element to reserve footer space -->
+    </div>
+    <footer data-animate="fade-in">
+        <div class="footer">
+            <div class="footer__card">
+                <div class="footer__card__pic email"></div>
+                <div class="footer__card__title">
+                    <a 
+                        href="mailto:contato@viniciusalmeida.com"
+                        target="_blank"
+                        data-lang="emailAddress"
+                    >
+                        contato@viniciusalmeida.dev
+                    </a>
+                </div>
+            </div>
+            <div class="footer__card">
+                <div class="footer__card__pic phone"></div>
+                <div class="footer__card__title">
+                    <a href="https://wa.me/message/P2IWW4QTZN7TI1" target="_blank">
+                        + 55 &#40;81&#41; 981645401
+                    </a>
+                </div>
+            </div>
+            <div class="footer__card">
+                <div class="footer__card__pic linkedin"></div>
+                <div class="footer__card__title">
+                    <a href="https://www.linkedin.com/in/viniciusalmeidadev/" target="_blank">
+                        in/viniciusalmeidadev
+                    </a>
+                </div>
+            </div>
+            <div class="footer__card">
+                <div class="footer__card__pic github"></div>
+                <div class="footer__card__title">
+                    <a href="https://github.com/vinesnts" target="_blank">
+                        @vinesnts
+                    </a>
+                </div>
+            </div>
+            <div class="footer__card">
+                <div class="footer__card__pic lattes"></div>
+                <div class="footer__card__title">
+                    <a 
+                        href="https://lattes.cnpq.br/3076429582182777"
+                        target="_blank"
+                        data-lang="lattesCv"
+                    >
+                        Currículo Lattes
+                    </a>
+                </div>
+            </div>
+            <div class="footer__card center">
+                <div class="footer__card__pic">©</div>
+                <div class="footer__card__title">
+                    <span data-lang="copyright">
+                        <span id="copyright-year"></span>&nbsp;Vinicius&nbsp;Almeida&nbsp;Dev. Todos&nbsp;os&nbsp;direitos&nbsp;reservados.
+                    </span>
+                </div>
+            </div>
+            <div class="footer__card center">
+                <div class="footer__card__title">
+                    <span>
+                         CNPJ:&nbsp;52.489.398/0001-75
+                    </span>
+                </div>
+            </div>
+        </div>
+        <a class="anchor" id="contact"></a>
+        <script src="node_modules/aos/dist/aos.js"></script>
+        <script src="js/script.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    </footer>
+</body>
+</html>
