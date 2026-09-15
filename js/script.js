@@ -1,3 +1,8 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
+
 const scrollHomeButton = document.querySelector("#scroll-home");
 
 const scrollOffset = (screen.width > 413 ? 35 : 40);
