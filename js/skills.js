@@ -43,7 +43,7 @@ Object.entries(categoryLabels).forEach(([category, label]) => {
   const card = document.createElement('div');
   card.className = 'skills__card';
 
-  const title = document.createElement('h4');
+  const title = document.createElement('h3');
   title.className = 'skills__card__title';
   if (category === 'misc') title.dataset.lang = 'misc';
   title.textContent = label;

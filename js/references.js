@@ -37,7 +37,7 @@ references.forEach(({ name, url, descriptionKey }) => {
   const card = document.createElement('div');
   card.className = 'ref__card';
 
-  const title = document.createElement('h4');
+  const title = document.createElement('h3');
   title.className = 'ref__card__title';
 
   const link = document.createElement('a');
