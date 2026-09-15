@@ -19,8 +19,8 @@
             a.appendChild(r);
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
-  <script type="module" crossorigin src="/assets/index-CLc_3oPy.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-DEqx6mWG.css">
+  <script type="module" crossorigin src="/assets/index-BMXhCnWy.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-rBGp9rwa.css">
 </head>
 <body>
     <button id="scroll-home" aria-label="Scroll home" data-lang="scrollHome" class="floating-btn">
@@ -36,7 +36,8 @@
             data-aos="fade-down"
             data-aos-anchor-placement="top-bottom"
         >
-            <div class="intro__pic">
+            <div class="intro__pic"
+                data-lazy-bg="../assets/profile.webp">
                 <!-- Self picture here -->
             </div>
             <div class="intro__info">
@@ -54,7 +55,8 @@
                         target="_blank"
                         data-lang="emailAddress"
                         title="me@viniciusalmeida.dev">
-                        <div class="intro__links__card__pic email"></div>
+                        <div class="intro__links__card__pic email"
+                            data-lazy-bg="../assets/icon/email-icon.png"></div>
                     </a>
                 </div>
                 <div class="intro__links__card">
@@ -62,7 +64,8 @@
                         href="https://wa.me/message/P2IWW4QTZN7TI1"
                         target="_blank"
                         title="+ 55 &#40;81&#41; 981645401">
-                        <div class="intro__links__card__pic phone"></div>
+                        <div class="intro__links__card__pic phone"
+                            data-lazy-bg="../assets/icon/phone-icon.png"></div>
                     </a>
                 </div>
                 <div class="intro__links__card">
@@ -70,7 +73,8 @@
                         href="https://www.linkedin.com/in/viniciusalmeidadev/"
                         target="_blank"
                         title="in/viniciusalmeidadev">
-                        <div class="intro__links__card__pic linkedin"></div>
+                        <div class="intro__links__card__pic linkedin"
+                            data-lazy-bg="../assets/logo/linkedin-icon.png"></div>
                     </a>
                 </div>
                 <div class="intro__links__card">
@@ -78,7 +82,8 @@
                         href="https://github.com/vinesnts"
                         target="_blank"
                         title="@vinesnts">
-                        <div class="intro__links__card__pic github"></div>
+                        <div class="intro__links__card__pic github"
+                            data-lazy-bg="../assets/logo/github-icon.webp"></div>
                     </a>
                 </div>
                 <div class="intro__links__card">
@@ -87,7 +92,8 @@
                         target="_blank"
                         data-lang="lattesCv"
                         title="Currículo Lattes">
-                        <div class="intro__links__card__pic lattes"></div>
+                        <div class="intro__links__card__pic lattes"
+                            data-lazy-bg="../assets/logo/lattes-icon.webp"></div>
                     </a>
                 </div>
             </div>
@@ -106,7 +112,7 @@
                         class="active"
                         href="#intro"
                         data-lang="home"
-                        onclick="scrollToElement(event, 'intro')"
+                        data-scroll-to="intro"
                     >
                         Início
                     </a>
@@ -115,7 +121,7 @@
                     <a
                         href="#bio"
                         data-lang="bio"
-                        onclick="scrollToElement(event, 'bio')"
+                       data-scroll-to="bio"
                     >
                         Bio
                     </a>
@@ -124,7 +130,7 @@
                     <a 
                         href="#skills"
                         data-lang="skills"
-                        onclick="scrollToElement(event, 'skills')"
+                        data-scroll-to="skills"
                     >
                         Habilidades
                     </a>
@@ -133,7 +139,7 @@
                     <a
                         href="#ref"
                         data-lang="references"
-                        onclick="scrollToElement(event, 'ref')"
+                        data-scroll-to="ref"
                     >
                         Referenciais
                     </a>
@@ -142,7 +148,7 @@
                     <a
                         href="#works"
                         data-lang="works"
-                        onclick="scrollToElement(event, 'works')"
+                        data-scroll-to="works"
                     >
                         Publicações
                     </a>
@@ -151,7 +157,7 @@
                     <a
                         href="#contact"
                         data-lang="contact"
-                        onclick="scrollBottom(event)"
+                        data-scroll-bottom=""
                     >
                         Contato
                     </a>
@@ -225,7 +231,8 @@
     <footer data-animate="fade-in">
         <div class="footer">
             <div class="footer__card">
-                <div class="footer__card__pic email"></div>
+                <div class="footer__card__pic email"
+                    data-lazy-bg="../assets/icon/email-icon.png"></div>
                 <div class="footer__card__title">
                     <a 
                         href="mailto:contato@viniciusalmeida.com"
@@ -237,7 +244,8 @@
                 </div>
             </div>
             <div class="footer__card">
-                <div class="footer__card__pic phone"></div>
+                <div class="footer__card__pic phone"
+                    data-lazy-bg="../assets/icon/phone-icon.png"></div>
                 <div class="footer__card__title">
                     <a href="https://wa.me/message/P2IWW4QTZN7TI1" target="_blank">
                         + 55 &#40;81&#41; 981645401
@@ -245,7 +253,8 @@
                 </div>
             </div>
             <div class="footer__card">
-                <div class="footer__card__pic linkedin"></div>
+                <div class="footer__card__pic linkedin"
+                    data-lazy-bg="../assets/logo/linkedin-icon.png"></div>
                 <div class="footer__card__title">
                     <a href="https://www.linkedin.com/in/viniciusalmeidadev/" target="_blank">
                         in/viniciusalmeidadev
@@ -253,7 +262,8 @@
                 </div>
             </div>
             <div class="footer__card">
-                <div class="footer__card__pic github"></div>
+                <div class="footer__card__pic github"
+                    data-lazy-bg="../assets/logo/github-icon.webp"></div>
                 <div class="footer__card__title">
                     <a href="https://github.com/vinesnts" target="_blank">
                         @vinesnts
@@ -261,7 +271,8 @@
                 </div>
             </div>
             <div class="footer__card">
-                <div class="footer__card__pic lattes"></div>
+                <div class="footer__card__pic lattes"
+                    data-lazy-bg="../assets/logo/lattes-icon.webp"></div>
                 <div class="footer__card__title">
                     <a 
                         href="https://lattes.cnpq.br/3076429582182777"
