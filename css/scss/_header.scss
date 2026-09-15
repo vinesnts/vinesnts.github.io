@@ -29,7 +29,7 @@ header {
             width: 200px;
             height: 200px;
             border-radius: 300px;
-            background: variables.$primary-color variables.$asset-pic-profile-alt no-repeat 60% 25%;
+            background: variables.$primary-color no-repeat 60% 25%;
             background-size: 130%;
             box-shadow: variables.$shadow-button;
         }
@@ -117,25 +117,20 @@ header {
                     font-size: 20px;
             
                     &.email {
-                        background-image: variables.$asset-icon-email;
                         background-position: 50% 55%;
                     }
             
                     &.phone {
-                        background-image: variables.$asset-icon-phone;
                         background-position: 50% 70%;
                     }
                     
                     &.linkedin {
-                        background-image: variables.$asset-logo-linkedin;
                     }
 
                     &.github {
-                        background-image: variables.$asset-logo-github;
                     }
 
                     &.lattes {
-                        background-image: variables.$asset-logo-lattes;
                     }
                 }
             }

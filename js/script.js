@@ -216,3 +216,17 @@ scrollHomeButton.addEventListener('click', (event) => {
     );
     document.getElementById('navbar').scrollTo({left: 0, behavior: 'smooth'});
 });
+
+document.querySelectorAll('[data-scroll-to]').forEach(element => {
+    element.addEventListener('click', event => {
+        event.preventDefault();
+        scrollToElement(event, element.dataset.scrollTo);
+    });
+});
+
+document.querySelectorAll('[data-scroll-bottom]').forEach(element => {
+    element.addEventListener('click', event => {
+        event.preventDefault();
+        scrollBottom(event);
+    });
+});

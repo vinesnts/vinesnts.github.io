@@ -101,7 +101,7 @@
                 width: 200px;
                 height: 200px;
                 border-radius: 300px;
-                background: variables.$primary-color variables.$asset-pic-profile-alt no-repeat 40% 40%;
+                background: variables.$primary-color no-repeat 40% 40%;
                 background-size: 150%;
                 box-shadow: variables.$shadow-button
             }
@@ -203,89 +203,73 @@
                     }
     
                     &.frontend {
-                        background-image: variables.$asset-icon-frontend;
                         background-size: 70%;
                     }
     
                     &.backend {
-                        background-image: variables.$asset-icon-backend;
                     }
     
                     &.design {
-                        background-image: variables.$asset-icon-design;
                     }
     
                     &.email {
-                        background-image: variables.$asset-icon-email;
                     }
     
                     &.phone {
-                        background-image: variables.$asset-icon-phone;
                         background-size: 50%;
                     }
     
                     &.linkedin {
-                        background-image: variables.$asset-logo-linkedin;
                         background-size: 50%;
                     }
 
                     &.github {
-                        background-image: variables.$asset-logo-github;
                         background-size: 50%;
                     }
     
                     &.casaong {
                         background-color: #BEF0B8;
-                        background-image: variables.$asset-logo-casaong;
                         background-size: 80%;
                     }
     
                     &.lapa {
                         background-color: #FFF;
-                        background-image: variables.$asset-logo-lapa;
                         background-size: 55%;
                     }
     
                     &.daroca {
                         background-color: #DCFFEE;
-                        background-image: variables.$asset-logo-daroca;
                         background-size: 70%;
                     }
     
                     &.tecnosolve {
                         background-color: rgb(0,39,96);
-                        background-image: variables.$asset-logo-tecnosolve;
                         background-position: center;
                         background-size: 125%;
                     }
     
                     &.showtecnologia {
                         background-color: #FFFFFF;
-                        background-image: variables.$asset-logo-showtecnologia;
                         background-size: 110%;
                     }
     
                     &.gestor {
                         background-color: #08469a;
-                        background-image: variables.$asset-logo-gestor;
                         background-size: 95%;
                     }
     
                     &.ufape {
                         background-color: #FFFFFF;
-                        background-image: variables.$asset-logo-ufape;
                         background-size: 95%;
                     }
     
                     &.alive {
                         background-color: #FFFFFF;
-                        background-image: variables.$asset-logo-alive;
                         background-size: 100%;
                     }
     
                     &.meupregao {
                         background-color: #FFFFFF;
-                        background-image: variables.$asset-logo-meupregao;
                         background-size: 50%;
                     }
                 }

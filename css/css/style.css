@@ -399,11 +399,11 @@ strong:has(a)::after {
   opacity: 0.8;
 }
 
-*:has(.tooltip):hover .tooltip {
+*:has(> .tooltip):hover .tooltip {
   opacity: 1;
   transition: opacity ease-in-out 200ms 500ms;
 }
-*:has(.tooltip) .tooltip {
+*:has(> .tooltip) .tooltip {
   position: absolute;
   top: -40px;
   left: 50%;
@@ -468,7 +468,7 @@ header .intro__pic {
   width: 200px;
   height: 200px;
   border-radius: 300px;
-  background: #222 url("../../assets/profile.webp") no-repeat 60% 25%;
+  background: #222 no-repeat 60% 25%;
   background-size: 130%;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1), 0px 0px 10px rgba(0, 0, 0, 0.1), 2px 2px 10px light-dark(rgba(150, 150, 150, 0.2), rgba(150, 150, 150, 0.2));
 }
@@ -544,23 +544,11 @@ header .intro__links__card__pic {
   font-size: 20px;
 }
 header .intro__links__card__pic.email {
-  background-image: url("../../assets/icon/email-icon.png");
   background-position: 50% 55%;
 }
 header .intro__links__card__pic.phone {
-  background-image: url("../../assets/icon/phone-icon.png");
   background-position: 50% 70%;
 }
-header .intro__links__card__pic.linkedin {
-  background-image: url("../../assets/logo/linkedin-icon.png");
-}
-header .intro__links__card__pic.github {
-  background-image: url("../../assets/logo/github-icon.webp");
-}
-header .intro__links__card__pic.lattes {
-  background-image: url("../../assets/logo/lattes-icon.webp");
-}
-
 .header-space {
   position: relative;
   top: 0px;
@@ -652,7 +640,7 @@ header .intro__links__card__pic.lattes {
   width: 200px;
   height: 200px;
   border-radius: 300px;
-  background: #222 url("../../assets/profile.webp") no-repeat 40% 40%;
+  background: #222 no-repeat 40% 40%;
   background-size: 150%;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1), 0px 0px 10px rgba(0, 0, 0, 0.1), 2px 2px 10px light-dark(rgba(150, 150, 150, 0.2), rgba(150, 150, 150, 0.2));
 }
@@ -766,36 +754,13 @@ header .intro__links__card__pic.lattes {
 .main-container__card .ref__card__pic.frontend,
 .main-container__card .contact__card__pic.frontend,
 .main-container__card .works__card__pic.frontend {
-  background-image: url("../../assets/icon/frontend-simple-icon.png");
   background-size: 70%;
-}
-.main-container__card .skills__card__pic.backend,
-.main-container__card .projects__card__pic.backend,
-.main-container__card .ref__card__pic.backend,
-.main-container__card .contact__card__pic.backend,
-.main-container__card .works__card__pic.backend {
-  background-image: url("../../assets/icon/backend-simple-icon.png");
-}
-.main-container__card .skills__card__pic.design,
-.main-container__card .projects__card__pic.design,
-.main-container__card .ref__card__pic.design,
-.main-container__card .contact__card__pic.design,
-.main-container__card .works__card__pic.design {
-  background-image: url("../../assets/icon/design-simple-icon.png");
-}
-.main-container__card .skills__card__pic.email,
-.main-container__card .projects__card__pic.email,
-.main-container__card .ref__card__pic.email,
-.main-container__card .contact__card__pic.email,
-.main-container__card .works__card__pic.email {
-  background-image: url("../../assets/icon/email-icon.png");
 }
 .main-container__card .skills__card__pic.phone,
 .main-container__card .projects__card__pic.phone,
 .main-container__card .ref__card__pic.phone,
 .main-container__card .contact__card__pic.phone,
 .main-container__card .works__card__pic.phone {
-  background-image: url("../../assets/icon/phone-icon.png");
   background-size: 50%;
 }
 .main-container__card .skills__card__pic.linkedin,
@@ -803,7 +768,6 @@ header .intro__links__card__pic.lattes {
 .main-container__card .ref__card__pic.linkedin,
 .main-container__card .contact__card__pic.linkedin,
 .main-container__card .works__card__pic.linkedin {
-  background-image: url("../../assets/logo/linkedin-icon.png");
   background-size: 50%;
 }
 .main-container__card .skills__card__pic.github,
@@ -811,7 +775,6 @@ header .intro__links__card__pic.lattes {
 .main-container__card .ref__card__pic.github,
 .main-container__card .contact__card__pic.github,
 .main-container__card .works__card__pic.github {
-  background-image: url("../../assets/logo/github-icon.webp");
   background-size: 50%;
 }
 .main-container__card .skills__card__pic.casaong,
@@ -820,7 +783,6 @@ header .intro__links__card__pic.lattes {
 .main-container__card .contact__card__pic.casaong,
 .main-container__card .works__card__pic.casaong {
   background-color: #BEF0B8;
-  background-image: url("../../assets/logo/casaong-icon.png");
   background-size: 80%;
 }
 .main-container__card .skills__card__pic.lapa,
@@ -829,7 +791,6 @@ header .intro__links__card__pic.lattes {
 .main-container__card .contact__card__pic.lapa,
 .main-container__card .works__card__pic.lapa {
   background-color: #FFF;
-  background-image: url("../../assets/logo/lapa-icon.png");
   background-size: 55%;
 }
 .main-container__card .skills__card__pic.daroca,
@@ -838,7 +799,6 @@ header .intro__links__card__pic.lattes {
 .main-container__card .contact__card__pic.daroca,
 .main-container__card .works__card__pic.daroca {
   background-color: #DCFFEE;
-  background-image: url("../../assets/logo/daroca-icon.png");
   background-size: 70%;
 }
 .main-container__card .skills__card__pic.tecnosolve,
@@ -847,7 +807,6 @@ header .intro__links__card__pic.lattes {
 .main-container__card .contact__card__pic.tecnosolve,
 .main-container__card .works__card__pic.tecnosolve {
   background-color: rgb(0, 39, 96);
-  background-image: url("../../assets/logo/tecnosolve.webp");
   background-position: center;
   background-size: 125%;
 }
@@ -857,7 +816,6 @@ header .intro__links__card__pic.lattes {
 .main-container__card .contact__card__pic.showtecnologia,
 .main-container__card .works__card__pic.showtecnologia {
   background-color: #FFFFFF;
-  background-image: url("../../assets/logo/showtecnologia.png");
   background-size: 110%;
 }
 .main-container__card .skills__card__pic.gestor,
@@ -866,7 +824,6 @@ header .intro__links__card__pic.lattes {
 .main-container__card .contact__card__pic.gestor,
 .main-container__card .works__card__pic.gestor {
   background-color: #08469a;
-  background-image: url("../../assets/logo/gestor-showtecnologia.png");
   background-size: 95%;
 }
 .main-container__card .skills__card__pic.ufape,
@@ -875,7 +832,6 @@ header .intro__links__card__pic.lattes {
 .main-container__card .contact__card__pic.ufape,
 .main-container__card .works__card__pic.ufape {
   background-color: #FFFFFF;
-  background-image: url("../../assets/logo/ufape.png");
   background-size: 95%;
 }
 .main-container__card .skills__card__pic.alive,
@@ -884,7 +840,6 @@ header .intro__links__card__pic.lattes {
 .main-container__card .contact__card__pic.alive,
 .main-container__card .works__card__pic.alive {
   background-color: #FFFFFF;
-  background-image: url("../../assets/logo/alive.png");
   background-size: 100%;
 }
 .main-container__card .skills__card__pic.meupregao,
@@ -893,7 +848,6 @@ header .intro__links__card__pic.lattes {
 .main-container__card .contact__card__pic.meupregao,
 .main-container__card .works__card__pic.meupregao {
   background-color: #FFFFFF;
-  background-image: url("../../assets/logo/meupregao-logo.png");
   background-size: 50%;
 }
 .main-container__card .skills__card__description, .main-container__card .skills__card__author, .main-container__card .skills__card__venue,
@@ -1305,26 +1259,6 @@ footer .footer__card__pic {
   color: #fff;
   line-height: 30px;
   font-size: 20px;
-}
-
-footer .footer__card__pic.email {
-  background-image: url("../../assets/icon/email-icon.png");
-}
-
-footer .footer__card__pic.phone {
-  background-image: url("../../assets/icon/phone-icon.png");
-}
-
-footer .footer__card__pic.linkedin {
-  background-image: url("../../assets/logo/linkedin-icon.png");
-}
-
-footer .footer__card__pic.github {
-  background-image: url("../../assets/logo/github-icon.webp");
-}
-
-footer .footer__card__pic.lattes {
-  background-image: url("../../assets/logo/lattes-icon.webp");
 }
 
 footer .footer__card__title {

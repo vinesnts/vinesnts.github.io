@@ -231,7 +231,7 @@ strong {
     }
 }
 
-*:has(.tooltip) {
+*:has(> .tooltip) {
 
     &:hover {
         .tooltip {
