@@ -17,15 +17,15 @@ export const works = [
     {
         "title": "<strong>Stochastic Modeling</strong> of Battery Swapping Stations for Electric Motorcycles: Thresholds and Sizing Rules",
         "volume": 0,
-        "url": "",
-        "doi": "",
+        "url": "https://doi.org/10.1109/tits.2026.3728412",
+        "doi": "10.1109/TITS.2026.3728412",
         "abstractNote": "",
         "number": 0,
         "journal": "IEEE Transactions on Intelligent Transportation Systems",
         "author": ["Jônatas Silva", "Vinícius Almeida", "Marcelo Santana", "Renata Dantas", "Paulo Maciel"],
         "year": 2026,
-        "month": "-",
-        "pages": "-"
+        "month": "September",
+        "pages": "1-11"
     },
     {
         "author": ["Vinícius Almeida", "Jônatas Silva", "Marcelo Santana", "Renata Dantas", "Paulo Maciel"],
@@ -201,6 +201,8 @@ works.forEach((work) => {
     const copyButton = document.createElement('button');
     copyButton.className = 'works__card__copy-btn';
     copyButton.type = 'button';
+    copyButton.dataset.lang = 'copyBibTeX';
+    copyButton.setAttribute('aria-label', 'Copy BibTeX');
     copyButton.addEventListener('click', () => {
         window.navigator.clipboard.writeText(
             createBibTeXCitation(work));

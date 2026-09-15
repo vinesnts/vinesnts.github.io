@@ -31,6 +31,8 @@ function translate(language) {
     document.querySelectorAll(`[data-lang="${key}"`).forEach((el) => {
       if (el.hasAttribute('title')) {
         el.setAttribute('title', value);
+      } else if (el.hasAttribute('aria-label')) {
+        el.setAttribute('aria-label', value);
       } else {
         el.innerHTML = value;
       }

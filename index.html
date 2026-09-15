@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A website of a software developer called Vinícius Almeida, his website address is viniciusalmeida.dev. He develops websites and APIs using Python, Java, Angular, Django, Flask, Falcon, FastAPI, Java Spring Boot, Postgres. He has experience with AWS, Docker, CI/CD. He is also a research in the field of performance, availability, and reliability of computing systems.">
     <title data-lang="title">Vinícius Almeida | Desenvolvedor</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/logo.css">
     <link rel="stylesheet" href="css/css/style.css">
     <link href="node_modules/aos/dist/aos.css" rel="stylesheet">
@@ -25,7 +24,8 @@
     </script>
 </head>
 <body>
-    <button id="scroll-home" class="floating-btn">
+    <button id="scroll-home" aria-label="Scroll home" data-lang="scrollHome" class="floating-btn">
+        <div class="tooltip" data-lang="scrollHome">Scroll home</div>
     </button>
     <a class="anchor" id="intro"></a>
     <div class="header-space">
@@ -158,8 +158,8 @@
                     </a>
                 </li>
                 <li class="align-right">
-                    <select name="lang" id="lang">
-                        <!-- <option value="" selected disabled data-lang="select-lang">Selecionar idioma</option> -->
+                    <select name="lang" id="lang" aria-label="Selecionar idioma" data-lang="selectLang">
+                        <!-- <option value="" selected disabled data-lang="selectLang">Selecionar idioma</option> -->
                     </select>
                 </li>
                 <!-- <li class="align-right">

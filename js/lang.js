@@ -10,6 +10,7 @@ const lang_en = {
   selectLang: 'Select language',
   title: 'Vinícius Almeida | Researcher and Software Developer',
   home: 'Home',
+  scrollHome: 'Back to top',
   homeHref: '#',
   bio: 'Bio',
   bioHref: '#',
@@ -47,12 +48,14 @@ const lang_en = {
   modcsText: 'Research group on modeling the <strong>performance</strong>, <strong>reliability</strong> and <strong>availability</strong> of computing systems.',
   copyright: '<span id="copyright-year"></span>&nbsp;Vinicius&nbsp;Almeida&nbsp;Dev. All&nbsp;rights&nbsp;reserved.',
   works: 'Works',
+  copyBibTeX: 'Copy BibTeX',
 }
 
 const lang_pt = {
   selectLang: 'Selecionar idioma',
   title: 'Vinícius Almeida | Pesquisador e Desenvolvedor',
   home: 'Início',
+  scrollHome: 'Voltar para o início',
   homeHref: '#',
   bio: 'Bio',
   bioHref: '#',
@@ -90,6 +93,7 @@ const lang_pt = {
   modcsText: 'Grupo de pesquisa de modelagem de <strong>performance</strong>, <strong>confiabilidade</strong> e <strong>disponibilidade</strong> de sistemas computacionais.',
   copyright: '<span id="copyright-year"></span>&nbsp;Vinicius&nbsp;Almeida&nbsp;Dev. Todos&nbsp;os&nbsp;direitos&nbsp;reservados.',
   works: 'Artigos',
+  copyBibTeX: 'Copiar BibTeX',
 }
 
 const lang = (lang) => {

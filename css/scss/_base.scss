@@ -231,6 +231,32 @@ strong {
     }
 }
 
+*:has(.tooltip) {
+
+    &:hover {
+        .tooltip {
+            opacity: 1;
+            transition: opacity ease-in-out 200ms 500ms;
+        }
+    }
+
+    .tooltip {
+        position: absolute;
+        top: -40px;
+        left: 50%;
+        width: 85px;
+        transform: translateX(-50%);
+        font-size: 12px;
+        background-color: light-dark(variables.$black-color, variables.$white-color);
+        color: light-dark(variables.$white-color, variables.$black-color);
+        padding: 2px 6px;
+        border-radius: 4px;
+        opacity: 0;
+        transition: none;
+        z-index: 99;
+    }
+}
+
 
 html {
     &[lang="en"] {
@@ -246,6 +272,14 @@ html {
                 content: "Copy BibTeX";
             }
         }
+
+        *:has(.tooltip) {
+
+            .tooltip {
+                top: -25px;
+                width: 75px;
+            }
+        }
     }
 
     &[lang="pt"] {
@@ -259,6 +293,14 @@ html {
     
             &::before {
                 content: "Copiar BibTeX";
+            }
+        }
+
+        *:has(.tooltip) {
+
+            .tooltip {
+                top: -40px;
+                width: 85px;
             }
         }
     }
