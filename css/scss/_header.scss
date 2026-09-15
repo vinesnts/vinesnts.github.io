@@ -29,7 +29,7 @@ header {
             width: 200px;
             height: 200px;
             border-radius: 300px;
-            background: variables.$primary-color no-repeat 60% 25%;
+            background: variables.$primary-color variables.$asset-pic-profile no-repeat 60% 25%;
             background-size: 130%;
             box-shadow: variables.$shadow-button;
         }
